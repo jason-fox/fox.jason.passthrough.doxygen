@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+	This file is part of the DITA-OT Doxygen Plug-in project.
+	See the accompanying LICENSE file for applicable licenses.
+-->
+<plugin id="fox.jason.passthrough.doxygen" version="1.0.0">
+	<feature extension="ant.import" file="process_doxygen.xml"/>
+	<!--
+		This plugin requires the passthrough reader
+	-->
+	<require plugin="fox.jason.passthrough"/>
+	
+	<!-- Uses the passthrough extension point and file reader -->
+	<feature extension="dita.parser">
+		<parser format="doxygen" class="fox.jason.passthrough.parser.FileReader"/>
+	</feature>
+	<feature extension="passthrough.pre" value="doxygen.process.pre"/>
+	<feature extension="passthrough.process" value="doxygen.process"/>
+	<!-- PDF extension point -->
+	<feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
+</plugin>
