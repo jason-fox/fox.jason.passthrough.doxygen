@@ -11,7 +11,7 @@ addons:
       - ant
 
 env:
-  - DITA_OT=3.4.1
+  - DITA_OT=3.5
 
 before_install:
   - zip -r fox.jason.passthrough.doxygen.zip . -x *.zip* *.git/* *temp/* *out/*
@@ -20,10 +20,10 @@ before_install:
   - chmod +x dita-ot-$DITA_OT/bin/dita
 
 install:
-  - dita-ot-$DITA_OT/bin/dita --install https://github.com/jason-fox/fox.jason.unit-test/archive/master.zip
-  - dita-ot-$DITA_OT/bin/dita --install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
-  - dita-ot-$DITA_OT/bin/dita --install https://github.com/jason-fox/fox.jason.passthrough/archive/master.zip
-  - dita-ot-$DITA_OT/bin/dita --install fox.jason.passthrough.doxygen.zip
+  - dita-ot-$DITA_OT/bin/dita install https://github.com/jason-fox/fox.jason.unit-test/archive/master.zip
+  - dita-ot-$DITA_OT/bin/dita install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
+  - dita-ot-$DITA_OT/bin/dita install https://github.com/jason-fox/fox.jason.passthrough/archive/master.zip
+  - dita-ot-$DITA_OT/bin/dita install fox.jason.passthrough.doxygen.zip
 
 before_script:
   - dita-ot-$DITA_OT/bin/dita --input dita-ot-$DITA_OT/plugins/fox.jason.passthrough.doxygen -f xsl-instrument
