@@ -40,7 +40,7 @@
         <navtitle>Bicycle</navtitle>
         <searchtitle>Bicycle</searchtitle>
       </titlealts>
-      <body outputclass="c++">
+      <body outputclass="cpp">
         <p>
           <b>Direct Known Subclasses:</b>
         </p>
@@ -232,7 +232,7 @@ PedalHarder makes you go faster (usually).</entry>
         <navtitle>MountainBike</navtitle>
         <searchtitle>MountainBike</searchtitle>
       </titlealts>
-      <body outputclass="c++">
+      <body outputclass="cpp">
         <codeblock>public class
           <b>MountainBike</b>extends
           <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">transport::Bicycle</xref>
@@ -345,7 +345,7 @@ PedalHarder makes you go faster (usually).</entry>
         <navtitle>RacingBike</navtitle>
         <searchtitle>RacingBike</searchtitle>
       </titlealts>
-      <body outputclass="c++">
+      <body outputclass="cpp">
         <codeblock>public class
           <b>RacingBike</b>extends
           <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">transport::Bicycle</xref>
