@@ -34,21 +34,34 @@ constructors, methods, and fields.
 
 #### Sample doxygen
 
-```java
-/**
- * Effector is the interface for Casbin effectors.
- */
-public interface Effector {
-    /**
-     * mergeEffects merges all matching results collected by the enforcer into a single decision.
+```c++
+namespace transport
+{
+    /** Mountain bike implementation of a `Bicycle`.
      *
-     * @param expr the expression of [policy_effect].
-     * @param effects the effects of all matched rules.
-     * @param results the matcher results of all matched rules.
-     * @return the final effect.
+     * MountainBike is an implementation of a Bicycle
+     * providing a bike for cycling on rough terrain. Mountain bikes
+     * are pretty cool because they have stuff like **Suspension** (and
+     * you can even adjust it using SetSuspension). If you're looking
+     * for a bike for use on the road, you might be better off using a
+     * RacingBike though.
+     *
+     * @ingroup mountainbike
      */
-    boolean mergeEffects(String expr, Effect[] effects, float[] results);
-}
+	class MountainBike : public Bicycle
+	{
+	public:
+		/** Set suspension stiffness.
+		 * @stiffness the suspension stiffness.
+		 *
+		 * SetSuspension changes the stiffness of the suspension
+		 * on the bike. The method will return false if the stiffness
+		 * could not be adjusted.
+		 *
+		 * @return true if the suspension was adjusted successfully,
+		 *         false otherwise.
+		 */
+		bool SetSuspension(double stiffness);
 ```
 
 #### Sample DITA Output
