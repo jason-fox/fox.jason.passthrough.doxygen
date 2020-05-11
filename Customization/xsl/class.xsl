@@ -28,66 +28,49 @@
           <xsl:value-of select="replace(compoundname, '^.*::','')"/>
         </searchtitle>
       </titlealts>
-      <body class="- topic/body " outputclass="java">
-<!--
-        <xsl:variable name="class" select="@qualified"/>
-        <xsl:variable name="extends" select="class/@qualified"/>
+      <body class="- topic/body ">
+        <xsl:attribute name="outputclass">
+            <xsl:value-of select="dita-ot:prismjs(@language)"/>
+        </xsl:attribute>
 
-        <xsl:if test="interface or //package/class[@qualified=$extends]/interface or @externalizable='true' or @serializable='true' ">
-          <p class="- topic/p ">
-            <b class=" hi-d/b ">
-              <xsl:text>All Implemented Interfaces:</xsl:text>
-            </b>
-          </p>
-          <ul class=" topic/ul ">
-            <xsl:for-each select="interface">
-              <li class=" topic/li ">
-                <xsl:call-template name="add-link" >
-                  <xsl:with-param name="type" select="'topic'" />
-                  <xsl:with-param name="href" select="concat('#', @qualified)" />
-                  <xsl:with-param name="text" select="replace(@qualified,'^.*\.','')" />
-                </xsl:call-template>
-              </li>
-            </xsl:for-each>
-            <xsl:for-each select="//package/class[@qualified=$extends]/interface">
-              <li class=" topic/li ">
-                <xsl:call-template name="add-link" >
-                  <xsl:with-param name="type" select="'topic'" />
-                  <xsl:with-param name="href" select="concat('#', @qualified)" />
-                  <xsl:with-param name="text" select="replace(@qualified,'^.*\.','')" />
-                </xsl:call-template>
-              </li>
-            </xsl:for-each>
-            <xsl:if test="@externalizable='true'">
-              <li class=" topic/li ">
-                <xsl:text>java.io.Externalizable</xsl:text>
-              </li>
-            </xsl:if>
-            <xsl:if test="@serializable='true'">
-              <li class=" topic/li ">
-                <xsl:text>java.io.Serializable</xsl:text>
-              </li>
-            </xsl:if> 
-          </ul>
+        <xsl:if test="basecompoundref/@refid">
+          <xsl:if test="starts-with(basecompoundref/@refid, 'interface')">
+            <p class="- topic/p ">
+              <b class=" hi-d/b ">
+                <xsl:text>All Implemented Interfaces:</xsl:text>
+              </b>
+            </p>
+            <ul class=" topic/ul ">
+              <xsl:for-each select="basecompoundref">
+                <li class=" topic/li ">
+                  <xsl:call-template name="add-link" >
+                    <xsl:with-param name="type" select="'topic'" />
+                    <xsl:with-param name="href" select="concat('#', .)" />
+                    <xsl:with-param name="text" select="." />
+                  </xsl:call-template>
+                </li>
+              </xsl:for-each>
+            </ul>
+          </xsl:if>
         </xsl:if>
-        <xsl:if test="//package/class/class[@qualified=$class]">
+        <xsl:if test="derivedcompoundref">
           <p class="- topic/p ">
             <b class=" hi-d/b ">
               <xsl:text>Direct Known Subclasses:</xsl:text>
             </b>
           </p>
           <ul class=" topic/ul ">
-            <xsl:for-each select="//package/class/class[@qualified=$class]">
+            <xsl:for-each select="derivedcompoundref">
                <li class=" topic/li ">
                 <xsl:call-template name="add-link" >
                   <xsl:with-param name="type" select="'topic'" />
-                  <xsl:with-param name="href" select="concat('#', parent::class/@qualified)" />
-                  <xsl:with-param name="text" select="parent::class/@name" />
+                  <xsl:with-param name="href" select="concat('#', .)" />
+                  <xsl:with-param name="text" select="." />
                 </xsl:call-template>
               </li>
             </xsl:for-each>
           </ul>
-        </xsl:if-->
+        </xsl:if>
 
         <codeblock class=" pr-d/codeblock ">
           <xsl:attribute name="xtrc" select="concat('codeblock:',generate-id(.),'1')"/>
@@ -136,7 +119,7 @@
           <xsl:if test="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and not(type='') and @prot='public']">
             <xsl:call-template name="add-method-summary"/>
           </xsl:if>
-          <!--xsl:call-template name="add-inherited-method-summary"/-->
+          <xsl:call-template name="add-inherited-method-summary"/>
         </section>
 
          <xsl:if test="sectiondef[contains(@kind,'-attrib')]/memberdef[@kind='variable'and @prot='public']">

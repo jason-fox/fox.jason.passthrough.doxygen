@@ -40,7 +40,18 @@
         <navtitle>Bicycle</navtitle>
         <searchtitle>Bicycle</searchtitle>
       </titlealts>
-      <body outputclass="java">
+      <body outputclass="c++">
+        <p>
+          <b>Direct Known Subclasses:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#transport::MountainBike" scope="local" type="topic">transport::MountainBike</xref>
+          </li>
+          <li>
+            <xref format="dita" href="#transport::RacingBike" scope="local" type="topic">transport::RacingBike</xref>
+          </li>
+        </ul>
         <codeblock>public class
           <b>Bicycle</b>
         </codeblock>
@@ -94,6 +105,56 @@ PedalHarder makes you go faster (usually).</entry>
                   <entry align="left" colname="c2">
                     <codeph>
                       <xref format="dita" href="#transport.Bicycle/methods_RingBell" scope="local" type="table">RingBell</xref>()</codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+          <table outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="c1">Methods inherited from class Class transport::
+                    <xref format="dita" href="#transport.RacingBike" scope="local" type="topic">RacingBike</xref>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="c1">
+                    <codeph>
+                      <xref format="dita" href="#transport.RacingBike/methods_PedalHarder" scope="local" type="table">PedalHarder</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#transport.RacingBike/methods_RingBell" scope="local" type="table">RingBell</xref>
+                    </codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+          <table outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="c1">Methods inherited from class Class transport::
+                    <xref format="dita" href="#transport.MountainBike" scope="local" type="topic">MountainBike</xref>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="c1">
+                    <codeph>
+                      <xref format="dita" href="#transport.MountainBike/methods_ChangeBreak" scope="local" type="table">ChangeBreak</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#transport.MountainBike/methods_SetSuspension" scope="local" type="table">SetSuspension</xref>
+                    </codeph>
                   </entry>
                 </row>
               </tbody>
@@ -171,7 +232,7 @@ PedalHarder makes you go faster (usually).</entry>
         <navtitle>MountainBike</navtitle>
         <searchtitle>MountainBike</searchtitle>
       </titlealts>
-      <body outputclass="java">
+      <body outputclass="c++">
         <codeblock>public class
           <b>MountainBike</b>extends
           <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">transport::Bicycle</xref>
@@ -284,7 +345,7 @@ PedalHarder makes you go faster (usually).</entry>
         <navtitle>RacingBike</navtitle>
         <searchtitle>RacingBike</searchtitle>
       </titlealts>
-      <body outputclass="java">
+      <body outputclass="c++">
         <codeblock>public class
           <b>RacingBike</b>extends
           <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">transport::Bicycle</xref>
@@ -339,6 +400,25 @@ PedalHarder makes you go faster (usually).</entry>
                   <entry align="left" colname="c1">
                     <codeblock>public void PedalHarder()</codeblock>
                     <p>PedalHarder makes you go faster (usually).</p>
+                    <p>
+                      <b>Overrides:</b>
+                    </p>
+                    <p>
+                      <codeph>
+                        <xref format="dita" href="#transport.Bicycle/methods_PedalHarder" scope="local" type="table">PedalHarder</xref>
+                      </codeph>in class
+                      <codeph>
+                        <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">Bicycle</xref>
+                      </codeph>
+                    </p>
+                    <p>
+                      <codeph>
+                        <xref format="dita" href="#transport.MountainBike/methods_PedalHarder" scope="local" type="table">PedalHarder</xref>
+                      </codeph>in class
+                      <codeph>
+                        <xref format="dita" href="#transport.MountainBike" scope="local" type="topic">MountainBike</xref>
+                      </codeph>
+                    </p>
                   </entry>
                 </row>
               </tbody>
@@ -358,6 +438,25 @@ PedalHarder makes you go faster (usually).</entry>
                   <entry align="left" colname="c1">
                     <codeblock>public void RingBell()</codeblock>
                     <p></p>
+                    <p>
+                      <b>Overrides:</b>
+                    </p>
+                    <p>
+                      <codeph>
+                        <xref format="dita" href="#transport.Bicycle/methods_RingBell" scope="local" type="table">RingBell</xref>
+                      </codeph>in class
+                      <codeph>
+                        <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">Bicycle</xref>
+                      </codeph>
+                    </p>
+                    <p>
+                      <codeph>
+                        <xref format="dita" href="#transport.MountainBike/methods_RingBell" scope="local" type="table">RingBell</xref>
+                      </codeph>in class
+                      <codeph>
+                        <xref format="dita" href="#transport.MountainBike" scope="local" type="topic">MountainBike</xref>
+                      </codeph>
+                    </p>
                   </entry>
                 </row>
               </tbody>

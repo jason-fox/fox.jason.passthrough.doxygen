@@ -149,4 +149,29 @@
     <xsl:value-of select="replace($name,'::','.')"/>
   </xsl:function>
 
+
+  <xsl:function name="dita-ot:prismjs">
+    <xsl:param name="language" as="xs:string"/>
+    <xsl:choose>
+      <xsl:when test="$language='Unknown'">
+        <xsl:value-of select="'none'"/>
+      </xsl:when>
+      <xsl:when test="$language='IDL'">
+        <xsl:value-of select="'idl'"/>
+      </xsl:when>
+      <xsl:when test="$language='C#'">
+        <xsl:value-of select="'csharp'"/>
+      </xsl:when> 
+      <xsl:when test="$language='Objective-C'">
+        <xsl:value-of select="'objectivec'"/>
+      </xsl:when>
+      <xsl:when test="$language='C++'">
+        <xsl:value-of select="'cpp'"/>
+      </xsl:when>
+      <xsl:otherwise>
+         <xsl:value-of select="lower-case($language)"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
 </xsl:stylesheet>

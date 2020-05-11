@@ -77,17 +77,21 @@
     </table>
   </xsl:template>
   <xsl:template name="add-inherited-method-summary">
-    <xsl:variable name="extends">
-      <xsl:value-of select="class/@qualified"/>
-    </xsl:variable>
 
-    <xsl:choose>
-      <xsl:when test="//package/class[@qualified=$extends]">
-        <xsl:call-template name="inheritance-method-summary">
-          <xsl:with-param name="extends" select = "//package/class[@qualified=$extends]/@qualified" />
-        </xsl:call-template>
-      </xsl:when>
-    </xsl:choose>
+    <xsl:variable name="current_id"  select="@id"/>
+
+    <xsl:for-each select="inheritancegraph/node">
+      <xsl:if test="childnode[@relation='public-inheritance']">
+        <xsl:variable name="extends">
+          <xsl:value-of select="link/@refid"/>
+        </xsl:variable>
+        <xsl:if test="link/@refid and $extends!=$current_id">
+          <xsl:call-template name="inheritance-method-summary">
+              <xsl:with-param name="extends" select = "//compounddef[@kind='class' and @id=$extends]" />
+          </xsl:call-template>
+        </xsl:if>
+      </xsl:if>
+    </xsl:for-each>
   </xsl:template>
 
   <!--
@@ -95,29 +99,37 @@
   -->
   <xsl:template name="inheritance-method-summary">
     <xsl:param name = "extends" />
-      
+
+    <xsl:variable name="inherited_id">
+      <xsl:value-of select="$extends/compoundname"/>
+    </xsl:variable>
+    
+   
     <xsl:variable name="inherited_methods">
       <xsl:text>Methods inherited from class </xsl:text>
-      <xsl:value-of select="replace(@qualified,'\..*$','.')"/>
+      <xsl:value-of select="concat ('Class ',replace($inherited_id, '::\w*$','::'))"/>
+
       <xsl:call-template name="add-link" >
         <xsl:with-param name="type" select="'topic'" />
-        <xsl:with-param name="href" select="concat('#', //package/class[@qualified=$extends]/@qualified)" />
-        <xsl:with-param name="text" select="//package/class[@qualified=$extends]/@name" />
+        <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id($inherited_id))" />
+        <xsl:with-param name="text" select="replace($inherited_id, '^.*::','')" />
       </xsl:call-template>
     </xsl:variable>
 
+    <!--xsl:variable name="inherited_methods_details" select="''" /-->
+
     <xsl:variable name="inherited_methods_details">
-      <xsl:for-each select="//package/class[@qualified=$extends]/method">
-        <xsl:sort select="@name"/>
-        <xsl:variable name="method" select="@name"/>
+      <xsl:for-each select="$extends/sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and not(type='') and @prot='public']">
+        <xsl:sort select="name"/>
+        <xsl:variable name="method" select="name"/>
         <codeph class=" pr-d/codeph ">
           <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'14')"/>
           <xsl:call-template name="add-link" >
             <xsl:with-param name="type" select="'table'" />
             <xsl:with-param name="href">
-              <xsl:value-of select="concat('#', $extends,'/methods_', $method)"/>
-              <xsl:if test="count(../method[@name=$method])&gt;1">
-                <xsl:value-of select="count(following-sibling::method[@name=$method])"/>
+              <xsl:value-of select="concat('#', dita-ot:name-to-id($inherited_id),'/methods_', $method)"/>
+              <xsl:if test="count(../memberdef[name=$method])&gt;1">
+                <xsl:value-of select="count(following-sibling::memberdef[name=$method])"/>
               </xsl:if>
             </xsl:with-param>
             <xsl:with-param name="text" select="$method" />
@@ -136,17 +148,6 @@
         <xsl:with-param name="body" select="$inherited_methods_details"/>
       </xsl:call-template>
     </table>
-
-    <xsl:variable name="reextends">
-      <xsl:value-of select="//package/class[@qualified=$extends]/class/@qualified"/>
-    </xsl:variable>
-    <xsl:choose>
-      <xsl:when test="//package/class[@qualified=$reextends]">
-        <xsl:call-template name="inheritance-method-summary" >
-          <xsl:with-param name="extends" select = "//package/class[@qualified=$reextends]/@qualified" />
-        </xsl:call-template>
-      </xsl:when>
-    </xsl:choose>
   </xsl:template>
 
   <!--
@@ -175,6 +176,21 @@
         <xsl:call-template name="add-signature"/>
       </codeblock>
       <xsl:call-template name="parse-brief-description"/>
+
+      <xsl:if test="reimplements">
+        <p class="- topic/p ">
+          <b class=" hi-d/b ">
+            <xsl:text>Overrides:</xsl:text>
+          </b>
+        </p>
+        <xsl:call-template name="add-overrides">
+          <xsl:with-param name="method" select="$method"/>
+          <xsl:with-param name="refid" select="reimplements/@refid"/>
+        </xsl:call-template>
+      </xsl:if>
+
+
+
       <xsl:call-template name="parameter-description"/>
       <xsl:call-template name="return-description"/>
     </xsl:variable>
@@ -257,23 +273,24 @@
   </xsl:template>
 
   <xsl:template name="add-overrides">
-      <xsl:param name="method"/>
-      <xsl:param name="signature"/>
-      <xsl:param name="extends"/>
-    
-      
+    <xsl:param name="method"/>
+    <xsl:param name="refid"/>
+
+    <xsl:variable name="extends" select="//member[@refid=$refid]/ancestor::compounddef"/>
+
+    <xsl:for-each select="$extends/compoundname">
       <p class="- topic/p ">
         <codeph class=" pr-d/codeph ">
           <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'17')"/>
           <xsl:call-template name="add-link" >
             <xsl:with-param name="type" select="'table'" />
             <xsl:with-param name="href">
-              <xsl:value-of select="concat('#', $extends, '/methods_', $method)" />
-              <xsl:if test="count(//package/class[@qualified=$extends]/method[@name=$method])&gt;1">
-                <xsl:value-of select="count(//package/class[@qualified=$extends]/method[@name=$method and @signature=$signature]/following-sibling::method[@name=$method])"/>
+              <xsl:value-of select="concat('#', dita-ot:name-to-id(.), '/methods_', $method)" />
+              <xsl:if test="count($extends/sectiondef/memberdef[name=$method])&gt;1">
+                <xsl:value-of select="count($extends/sectiondef/memberdef[@id=$refid]/following-sibling::memberdef[name=$method])"/>
               </xsl:if>
             </xsl:with-param>
-            <xsl:with-param name="text" select="replace(@qualified,'^.*\.','')" />
+            <xsl:with-param name="text" select="$method" />
           </xsl:call-template>
         </codeph>
         <xsl:text> in class </xsl:text>
@@ -281,11 +298,12 @@
           <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'18')"/>
           <xsl:call-template name="add-link" >
             <xsl:with-param name="type" select="'topic'" />
-            <xsl:with-param name="href" select="concat('#', $extends)" />
-            <xsl:with-param name="text" select="replace($extends,'^.*\.','')" />
+            <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(.))" />
+            <xsl:with-param name="text" select="replace(.,'^.*::','')" />
           </xsl:call-template>
         </codeph>
       </p>
+    </xsl:for-each>
   </xsl:template>
     <!---
 -->
