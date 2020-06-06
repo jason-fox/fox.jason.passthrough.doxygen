@@ -121,8 +121,8 @@
         <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(compoundname))" />
         <xsl:with-param name="text" select="replace(compoundname, '^.*::','')" />
       </xsl:call-template>
-      <xsl:if test="normalize-space(briefdescription)!=''">
-        <xsl:value-of select="concat (' - ', briefdescription)"/>
+      <xsl:if test="briefdescription">
+        <xsl:value-of select="concat (' - ', briefdescription, detaileddescription/para[1])"/>
       </xsl:if>
     </li>
   </xsl:template>

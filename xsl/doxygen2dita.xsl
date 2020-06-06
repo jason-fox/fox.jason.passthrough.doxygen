@@ -80,19 +80,7 @@
   </xsl:template>
 
    <xsl:template name="parse-detailed-description">
-    <xsl:variable name="html-fragment">
-      <xsl:try>
-        <xsl:copy>
-          <xsl:copy-of select="parse-xml-fragment(concat('&lt;root&gt;',detaileddescription,'&lt;/root&gt;'))"/>
-        </xsl:copy>
-        <xsl:catch>
-          <xsl:copy>
-            <xsl:copy-of select="parse-xml-fragment(concat('&lt;root&gt;',replace(detaileddescription,'&lt;p&gt;','&#10;&#10;'),'&lt;/root&gt;'))"/>
-          </xsl:copy>
-        </xsl:catch>
-      </xsl:try>
-    </xsl:variable>
-    <xsl:apply-templates select="$html-fragment" mode="html"/>
+    <xsl:apply-templates select="detaileddescription" mode="html"/>
   </xsl:template>
 
   <!--

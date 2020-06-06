@@ -91,7 +91,7 @@
             </xsl:when>
           </xsl:choose>
         </codeblock>
-        <xsl:value-of select="briefdescription"/>
+        <xsl:call-template name="parse-detailed-description"/>
 
         <xsl:if test="sectiondef[contains(@kind,'-attrib')]/memberdef[@kind='variable' and @prot='public']">
           <!-- Class Field Summary -->
@@ -227,7 +227,7 @@
         <xsl:call-template name="add-signature"/>
       </codeblock>
       <xsl:choose>
-        <xsl:when test="normalize-space(detaileddescription)!=''">
+        <xsl:when test="detaileddescription/node()">
           <xsl:call-template name="parse-detailed-description"/>
         </xsl:when>
         <xsl:otherwise>

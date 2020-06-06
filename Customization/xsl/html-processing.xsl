@@ -32,9 +32,11 @@
   <!--
     Paragraph processing
   -->
-  <xsl:template match="p" mode="html">
+  <xsl:template match="para" mode="html">
     <p class="- topic/p ">
-      <xsl:apply-templates mode="html"/>
+      
+      <xsl:value-of select="."/>
+      <!--xsl:apply-templates mode="html"/-->
     </p>
   </xsl:template>
 

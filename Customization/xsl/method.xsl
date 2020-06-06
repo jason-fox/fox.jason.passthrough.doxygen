@@ -190,7 +190,7 @@
       </xsl:if>
 
 
-
+      <xsl:call-template name="parse-detailed-description"/>
       <xsl:call-template name="parameter-description"/>
       <xsl:call-template name="return-description"/>
     </xsl:variable>
