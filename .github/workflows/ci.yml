@@ -23,22 +23,6 @@ jobs:
   #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   #         SONAR_CLOUD_LOGIN: ${{ secrets.SONAR_CLOUD_LOGIN }}
 
-  build-dita:
-    name: Build DITA
-    runs-on: ubuntu-latest
-    steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-      - name: Build PDF
-        uses: jason-fox/dita-build-action@master
-        with:
-          plugins: |
-            https://github.com/jason-fox/fox.jason.passthrough/archive/master.zip
-            https://github.com/jason-fox/fox.jason.passthrough.doxygen/archive/master.zip
-          build: |
-            dita -i ./test/cppdoc/document.ditamap -o out  -f pdf -v
-
-
   unit-test:
     name: Unit Tests
     runs-on: ubuntu-latest
@@ -50,7 +34,5 @@ jobs:
         with:
           dita-ot-version: 3.6
           plugin: 'fox.jason.passthrough.doxygen'
-          prerequisites: |
-            https://github.com/jason-fox/fox.jason.passthrough/archive/master.zip
         env:
           COVERALLS_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
