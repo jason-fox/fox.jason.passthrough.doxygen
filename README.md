@@ -101,8 +101,6 @@ rm dita-ot-3.6.zip
 -   Run the plug-in installation commands:
 
 ```console
-dita install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
-dita install https://github.com/jason-fox/fox.jason.passthrough/archive/master.zip
 dita install https://github.com/jason-fox/fox.jason.passthrough.doxygen/archive/master.zip
 ```
 
@@ -142,8 +140,3 @@ the filename will be replaced by spaces in title.
 ## License
 
 [Apache 2.0](LICENSE) © 2020-2021 Jason Fox
-
-The Program includes the following additional software components which were obtained under license:
-
--   xmltask.jar - http://www.oopsconsultancy.com/software/xmltask/ - **Apache 1.1 license** (within
-    `org.doctales.xmltask` plug-in)
