@@ -3,10 +3,9 @@
   This file is part of the DITA-OT Doxygen Plug-in project.
   See the accompanying LICENSE file for applicable licenses.
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet exclude-result-prefixes="dita-ot" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot"
-                xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
                 version="3.0">
   
   <xsl:param name="output.dir.uri"/>
@@ -22,12 +21,12 @@
      Overall API Reference listing.
   -->
   <xsl:template match="/">
-    <topic id="sample" domains="(topic abbrev-d) a(props deliveryTarget) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic sw-d) (topic svg-d) (topic ui-d) (topic ut-d) (topic markup-d xml-d)" xmlns:dita="http://dita-ot.sourceforge.net/ns/201007/dita-ot" class="- topic/topic " ditaarch:DITAArchVersion="1.3" props="doxygen">
+    <topic id="sample" domains="(topic abbrev-d) a(props deliveryTarget) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic sw-d) (topic svg-d) (topic ui-d) (topic ut-d) (topic markup-d xml-d)" class="- topic/topic " props="doxygen">
       <title class="- topic/title ">API Reference</title>
       <body class="- topic/body ">
         <section class="- topic/section ">
           <title class="- topic/title " >Namespaces</title>
-          <ul class=" topic/ul ">
+          <ul class="- topic/ul ">
           <xsl:for-each select="//namespaces/compounddef">
             <xsl:sort select="compoundname"/>
             <xsl:call-template name="add-package-summary"/>
@@ -112,18 +111,18 @@
   <xsl:template name="mini-table">
     <xsl:param name = "header" />
     <xsl:param name = "body" />
-    <tgroup class=" topic/tgroup " cols="1">
-      <colspec class=" topic/colspec " colname="c1" colnum="1" colwidth="100%"/>
-      <thead class=" topic/thead ">
-        <row class=" topic/row ">
-          <entry class=" topic/entry " colname="c1" dita-ot:x="1" align="left">
+    <tgroup class="- topic/tgroup " cols="1">
+      <colspec class="- topic/colspec " colname="c1" colnum="1" colwidth="100%"/>
+      <thead class="- topic/thead ">
+        <row class="- topic/row ">
+          <entry class="- topic/entry " colname="c1" align="left">
             <xsl:copy-of select="$header"/>
           </entry>
         </row>
       </thead>
-      <tbody class=" topic/tbody ">
-         <row class=" topic/row ">
-          <entry class=" topic/entry " colname="c1" dita-ot:x="1" align="left">
+      <tbody class="- topic/tbody ">
+         <row class="- topic/row ">
+          <entry class="- topic/entry " colname="c1" align="left">
             <xsl:copy-of select="$body"/>
           </entry>
         </row>

@@ -3,44 +3,16 @@
   This file is part of the DITA-OT Doxygen Plug-in project.
   See the accompanying LICENSE file for applicable licenses.
 -->
-<project name="fox.jason.passthrough.doxygen">
-
-	<!--
-		Create doxygen processing macros.
-	-->
-	<target name="doxygen.process.pre">
-		<!--
-			Individual file processing for doxygen.
-			Take an input format run doxygen against it and convert to DITA
-
-			@param src - The input file to convert to DITA
-			@param dest - The output file location
-			@param title - The title of the converted file
-			@param metadata - The metadata of the converted file
-		-->
-		<macrodef name="add-doxygen-file">
-			<attribute name="src" />
-			<attribute name="dest" />
-			<attribute name="title" />
-			<attribute name="metadata"/>
-			<sequential>
-				<echo taskname="doxygen" level="info" message="Processing @{src}"/>
-
-				<local name="doxygen.temp.file"/>
-				<tempfile deleteonexit="true" destdir="${dita.temp.dir}" 
-				property="doxygen.temp.file" suffix=".xml"/>
-				<xslt taskname="doxygen" in="@{src}" out="${doxygen.temp.file}" force="true" style="${dita.plugin.fox.jason.passthrough.doxygen.dir}/xsl/preprocess.xsl"/>
-				<xslt taskname="doxygen" in="${doxygen.temp.file}" out="@{dest}" force="true" style="${dita.plugin.fox.jason.passthrough.doxygen.dir}/xsl/doxygen2dita.xsl"/>
-				<copy file="@{dest}" tofile="${output.dir}/test.xml"/>
-			</sequential>
-		</macrodef>
-	</target>
-
+<project name="fox.jason.passthrough.doxygen"  default="doxygen.process">
 
 	<!--
 		Iterate across all files marked format="doxygen" and process them
 	-->
 	<target name="doxygen.process">
-		<passthrough-iterate format="doxygen" macro="add-doxygen-file"/>
+		
+		<tempfile deleteonexit="true" destdir="${java.io.tmpdir}" 
+				property="doxygen.temp.file" suffix=".xml"/>
+		<xslt taskname="doxygen" in="${passthrough.input}" out="${doxygen.temp.file}" force="true" style="${basedir}/xsl/preprocess.xsl"/>
+		<xslt taskname="doxygen" in="${doxygen.temp.file}" out="${passthrough.output}" force="true" style="${basedir}/xsl/doxygen2dita.xsl"/>
 	</target>
 </project>

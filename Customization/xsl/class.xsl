@@ -3,16 +3,15 @@
   This file is part of the DITA-OT Doxygen Plug-in project.
   See the accompanying LICENSE file for applicable licenses.
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet exclude-result-prefixes="dita-ot" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot"
-                xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
                 version="2.0">
   <!--
      Class Overview
   -->
   <xsl:template match="compounddef" mode="class">
-    <topic domains="(topic abbrev-d) a(props deliveryTarget) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic sw-d) (topic svg-d) (topic ui-d) (topic ut-d) (topic markup-d xml-d)" xmlns:dita="http://dita-ot.sourceforge.net/ns/201007/dita-ot" class="- topic/topic " ditaarch:DITAArchVersion="1.3" props="doxygen">
+    <topic domains="(topic abbrev-d) a(props deliveryTarget) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic sw-d) (topic svg-d) (topic ui-d) (topic ut-d) (topic markup-d xml-d)" class="- topic/topic " props="doxygen">
       <xsl:attribute name="id">
         <xsl:value-of select="dita-ot:name-to-id(compoundname)"/>
       </xsl:attribute>
@@ -36,13 +35,13 @@
         <xsl:if test="basecompoundref/@refid">
           <xsl:if test="starts-with(basecompoundref/@refid, 'interface')">
             <p class="- topic/p ">
-              <b class=" hi-d/b ">
+              <b class="+ topic/ph hi-d/b ">
                 <xsl:text>All Implemented Interfaces:</xsl:text>
               </b>
             </p>
-            <ul class=" topic/ul ">
+            <ul class="- topic/ul ">
               <xsl:for-each select="basecompoundref">
-                <li class=" topic/li ">
+                <li class="- topic/li ">
                   <xsl:call-template name="add-link" >
                     <xsl:with-param name="type" select="'topic'" />
                     <xsl:with-param name="href" select="concat('#', .)" />
@@ -55,13 +54,13 @@
         </xsl:if>
         <xsl:if test="derivedcompoundref">
           <p class="- topic/p ">
-            <b class=" hi-d/b ">
+            <b class="+ topic/ph hi-d/b ">
               <xsl:text>Direct Known Subclasses:</xsl:text>
             </b>
           </p>
-          <ul class=" topic/ul ">
+          <ul class="- topic/ul ">
             <xsl:for-each select="derivedcompoundref">
-               <li class=" topic/li ">
+               <li class="- topic/li ">
                 <xsl:call-template name="add-link" >
                   <xsl:with-param name="type" select="'topic'" />
                   <xsl:with-param name="href" select="concat('#', .)" />
@@ -72,10 +71,10 @@
           </ul>
         </xsl:if>
 
-        <codeblock class=" pr-d/codeblock ">
+        <codeblock class="+ topic/pre pr-d/codeblock ">
           <xsl:attribute name="xtrc" select="concat('codeblock:',generate-id(.),'1')"/>
           <xsl:value-of select="concat(@prot, ' class ')"/>
-          <b class=" hi-d/b "><xsl:value-of select="replace(compoundname,'^.*::','')"/></b>
+          <b class="+ topic/ph hi-d/b "><xsl:value-of select="replace(compoundname,'^.*::','')"/></b>
           <xsl:choose>
             <xsl:when test="basecompoundref/@refid">
                 <xsl:variable name="extends" select="basecompoundref/@refid"/>
@@ -174,23 +173,23 @@
     Constructor Summary
   -->
   <xsl:template name="add-constructor-summary">
-    <table class=" topic/table " outputclass="constructor_summary">
-      <tgroup class=" topic/tgroup " cols="1">
-        <colspec class=" topic/colspec " colname="c1" colnum="1" colwidth="100%"/>
-        <thead class=" topic/thead ">
-          <row class=" topic/row ">
-            <entry class=" topic/entry " colname="c1" dita-ot:x="1" align="left">
+    <table class="- topic/table " outputclass="constructor_summary">
+      <tgroup class="- topic/tgroup " cols="1">
+        <colspec class="- topic/colspec " colname="c1" colnum="1" colwidth="100%"/>
+        <thead class="- topic/thead ">
+          <row class="- topic/row ">
+            <entry class="- topic/entry " colname="c1" align="left">
                <xsl:text>Constructor and Description</xsl:text>
             </entry>
           </row>
         </thead>
-        <tbody class=" topic/tbody ">
+        <tbody class="- topic/tbody ">
           <xsl:for-each select="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and type='' and @prot='public']">
             <xsl:sort select="name"/>
             <xsl:variable name="constructor" select="name"/>
-            <row class=" topic/row ">
-               <entry class=" topic/entry " colname="c1"  dita-ot:x="1" align="left">
-                <codeph class=" pr-d/codeph ">
+            <row class="- topic/row ">
+               <entry class="- topic/entry " colname="c1"  align="left">
+                <codeph class="+ topic/ph pr-d/codeph ">
                   <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'1')"/>
                   <xsl:call-template name="add-link" >
                     <xsl:with-param name="type" select="'table'" />
@@ -221,7 +220,7 @@
   <xsl:template match="memberdef" mode="constructor">
     <xsl:variable name="constructor" select="name"/>
     <xsl:variable name="constructor_details">
-      <codeblock class=" pr-d/codeblock ">
+      <codeblock class="+ topic/pre pr-d/codeblock ">
         <xsl:attribute name="xtrc" select="concat('codeblock:',generate-id(.),'9')"/>
         <xsl:value-of select="$constructor"/>
         <xsl:call-template name="add-signature"/>
@@ -237,7 +236,7 @@
       <xsl:call-template name="parameter-description"/>
     </xsl:variable>
 
-    <table class=" topic/table " outputclass="constructor_details">
+    <table class="- topic/table " outputclass="constructor_details">
       <xsl:attribute name="id">
         <xsl:value-of select="concat('constructors_',$constructor)"/>
         <xsl:if test="count(../memberdef[name=$constructor])&gt;1">
@@ -258,27 +257,27 @@
     Field Summary
   -->
   <xsl:template name="add-field-summary">
-    <table class=" topic/table " outputclass="field_summary">
-      <tgroup class=" topic/tgroup " cols="2">
-        <colspec class=" topic/colspec " colname="c1" colnum="1" colwidth="25%"/>
-        <colspec class=" topic/colspec " colname="c2" colnum="2" colwidth="75%"/>
-        <thead class=" topic/thead ">
-          <row class=" topic/row ">
-            <entry class=" topic/entry " colname="c1" dita-ot:x="1" align="left">
+    <table class="- topic/table " outputclass="field_summary">
+      <tgroup class="- topic/tgroup " cols="2">
+        <colspec class="- topic/colspec " colname="c1" colnum="1" colwidth="25%"/>
+        <colspec class="- topic/colspec " colname="c2" colnum="2" colwidth="75%"/>
+        <thead class="- topic/thead ">
+          <row class="- topic/row ">
+            <entry class="- topic/entry " colname="c1" align="left">
                <xsl:text>Modifier and Type</xsl:text>
             </entry>
-            <entry class=" topic/entry " colname="c2" dita-ot:x="2" align="left">
+            <entry class="- topic/entry " colname="c2" align="left">
                <xsl:text>Field and Description</xsl:text>
             </entry>
           </row>
         </thead>
-        <tbody class=" topic/tbody ">
+        <tbody class="- topic/tbody ">
           <xsl:for-each select="sectiondef[contains(@kind,'-attrib')]/memberdef[@kind='variable' and @prot='public']">
             <xsl:sort select="name"/>
             <xsl:variable name="field" select="name"/>
-            <row class=" topic/row ">
-              <entry class=" topic/entry " colname="c1"  dita-ot:x="1" align="left">
-                <codeph class=" pr-d/codeph ">
+            <row class="- topic/row ">
+              <entry class="- topic/entry " colname="c1"  align="left">
+                <codeph class="+ topic/ph pr-d/codeph ">
                   <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'3')"/>
                   <xsl:call-template name="add-modifiers"/>
                   <xsl:call-template name="add-class-link">
@@ -286,8 +285,8 @@
                   </xsl:call-template>
                 </codeph>
               </entry>
-               <entry class=" topic/entry " colname="c2"  dita-ot:x="2" align="left">
-                <codeph class=" pr-d/codeph ">
+               <entry class="- topic/entry " colname="c2"  align="left">
+                <codeph class="+ topic/ph pr-d/codeph ">
                   <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'4')"/>
                   <xsl:call-template name="add-link" >
                     <xsl:with-param name="type" select="'table'" />
@@ -317,7 +316,7 @@
   <xsl:template match="memberdef" mode="field">
     <xsl:variable name="field" select="name"/>
     <xsl:variable name="field_details">
-      <codeph class=" pr-d/codeph ">
+      <codeph class="+ topic/ph pr-d/codeph ">
         <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'5')"/>
         <xsl:value-of select="concat(@scope, ' ')"/>
         <xsl:if test="@static='true'">
@@ -334,7 +333,7 @@
       <xsl:call-template  name="parse-detailed-description"/>
     </xsl:variable>
 
-    <table class=" topic/table " outputclass="field_details">
+    <table class="- topic/table " outputclass="field_details">
       <xsl:attribute name="id">
         <xsl:value-of select="concat('fields_',$field)"/>
         <xsl:if test="count(../memberdef[name=$field])&gt;1">

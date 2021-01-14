@@ -3,10 +3,9 @@
   This file is part of the DITA-OT Doxygen Plug-in project.
   See the accompanying LICENSE file for applicable licenses.
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet exclude-result-prefixes="dita-ot" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot"
-                xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
                 version="2.0">
 
   <!--
@@ -23,7 +22,7 @@
   -->
   <xsl:template match="h1|h2|h3|h4|h5|h6" mode="html">
     <p class="- topic/p ">
-      <b class=" hi-d/b ">
+      <b class="+ topic/ph hi-d/b ">
         <xsl:apply-templates mode="html"/>
       </b>
     </p>
@@ -44,7 +43,7 @@
     Unordered list processing
   -->
   <xsl:template match="ul" mode="html">
-    <ul class=" topic/ul ">
+    <ul class="- topic/ul ">
       <xsl:apply-templates mode="html"/>
     </ul>
   </xsl:template>
@@ -53,7 +52,7 @@
     Ordered list processing
   -->
   <xsl:template match="ol" mode="html">
-    <ol class=" topic/ol ">
+    <ol class="- topic/ol ">
       <xsl:apply-templates mode="html"/>
     </ol>
   </xsl:template>
@@ -65,18 +64,18 @@
   <xsl:template match="li" mode="html">
     <xsl:choose>
       <xsl:when test="../name()='ul'">
-        <li class=" topic/li ">
+        <li class="- topic/li ">
           <xsl:apply-templates mode="html"/>
         </li>
       </xsl:when>
       <xsl:when test="../name()='ol'">
-        <li class=" topic/li ">
+        <li class="- topic/li ">
           <xsl:apply-templates mode="html"/>
         </li>
       </xsl:when>
       <xsl:otherwise>
-        <ul class=" topic/ul ">
-          <li class=" topic/li ">
+        <ul class="- topic/ul ">
+          <li class="- topic/li ">
             <xsl:apply-templates mode="html"/>
           </li>
         </ul>
@@ -88,7 +87,7 @@
     Code processing
   -->
   <xsl:template match="code" mode="html">
-    <codeph class=" pr-d/codeph ">
+    <codeph class="+ topic/ph pr-d/codeph ">
       <xsl:apply-templates mode="html"/>
     </codeph>
   </xsl:template>
@@ -97,7 +96,7 @@
     Bold/Strong processing
   -->
   <xsl:template match="b|strong" mode="html">
-    <b class=" hi-d/b ">
+    <b class="+ topic/ph hi-d/b ">
       <xsl:apply-templates mode="html"/>
     </b>
   </xsl:template>
@@ -115,7 +114,7 @@
     Anchor processing
   -->
   <xsl:template match="a" mode="html">
-    <xref class=" topic/xref " format="dita" scope="external">
+    <xref class="- topic/xref " format="dita" scope="external">
       <xsl:attribute name="href">
         <xsl:value-of select="@href"/>
       </xsl:attribute>
@@ -139,7 +138,7 @@
       <xsl:when test="../name()='root'">
         <xsl:choose>
           <xsl:when test="contains($text,'&#10;&#10;') ">
-            <lines class=" topic/lines ">
+            <lines class="- topic/lines ">
               <xsl:value-of select="$text"/>
             </lines>
           </xsl:when>

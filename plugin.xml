@@ -6,6 +6,7 @@
 -->
 <plugin id="fox.jason.passthrough.doxygen" version="1.0.0">
 	<feature extension="ant.import" file="process_doxygen.xml"/>
+	<feature extension="dita.conductor.lib.import" file="lib/passthrough.doxygen-1.0.jar"/>
 	<!--
 		This plugin requires the passthrough reader
 	-->
@@ -13,10 +14,8 @@
 	
 	<!-- Uses the passthrough extension point and file reader -->
 	<feature extension="dita.parser">
-		<parser format="doxygen" class="fox.jason.passthrough.parser.FileReader"/>
+		<parser format="doxygen" class="fox.jason.passthrough.DoxygenReader"/>
 	</feature>
-	<feature extension="passthrough.pre" value="doxygen.process.pre"/>
-	<feature extension="passthrough.process" value="doxygen.process"/>
 	<!-- PDF extension point -->
 	<feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
 </plugin>

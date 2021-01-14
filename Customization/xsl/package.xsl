@@ -12,7 +12,7 @@
     Package Summary
   -->
   <xsl:template name="add-package-summary">
-    <li class=" topic/li ">
+    <li class="- topic/li ">
       <xsl:call-template name="add-link" >
         <xsl:with-param name="type" select="'topic'" />
         <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(compoundname))" />
@@ -27,7 +27,7 @@
      Package Overview
   -->
   <xsl:template match="compounddef" mode="package">
-    <topic domains="(topic abbrev-d) a(props deliveryTarget) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic sw-d) (topic svg-d) (topic ui-d) (topic ut-d) (topic markup-d xml-d)" xmlns:dita="http://dita-ot.sourceforge.net/ns/201007/dita-ot" class="- topic/topic " ditaarch:DITAArchVersion="1.3" props="doxygen">
+    <topic domains="(topic abbrev-d) a(props deliveryTarget) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic sw-d) (topic svg-d) (topic ui-d) (topic ut-d) (topic markup-d xml-d)" class="- topic/topic " props="doxygen">
       <xsl:attribute name="id">
         <xsl:value-of select="dita-ot:name-to-id(compoundname)"/>
       </xsl:attribute>
@@ -51,7 +51,7 @@
             <title class="- topic/title " >
               <xsl:text>Class Summary</xsl:text>
             </title>
-            <ul class=" topic/ul ">
+            <ul class="- topic/ul ">
               <xsl:for-each select="../classes/compounddef">
                 <xsl:sort select="name"/>
                 <xsl:call-template name="add-items-list"/>
@@ -65,7 +65,7 @@
             <title class="- topic/title " >
               <xsl:text>Exception Summary</xsl:text>
             </title>
-            <ul class=" topic/ul ">
+            <ul class="- topic/ul ">
               <xsl:for-each select="class[@exception='true']">
                 <xsl:sort select="@name"/>
                 <xsl:call-template name="add-items-list"/>
@@ -78,7 +78,7 @@
             <title class="- topic/title " >
               <xsl:text>Interface Summary</xsl:text>
             </title>
-            <ul class=" topic/ul ">
+            <ul class="- topic/ul ">
               <xsl:for-each select="../interfaces/compounddef">
                 <xsl:sort select="name"/>
                 <xsl:call-template name="add-items-list"/>
@@ -91,7 +91,7 @@
             <title class="- topic/title " >
               <xsl:text>Enumeration Summary</xsl:text>
             </title>
-            <ul class=" topic/ul ">
+            <ul class="- topic/ul ">
               <xsl:for-each select="../enums/compounddef">
                 <xsl:sort select="name"/>
                 <xsl:call-template name="add-items-list"/>
@@ -115,7 +115,7 @@
     Summary listing for Classes, Interfaces and Enumeration
   -->
   <xsl:template name="add-items-list">
-    <li class=" topic/li ">
+    <li class="- topic/li ">
       <xsl:call-template name="add-link" >
         <xsl:with-param name="type" select="'topic'" />
         <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(compoundname))" />
