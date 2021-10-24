@@ -1,18 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><!--ant-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!--ant-->
 <!--
   This file is part of the DITA-OT Doxygen Plug-in project.
   See the accompanying LICENSE file for applicable licenses.
 -->
-<project name="fox.jason.passthrough.doxygen"  default="doxygen.process">
+<project name="fox.jason.passthrough.doxygen" default="doxygen.process">
 
 	<!--
 		Iterate across all files marked format="doxygen" and process them
 	-->
 	<target name="doxygen.process">
 		
-		<tempfile deleteonexit="true" destdir="${java.io.tmpdir}" 
-				property="doxygen.temp.file" suffix=".xml"/>
-		<xslt taskname="doxygen" in="${passthrough.input}" out="${doxygen.temp.file}" force="true" style="${basedir}/xsl/preprocess.xsl"/>
-		<xslt taskname="doxygen" in="${doxygen.temp.file}" out="${passthrough.output}" force="true" style="${basedir}/xsl/doxygen2dita.xsl"/>
+		<tempfile
+      deleteonexit="true"
+      destdir="${java.io.tmpdir}"
+      property="doxygen.temp.file"
+      suffix=".xml"
+    />
+		<xslt
+      taskname="doxygen"
+      in="${passthrough.input}"
+      out="${doxygen.temp.file}"
+      force="true"
+      style="${basedir}/xsl/preprocess.xsl"
+    />
+		<xslt
+      taskname="doxygen"
+      in="${doxygen.temp.file}"
+      out="${passthrough.output}"
+      force="true"
+      style="${basedir}/xsl/doxygen2dita.xsl"
+    />
 	</target>
 </project>

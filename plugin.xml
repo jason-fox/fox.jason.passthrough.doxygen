@@ -6,8 +6,14 @@
 -->
 <plugin id="fox.jason.passthrough.doxygen" version="1.0.0">
 	<feature extension="ant.import" file="process_doxygen.xml"/>
-	<feature extension="dita.conductor.lib.import" file="lib/passthrough.doxygen-1.0.jar"/>
-	<feature extension="dita.conductor.lib.import" file="lib/passthrough.parser-4.0.jar"/>
+	<feature
+    extension="dita.conductor.lib.import"
+    file="lib/passthrough.doxygen-1.0.jar"
+  />
+	<feature
+    extension="dita.conductor.lib.import"
+    file="lib/passthrough.parser-4.0.jar"
+  />
 	
 	<!-- Uses the passthrough Doxygen file reader -->
 	<feature extension="dita.parser">
