@@ -139,4 +139,4 @@ the filename will be replaced by spaces in title.
 
 ## License
 
-[Apache 2.0](LICENSE) © 2020-2021 Jason Fox
+[Apache 2.0](LICENSE) © 2020 - 2022 Jason Fox
