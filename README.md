@@ -4,7 +4,6 @@
 [![DITA-OT 4.0](https://img.shields.io/badge/DITA--OT-4.0-green.svg)](http://www.dita-ot.org/4.0)
 [![CI](https://github.com/jason-fox/fox.jason.passthrough.doxygen/workflows/CI/badge.svg)](https://github.com/jason-fox/fox.jason.passthrough.doxygen/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.passthrough.doxygen/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.passthrough.doxygen?branch=master)
-[![Documentation Status](https://readthedocs.org/projects/doxygendita-ot/badge/?version=latest)](https://doxygendita-ot.readthedocs.io/en/latest/?badge=latest)
 
 This is a [DITA-OT Plug-in](https://www.dita-ot.org/plugins) used to auto-create valid DITA-based Doxygen documentation.
 The initial source of the documentation can be generated directly using the
