@@ -1,7 +1,7 @@
 # Doxygen Plugin for DITA-OT [<img src="https://jason-fox.github.io/fox.jason.passthrough.doxygen/doxygen.png" align="right" width="300">](http://doxygendita-ot.rtfd.io/)
 
 [![license](https://img.shields.io/github/license/jason-fox/fox.jason.passthrough.doxygen.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![DITA-OT 4.0](https://img.shields.io/badge/DITA--OT-4.0-blue.svg)](http://www.dita-ot.org/4.0)
+[![DITA-OT 4.0](https://img.shields.io/badge/DITA--OT-4.0-green.svg)](http://www.dita-ot.org/4.0)
 [![CI](https://github.com/jason-fox/fox.jason.passthrough.doxygen/workflows/CI/badge.svg)](https://github.com/jason-fox/fox.jason.passthrough.doxygen/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.passthrough.doxygen/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.passthrough.doxygen?branch=master)
 [![Documentation Status](https://readthedocs.org/projects/doxygendita-ot/badge/?version=latest)](https://doxygendita-ot.readthedocs.io/en/latest/?badge=latest)
