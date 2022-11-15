@@ -84,16 +84,22 @@
           <b class="+ topic/ph hi-d/b "><xsl:value-of select="replace(compoundname,'^.*::','')"/></b>
           <xsl:choose>
             <xsl:when test="basecompoundref/@refid">
-                <xsl:variable name="extends" select="basecompoundref/@refid"/>
-                <xsl:text> extends </xsl:text>
+              <xsl:variable name="extends" select="basecompoundref/@refid"/>
+              <xsl:text> extends </xsl:text>
+             
+              <xsl:for-each select="basecompoundref">
                 <xsl:call-template name="add-link">
                   <xsl:with-param name="type" select="'topic'"/>
                   <xsl:with-param
-                  name="href"
-                  select="concat('#', dita-ot:name-to-id(//compounddef[@id=$extends]/compoundname))"
-                />
-                  <xsl:with-param name="text" select="replace(basecompoundref,'^.*\.','')"/>
+                    name="href"
+                    select="concat('#',   dita-ot:name-to-id(//compounddef[@id=$extends]/compoundname))"
+                  />
+                  <xsl:with-param name="text" select="replace(.,'^.*\.','')"/>
                 </xsl:call-template>
+                <xsl:if test="count(basecompoundref) &gt; 1">
+                  <xsl:text> </xsl:text>
+                </xsl:if>
+              </xsl:for-each>
             </xsl:when>
             <xsl:when test="basecompoundref">
               <xsl:value-of select="concat(' extends ', basecompoundref)"/>
