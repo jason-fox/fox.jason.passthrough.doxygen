@@ -24,7 +24,7 @@ processed as if it had been written in DITA.
 
 ## Background
 
-[<img src="https://jason-fox.github.io/fox.jason.passthrough.doxygen/javalogo.png" align="right" height="55">](https://docs.oracle.com/javase/1.5.0/docs/guide/doxygen/index.html)
+[<img src="https://jason-fox.github.io/fox.jason.passthrough.doxygen/doxygen-logo.png" align="right" height="55">](https://docs.oracle.com/javase/1.5.0/docs/guide/doxygen/index.html)
 
 [Doxygen](http://www.doxygen.nl/manual/) is a tool that parses the declarations and
 documentation comments in a set of source files and produces a set of HTML pages describing the classes, interfaces,
@@ -65,7 +65,7 @@ namespace transport
 
 #### Sample DITA Output
 
-> ![](https://jason-fox.github.io/fox.jason.passthrough.doxygen/doxygen-output.png)
+> ![](https://jason-fox.github.io/fox.jason.passthrough.doxygen/mountainbike.png)
 
 ## Install
 
