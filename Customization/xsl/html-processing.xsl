@@ -37,8 +37,7 @@
   <xsl:template match="para" mode="html">
     <p class="- topic/p ">
       
-      <xsl:value-of select="."/>
-      <!--xsl:apply-templates mode="html"/-->
+      <xsl:apply-templates mode="html"/>
     </p>
   </xsl:template>
 
@@ -93,6 +92,15 @@
     <codeph class="+ topic/ph pr-d/codeph ">
       <xsl:apply-templates mode="html"/>
     </codeph>
+  </xsl:template>
+
+  <!--
+    Codeblock processing
+  -->
+  <xsl:template match="programlisting" mode="html">
+    <codeblock class="+ topic/pre pr-d/codeblock ">
+      <xsl:apply-templates mode="html"/>
+    </codeblock>
   </xsl:template>
 
   <!--
