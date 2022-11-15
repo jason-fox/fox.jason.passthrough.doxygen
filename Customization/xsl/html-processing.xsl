@@ -35,10 +35,16 @@
     Paragraph processing
   -->
   <xsl:template match="para" mode="html">
-    <p class="- topic/p ">
-      
-      <xsl:apply-templates mode="html"/>
-    </p>
+    <xsl:choose>
+      <xsl:when test="ancestor::para">
+        <xsl:apply-templates mode="html"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <p class="- topic/p ">
+          <xsl:apply-templates mode="html"/>
+        </p>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <!--
