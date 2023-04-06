@@ -30,7 +30,14 @@
       </b>
     </p>
   </xsl:template>
-
+  
+  <!--
+    Process white spaces in code blocks
+  -->
+  <xsl:template match="sp" mode="html">
+    <xsl:text> </xsl:text>
+  </xsl:template>
+  
   <!--
     Paragraph processing
   -->
