@@ -110,6 +110,7 @@
             </xsl:when>
           </xsl:choose>
         </codeblock>
+        <xsl:call-template name="parse-brief-description"/>
         <xsl:call-template name="parse-detailed-description"/>
 
         <xsl:if test="sectiondef[contains(@kind,'-attrib')]/memberdef[@kind='variable' and @prot='public']">
