@@ -346,7 +346,14 @@
           <xsl:with-param name="text" select="replace($refid,'^.*\.','')"/>
         </xsl:call-template>
       </xsl:when>
-       <xsl:when test="starts-with($class,'java.lang.')">
+      <xsl:when test="//memberdef[@id=$class]">
+        <xsl:call-template name="add-link">
+          <xsl:with-param name="type" select="'topic'"/>
+          <xsl:with-param name="href" select="concat('#', $refid)"/>
+          <xsl:with-param name="text" select="//memberdef[@id=$class]/name"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="starts-with($class,'java.lang.')">
          <xsl:value-of select="dita-ot:addZeroWidthSpaces($class)"/>
       </xsl:when>
       <xsl:when test="$class">
