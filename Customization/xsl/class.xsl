@@ -113,6 +113,15 @@
         <xsl:call-template name="parse-brief-description"/>
         <xsl:call-template name="parse-detailed-description"/>
 
+        <xsl:if test="sectiondef/memberdef[@kind='typedef' and @prot='public']">
+          <!-- Class typedef Summary -->
+          <section class="- topic/section " outputclass="typedefs_summary">
+            <title class="- topic/title ">
+              <xsl:text>Types Summary</xsl:text>
+            </title>
+            <xsl:call-template name="add-typedefs-summary"/>
+          </section>
+        </xsl:if>
         <xsl:if test="sectiondef[contains(@kind,'-attrib')]/memberdef[@kind='variable' and @prot='public']">
           <!-- Class Field Summary -->
           <section class="- topic/section " outputclass="fields_summary">
@@ -388,4 +397,49 @@
     </table>
     <p class="- topic/p "/>
   </xsl:template>
+
+
+  <!--
+    Typedefs Summary
+  -->
+  <xsl:template name="add-typedefs-summary">
+    <table class="- topic/table " outputclass="typedefs_summary">
+      <tgroup class="- topic/tgroup " cols="2">
+        <colspec class="- topic/colspec " colname="c1" colnum="1" colwidth="25%"/>
+        <colspec class="- topic/colspec " colname="c2" colnum="2" colwidth="75%"/>
+        <thead class="- topic/thead ">
+          <row class="- topic/row ">
+            <entry class="- topic/entry " colname="c1" align="left">
+              <xsl:text>Name</xsl:text>
+            </entry>
+            <entry class="- topic/entry " colname="c2" align="left">
+              <xsl:text>Description</xsl:text>
+            </entry>
+          </row>
+        </thead>
+        <tbody class="- topic/tbody ">
+          <xsl:for-each select="sectiondef/memberdef[@kind='typedef' and @prot='public']">
+            <xsl:sort select="name"/>
+            <xsl:variable name="field" select="name"/>
+            <row class="- topic/row ">
+              <entry class="- topic/entry " colname="c1" align="left">
+                <codeph class="+ topic/ph pr-d/codeph ">
+                  <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'3')"/>
+                  <xsl:value-of select="name"/>
+                </codeph>
+              </entry>
+              <entry class="- topic/entry " colname="c2" align="left">
+                <xsl:if test="normalize-space(briefdescription)!=''">
+                  <xsl:value-of select="concat (' - ', briefdescription)"/>
+                </xsl:if>
+              </entry>
+            </row>
+          </xsl:for-each>
+        </tbody>
+      </tgroup>
+    </table>
+  </xsl:template>
+  
+
+
 </xsl:stylesheet>
