@@ -263,13 +263,11 @@
         <xsl:value-of select="$constructor"/>
         <xsl:call-template name="add-signature"/>
       </codeblock>
+      <xsl:call-template name="parse-brief-description"/>
       <xsl:choose>
-        <xsl:when test="detaileddescription/node()">
+          <xsl:when test="detaileddescription/node()">
           <xsl:call-template name="parse-detailed-description"/>
         </xsl:when>
-        <xsl:otherwise>
-          <xsl:call-template name="parse-brief-description"/>
-        </xsl:otherwise>
       </xsl:choose>
       <xsl:call-template name="parameter-description"/>
     </xsl:variable>
@@ -370,6 +368,7 @@
         </xsl:call-template>
         <xsl:value-of select="concat(' ',$field)"/>
       </codeph>
+      <xsl:call-template name="parse-brief-description"/>
       <xsl:call-template name="parse-detailed-description"/>
     </xsl:variable>
 
