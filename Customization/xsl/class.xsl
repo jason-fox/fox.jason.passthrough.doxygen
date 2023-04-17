@@ -83,7 +83,7 @@
           <xsl:value-of select="concat(@prot, ' class ')"/>
           <b class="+ topic/ph hi-d/b "><xsl:value-of select="replace(compoundname,'^.*::','')"/></b>
           <xsl:choose>
-            <xsl:when test="basecompoundref/@refid">
+            <xsl:when test="basecompoundref/@refid and //compounddef[@id=@refid]/compoundname">
               <xsl:text> extends </xsl:text>
              
               <xsl:for-each select="basecompoundref">
