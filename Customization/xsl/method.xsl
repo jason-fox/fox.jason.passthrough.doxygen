@@ -323,27 +323,27 @@
   <xsl:template name="add-class-link">
     <xsl:param name="class"/>
     <xsl:variable name="refid" select="replace(replace($class, '^(interface|class)', ''), '_1_1', '.')"/>
-
+    <xsl:variable name="reftext" select="replace($refid,'^.*\.','')"/>
     <xsl:choose>
       <xsl:when test="//compounddef[@kind='class' and @id=$class]">
         <xsl:call-template name="add-link">
           <xsl:with-param name="type" select="'topic'"/>
           <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="replace($refid,'^.*\.','')"/>
+          <xsl:with-param name="text" select="$reftext"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:when test="//compounddef[@kind='interface' and @id=$class]">
         <xsl:call-template name="add-link">
           <xsl:with-param name="type" select="'topic'"/>
           <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="replace($refid,'^.*\.','')"/>
+          <xsl:with-param name="text" select="$reftext"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:when test="//compounddef[@kind='interface' and @id=$class]">
         <xsl:call-template name="add-link">
           <xsl:with-param name="type" select="'topic'"/>
           <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="replace($refid,'^.*\.','')"/>
+          <xsl:with-param name="text" select="$reftext"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:when test="//memberdef[@id=$class]">
