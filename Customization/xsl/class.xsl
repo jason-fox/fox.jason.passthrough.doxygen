@@ -153,6 +153,25 @@
           <xsl:call-template name="add-inherited-method-summary"/>
         </section>
 
+         <xsl:if test="sectiondef/memberdef[@kind='typedef'and @prot='public']">
+          <!-- typedef Detail -->
+          <section class="- topic/section " outputclass="typedefs">
+            <xsl:attribute name="id">
+              <xsl:value-of select="concat(compoundname, '_typedefs')"/>
+            </xsl:attribute>
+            <title class="- topic/title ">
+              <xsl:text>Types Detail</xsl:text>
+            </title>
+            <xsl:apply-templates
+              select="sectiondef/memberdef[@kind='typedef' and @prot='public']"
+              mode="typedef"
+            >
+              <xsl:sort select="@id"/>
+            </xsl:apply-templates>
+          </section>
+        </xsl:if>
+
+
          <xsl:if test="sectiondef[contains(@kind,'-attrib')]/memberdef[@kind='variable'and @prot='public']">
           <!-- field Detail -->
           <section class="- topic/section " outputclass="fields">
@@ -440,6 +459,39 @@
     </table>
   </xsl:template>
   
+
+  <!--
+      typedef Details
+  -->
+  <xsl:template match="memberdef" mode="typedef">
+    <xsl:variable name="field" select="name"/>
+    <xsl:variable name="field_details">
+      <codeph class="+ topic/ph pr-d/codeph ">
+        <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'5')"/>
+        <xsl:value-of select="concat(' ',./definition)"/>
+      </codeph>
+      <xsl:call-template name="parse-brief-description"/>
+      <xsl:call-template name="parse-detailed-description"/>
+    </xsl:variable>
+
+    <table class="- topic/table " outputclass="typedef_details">
+      <xsl:attribute name="id">
+        <xsl:value-of select="concat('typedefs_',$field)"/>
+        <xsl:if test="count(../memberdef[name=$field])&gt;1">
+          <xsl:value-of select="count(following-sibling::memberdef[name=$field])"/>
+        </xsl:if>
+      </xsl:attribute>
+      <xsl:call-template name="mini-table">
+        <xsl:with-param name="header">
+          <xsl:value-of select="$field"/>
+        </xsl:with-param>
+        <xsl:with-param name="body" select="$field_details"/>
+      </xsl:call-template>
+    </table>
+    <p class="- topic/p "/>
+  </xsl:template>
+
+
 
 
 </xsl:stylesheet>
