@@ -444,7 +444,18 @@
               <entry class="- topic/entry " colname="c1" align="left">
                 <codeph class="+ topic/ph pr-d/codeph ">
                   <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'3')"/>
-                  <xsl:value-of select="name"/>
+                  <xsl:call-template name="add-link">
+                    <xsl:with-param name="type" select="'table'"/>
+                    <xsl:with-param name="href">
+                      <xsl:value-of
+                        select="concat('#', dita-ot:name-to-id(ancestor::compounddef/compoundname), '/typedefs_', $field)"
+                      />
+                      <xsl:if test="count(../memberdef[name=$field])&gt;1">
+                        <xsl:value-of select="count(following-sibling::memberdef[name=$field])"/>
+                      </xsl:if>
+                    </xsl:with-param>
+                    <xsl:with-param name="text" select="$field"/>
+                  </xsl:call-template>
                 </codeph>
               </entry>
               <entry class="- topic/entry " colname="c2" align="left">
