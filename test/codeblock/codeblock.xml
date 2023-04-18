@@ -1,0 +1,62 @@
+<?xml version="1.0" standalone="yes"?>
+<doxygen version="1.9.5" xml:lang="en-US"><compounddef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="class_i_o_driver_1_1_i_o_message_logging" kind="class" language="C++" prot="public">
+    <compoundname>IODriver::IOMessageLogging</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class used to add a generic logging layer to all drivers and plugins Example: <programlisting><codeline><highlight class="normal">&lt;extensions&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/extensions&gt;</highlight></codeline>
+</programlisting> Additionally channelId, messageId and messageName is supported. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>IODriver::IOMessageLogging</label>
+        <link refid="class_i_o_driver_1_1_i_o_message_logging"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>IODriver::IOMessageLogging</label>
+        <link refid="class_i_o_driver_1_1_i_o_message_logging"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="test.cpp" line="11" column="5" bodyfile="test.cpp" bodystart="12" bodyend="13"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef><compounddef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namespace_i_o_driver" kind="namespace" language="C++">
+    <compoundname>IODriver</compoundname>
+    <innerclass refid="class_i_o_driver_1_1_i_o_message_logging" prot="public">IODriver::IOMessageLogging</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test.cpp" line="1" column="1"/>
+  </compounddef><compounddef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="test_8cpp" kind="file" language="C++">
+    <compoundname>test.cpp</compoundname>
+    <innerclass refid="class_i_o_driver_1_1_i_o_message_logging" prot="public">IODriver::IOMessageLogging</innerclass>
+    <innernamespace refid="namespace_i_o_driver">IODriver</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">IODriver</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="class_i_o_driver_1_1_i_o_message_logging" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_i_o_driver_1_1_i_o_message_logging" kindref="compound">IOMessageLogging</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test.cpp"/>
+  </compounddef></doxygen>
