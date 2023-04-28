@@ -111,7 +111,7 @@
     
    
     <xsl:variable name="inherited_methods">
-      <xsl:text>Methods inherited from class </xsl:text>
+      <xsl:text>Methods inherited from </xsl:text>
       <xsl:value-of select="concat ('Class ',replace($inherited_id, '::\w*$','::'))"/>
 
       <xsl:call-template name="add-link">
