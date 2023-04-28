@@ -83,30 +83,32 @@
           <xsl:value-of select="concat(@prot, ' class ')"/>
           <b class="+ topic/ph hi-d/b "><xsl:value-of select="replace(compoundname,'^.*::','')"/></b>
           <xsl:choose>
-            <xsl:when test="basecompoundref/@refid and //compounddef[@id=@refid]/compoundname">
+            <xsl:when test="basecompoundref">
               <xsl:text> extends </xsl:text>
              
               <xsl:for-each select="basecompoundref">
                 <xsl:variable name="extends" select="@refid"/>
-                <xsl:variable name="extends-name" select="//compounddef[@id=$extends]/compoundname"/>
-                <xsl:if test="$extends-name">
-                  
-                <xsl:call-template name="add-link">
-                  <xsl:with-param name="type" select="'topic'"/>
-                  <xsl:with-param
-                    name="href"
-                      select="concat('#',   dita-ot:name-to-id($extends-name))"
-                  />
-                  <xsl:with-param name="text" select="replace(.,'^.*\.','')"/>
-                </xsl:call-template>
-                </xsl:if>
+                <xsl:variable name="extends-name" select="text()"/>
+                <xsl:choose>
+                    <xsl:when test="$extends-name">
+                        <xsl:call-template name="add-link">
+                          <xsl:with-param name="type" select="'topic'"/>
+                          <xsl:with-param
+                            name="href"
+                              select="concat('#',   dita-ot:name-to-id($extends-name))"
+                          />
+                          <xsl:with-param name="text" select="replace(.,'^.*\.','')"/>
+                        </xsl:call-template>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="."/>
+                    </xsl:otherwise>
+                    
+                </xsl:choose>
                 <xsl:if test="count(basecompoundref) &gt; 1">
                   <xsl:text> </xsl:text>
                 </xsl:if>
               </xsl:for-each>
-            </xsl:when>
-            <xsl:when test="basecompoundref">
-              <xsl:value-of select="concat(' extends ', basecompoundref)"/>
             </xsl:when>
           </xsl:choose>
         </codeblock>
