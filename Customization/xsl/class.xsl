@@ -51,7 +51,7 @@
                 <li class="- topic/li ">
                   <xsl:call-template name="add-link">
                     <xsl:with-param name="type" select="'topic'"/>
-                    <xsl:with-param name="href" select="concat('#', .)"/>
+                    <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(.))"/>
                     <xsl:with-param name="text" select="."/>
                   </xsl:call-template>
                 </li>
@@ -70,7 +70,7 @@
                <li class="- topic/li ">
                 <xsl:call-template name="add-link">
                   <xsl:with-param name="type" select="'topic'"/>
-                  <xsl:with-param name="href" select="concat('#', encode-for-uri(.))"/>
+                  <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(.))"/>
                   <xsl:with-param name="text" select="."/>
                 </xsl:call-template>
               </li>
