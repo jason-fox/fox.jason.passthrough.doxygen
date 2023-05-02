@@ -47,7 +47,25 @@
               </b>
             </p>
             <ul class="- topic/ul ">
-              <xsl:for-each select="basecompoundref">
+              <xsl:for-each select="basecompoundref[starts-with(@refid, 'interface')]">
+                <li class="- topic/li ">
+                  <xsl:call-template name="add-link">
+                    <xsl:with-param name="type" select="'topic'"/>
+                    <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(.))"/>
+                    <xsl:with-param name="text" select="."/>
+                  </xsl:call-template>
+                </li>
+              </xsl:for-each>
+            </ul>
+          </xsl:if>
+          <xsl:if test="not(starts-with(basecompoundref/@refid, 'interface'))">
+            <p class="- topic/p ">
+              <b class="+ topic/ph hi-d/b ">
+                <xsl:text>Direct Base Classes:</xsl:text>
+              </b>
+            </p>
+            <ul class="- topic/ul ">
+              <xsl:for-each select="basecompoundref[not(starts-with(@refid, 'interface'))]">
                 <li class="- topic/li ">
                   <xsl:call-template name="add-link">
                     <xsl:with-param name="type" select="'topic'"/>
