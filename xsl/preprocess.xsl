@@ -11,7 +11,7 @@
 
   <xsl:template match="/">
   	<root>
-      <xsl:for-each select="doxygen/compounddef[@kind='namespace' and innerclass]">
+      <xsl:for-each select="doxygen/compounddef[@kind='namespace' and (innerclass or innernamespace)]">
         <xsl:sort select="@id"/>
         <xsl:variable name="id">
           <xsl:value-of select="@id"/>
