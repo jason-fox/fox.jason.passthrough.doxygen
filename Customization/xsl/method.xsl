@@ -31,7 +31,7 @@
         </thead>
         <tbody class="- topic/tbody ">
           <xsl:for-each
-            select="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and not(type='') and @prot='public']"
+            select="sectiondef/memberdef[ (@kind='function' or @kind='slot') and not(type='') and @prot='public']"
           >
             <xsl:sort select="name"/>
             <xsl:variable name="method" select="name"/>
@@ -41,7 +41,8 @@
                   <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'12')"/>
                   <xsl:call-template name="add-modifiers"/>
                   <xsl:call-template name="add-type-link">
-                    <xsl:with-param name="type" select="type"/>
+                    <xsl:with-param name="refid" select="type/ref/@refid"/>
+                    <xsl:with-param name="reftext" select="type"/>
                   </xsl:call-template>
                 </codeph>
               </entry>
@@ -116,7 +117,7 @@
 
     <xsl:variable name="inherited_methods_details">
       <xsl:for-each
-        select="$extends/sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and not(type='') and @prot='public']"
+        select="$extends/sectiondef/memberdef[(@kind='function' or @kind='slot') and not(type='') and @prot='public']"
       >
         <xsl:sort select="name"/>
         <xsl:variable name="method" select="name"/>
@@ -159,7 +160,8 @@
         <xsl:value-of select="concat(@prot, ' ')"/>
         <xsl:call-template name="add-modifiers"/>
         <xsl:call-template name="add-type-link">
-          <xsl:with-param name="type" select="type"/>
+          <xsl:with-param name="refid" select="type/ref/@refid"/>
+          <xsl:with-param name="reftext" select="type"/>
         </xsl:call-template>
         <xsl:value-of select="concat(' ', $method)"/>
         <xsl:call-template name="add-signature"/>
@@ -309,6 +311,8 @@
       <xsl:when test="$kind = 'typedef'"><xsl:text>typedefs</xsl:text></xsl:when>
       <xsl:when test="$kind = 'function'"><xsl:text>methods</xsl:text></xsl:when>
       <xsl:when test="$kind = 'enum'"><xsl:text>enums</xsl:text></xsl:when>
+      <xsl:when test="$kind = 'slot'"><xsl:text>methods</xsl:text></xsl:when>
+      <xsl:when test="$kind = 'property'"><xsl:text>properties</xsl:text></xsl:when>
       <xsl:otherwise>
         <xsl:text></xsl:text>
         <xsl:message terminate="yes"><xsl:text>undefined kind for </xsl:text><xsl:value-of select="$kind"/></xsl:message>
@@ -317,16 +321,17 @@
   </xsl:template>
 
   <xsl:template name="add-type-link">
-    <xsl:param name="type"/>
-    <xsl:variable name="test-member" select ="//memberdef[@id = $type/ref/@refid]"/>
+    <xsl:param name="refid"/>
+    <xsl:param name="reftext"/>
+    
     <xsl:variable name="refed-type-xref-kind">
       <xsl:choose>
           <!-- refid points to a componddef -->
-          <xsl:when test="//compounddef[@id = $type/ref/@refid]">
+          <xsl:when test="//compounddef[@id = $refid]">
               <xsl:text>topic</xsl:text>
           </xsl:when>
           <!-- refid points to a member, which is rendered into a table -->
-          <xsl:when test="//memberdef[@id = $type/ref/@refid]">
+          <xsl:when test="//memberdef[@id = $refid]">
               <xsl:text>table</xsl:text>
           </xsl:when>
       </xsl:choose>
@@ -334,22 +339,22 @@
     <xsl:variable name="refed-type-fullname">
         <xsl:choose>
           <!-- Empty text, so no ref -->
-          <xsl:when test="normalize-space($type) = ''">
+          <xsl:when test="normalize-space($reftext) = ''">
           </xsl:when>
 
           <!-- Empty ref, so deliver text -->
-          <xsl:when test="not ($type/ref/@refid)">
-              <xsl:value-of select="$type"/>              
+          <xsl:when test="not ($refid)">
+              <xsl:value-of select="$reftext"/>              
           </xsl:when>
         
           <!-- refid points to a componddef -->
-          <xsl:when test="//compounddef[@id = $type/ref/@refid]/compoundname">
-              <xsl:value-of select ="//compounddef[@id = $type/ref/@refid]/compoundname"/>
+          <xsl:when test="//compounddef[@id = $refid]/compoundname">
+              <xsl:value-of select ="//compounddef[@id = $refid]/compoundname"/>
           </xsl:when>
 
           <!-- refid points to a memberdef -->
-          <xsl:when test="//memberdef[@id = $type/ref/@refid]/ancestor::compounddef/compoundname">
-            <xsl:variable name="memberdef" select="//memberdef[@id = $type/ref/@refid]"/>
+          <xsl:when test="//memberdef[@id = $refid]/ancestor::compounddef/compoundname">
+            <xsl:variable name="memberdef" select="//memberdef[@id = $refid]"/>
             <xsl:variable name="section">
               <xsl:call-template name="sectionname">
                 <xsl:with-param name="kind" select="$memberdef/@kind"/>
@@ -365,14 +370,14 @@
           </xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="refid" select="dita-ot:name-to-id($refed-type-fullname)"/>
-    <xsl:variable name="reftext" select="replace($type,'^.*\.','')"/>
+    <xsl:variable name="refid-resolved" select="dita-ot:name-to-id($refed-type-fullname)"/>
+    <xsl:variable name="reftext-clean" select="replace($reftext,'^.*\.','')"/>
     <xsl:choose>
-      <xsl:when test="$type/ref">
+      <xsl:when test="$refid">
         <xsl:call-template name="add-link">
           <xsl:with-param name="type" select="$refed-type-xref-kind"/>
-          <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="$reftext"/>
+          <xsl:with-param name="href" select="concat('#', $refid-resolved)"/>
+          <xsl:with-param name="text" select="$reftext-clean"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:otherwise>

@@ -81,6 +81,35 @@
   -->
   <xsl:template match="simplesect[@kind='return']" mode="html">
   </xsl:template>
+
+  <!--
+    simplesect kind=see 
+  -->
+  <xsl:template match="simplesect[@kind='see']" mode="html">
+    <xsl:text>see </xsl:text>
+    <xsl:apply-templates mode="html"/>
+  </xsl:template>
+  
+  <!-- Rendering of ref (like in @see links)
+   -->
+  <xsl:template match="ref" mode="html">
+    <xsl:call-template name="add-type-link">
+      <xsl:with-param name="refid" select="@refid"/>
+      <xsl:with-param name="reftext" select="."/>
+    </xsl:call-template>
+  </xsl:template>
+
+  <!-- Rendering of ulink (link to external urls)
+   -->
+  <xsl:template match="ulink" mode="html">
+      <xref class="- topic/xref " format="html" scope="external">
+      <xsl:attribute name="href">
+        <xsl:value-of select="@url"/>
+      </xsl:attribute>
+      <xsl:processing-instruction name="ditaot">
+        <xsl:text>usertext</xsl:text>
+      </xsl:processing-instruction><xsl:value-of select="normalize-space(.)"/></xref>
+  </xsl:template>
   
   
   <!--

@@ -40,16 +40,18 @@
         <codeblock class="+ topic/pre pr-d/codeblock ">
           <xsl:attribute name="xtrc" select="concat('codeblock:',generate-id(.),'7')"/>
           <xsl:value-of select="concat(@prot, ' interface ')"/>
-          <b class="+ topic/ph hi-d/b ">
-          	<xsl:variable name="class" select="replace(compoundname, '^.*::','')"/>
-		        <xsl:call-template name="add-type-link">
-		          <xsl:with-param name="type" select="$class"/>
-		        </xsl:call-template>
+            <b class="+ topic/ph hi-d/b ">
+            	<xsl:variable name="class" select="replace(compoundname, '^.*::','')"/>
+
+                <xsl:call-template name="add-type-link">
+                  <xsl:with-param name="refid" select="./ref/@refid"/>
+                  <xsl:with-param name="reftext" select="$class"/>
+                </xsl:call-template>
         	</b>
         </codeblock>
         <xsl:value-of select="briefdescription"/>
       
-        <xsl:if test="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and  not(type='')]">
+        <xsl:if test="sectiondef[contains(@kind,'-func')]/memberdef[ (@kind='function' or @kind='slot') and  not(type='')]">
           <!-- Interface Method Summary -->
           <section class="- topic/section " outputclass="methods_summary">
             <title class="- topic/title ">
@@ -59,7 +61,7 @@
           </section>
         </xsl:if>
      
-        <xsl:if test="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and  not(type='')]">
+        <xsl:if test="sectiondef/memberdef[ (@kind='function' or @kind='slot') and  not(type='')]">
           <!-- Interface Method Details -->
           <section class="- topic/section " outputclass="methods">
             <xsl:attribute name="id">
@@ -69,7 +71,7 @@
             	<xsl:text>Method Detail</xsl:text>
             </title>
             <xsl:apply-templates
-              select="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and  not(type='')]"
+              select="sectiondef/memberdef[ (@kind='function' or @kind='slot') and  not(type='')]"
               mode="method"
             >
               <xsl:sort select="name"/>

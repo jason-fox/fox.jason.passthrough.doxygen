@@ -166,7 +166,7 @@
              <xsl:text>Method Summary</xsl:text>
            </title>
           <xsl:if
-            test="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and not(type='') and @prot='public']"
+            test="sectiondef/memberdef[ (@kind='function' or @kind='slot') and not(type='') and @prot='public']"
           >
             <xsl:call-template name="add-method-summary"/>
           </xsl:if>
@@ -210,7 +210,7 @@
           </section>
         </xsl:if>
 
-        <xsl:if test="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and type='' and @prot='public']">
+        <xsl:if test="sectiondef/memberdef[ @kind='function' and type='' and @prot='public']">
           <!-- Constructor Detail -->
           <section class="- topic/section " outputclass="constructors">
             <xsl:attribute name="id">
@@ -229,7 +229,7 @@
         </xsl:if>
 
         <xsl:if
-          test="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and  not(type='') and @prot='public']"
+          test="sectiondef/memberdef[(@kind='function' or @kind='slot') and  not(type='') and @prot='public']"
         >
           <!-- Method Detail-->
           <section class="- topic/section " outputclass="methods">
@@ -240,7 +240,7 @@
               <xsl:text>Method Detail</xsl:text>
             </title>
             <xsl:apply-templates
-              select="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and not(type='') and @prot='public']"
+              select="sectiondef/memberdef[ ( @kind='function' or @kind='slot') and not(type='') and @prot='public']"
               mode="method"
             >
               <xsl:sort select="name"/>
@@ -365,7 +365,8 @@
                   <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'3')"/>
                   <xsl:call-template name="add-modifiers"/>
                   <xsl:call-template name="add-type-link">
-                    <xsl:with-param name="type" select="type"/>
+                    <xsl:with-param name="refid" select="type/ref/@refid"/>
+                    <xsl:with-param name="reftext" select="type"/>
                   </xsl:call-template>
                 </codeph>
               </entry>
@@ -412,7 +413,8 @@
           <xsl:text>final </xsl:text>
         </xsl:if>
         <xsl:call-template name="add-type-link">
-          <xsl:with-param name="type" select="type"/>
+          <xsl:with-param name="refid" select="type/ref/@refid"/>
+          <xsl:with-param name="reftext" select="type"/>
         </xsl:call-template>
         <xsl:value-of select="concat(' ',$field)"/>
       </codeph>
