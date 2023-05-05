@@ -133,7 +133,7 @@
         <xsl:call-template name="parse-brief-description"/>
         <xsl:call-template name="parse-detailed-description"/>
 
-        <xsl:if test="sectiondef/memberdef[@kind='typedef' and @prot='public']">
+        <xsl:if test="sectiondef/memberdef[(@kind='typedef' or @kind='enum') and @prot='public']">
           <!-- Class typedef Summary -->
           <section class="- topic/section " outputclass="typedefs_summary">
             <title class="- topic/title ">
@@ -173,7 +173,7 @@
           <xsl:call-template name="add-inherited-method-summary"/>
         </section>
 
-         <xsl:if test="sectiondef/memberdef[@kind='typedef'and @prot='public']">
+         <xsl:if test="sectiondef/memberdef[(@kind='typedef' or @kind='enum') and @prot='public']">
           <!-- typedef Detail -->
           <section class="- topic/section " outputclass="typedefs">
             <xsl:attribute name="id">
@@ -183,7 +183,7 @@
               <xsl:text>Types Detail</xsl:text>
             </title>
             <xsl:apply-templates
-              select="sectiondef/memberdef[@kind='typedef' and @prot='public']"
+              select="sectiondef/memberdef[(@kind='typedef' or @kind='enum') and @prot='public']"
               mode="typedef"
             >
               <xsl:sort select="@id"/>
@@ -457,7 +457,7 @@
           </row>
         </thead>
         <tbody class="- topic/tbody ">
-          <xsl:for-each select="sectiondef/memberdef[@kind='typedef' and @prot='public']">
+          <xsl:for-each select="sectiondef/memberdef[(@kind='typedef' or @kind ='enum') and @prot='public']">
             <xsl:sort select="name"/>
             <xsl:variable name="field" select="name"/>
             <row class="- topic/row ">
