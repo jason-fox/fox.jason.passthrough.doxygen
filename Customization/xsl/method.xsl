@@ -319,6 +319,18 @@
   <xsl:template name="add-type-link">
     <xsl:param name="type"/>
     <xsl:variable name="test-member" select ="//memberdef[@id = $type/ref/@refid]"/>
+    <xsl:variable name="refed-type-xref-kind">
+      <xsl:choose>
+          <!-- refid points to a componddef -->
+          <xsl:when test="//compounddef[@id = $type/ref/@refid]">
+              <xsl:text>topic</xsl:text>
+          </xsl:when>
+          <!-- refid points to a member, which is rendered into a table -->
+          <xsl:when test="//memberdef[@id = $type/ref/@refid]">
+              <xsl:text>table</xsl:text>
+          </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:variable name="refed-type-fullname">
         <xsl:choose>
           <!-- Empty text, so no ref -->
@@ -358,7 +370,7 @@
     <xsl:choose>
       <xsl:when test="$type/ref">
         <xsl:call-template name="add-link">
-          <xsl:with-param name="type" select="'topic'"/>
+          <xsl:with-param name="type" select="$refed-type-xref-kind"/>
           <xsl:with-param name="href" select="concat('#', $refid)"/>
           <xsl:with-param name="text" select="$reftext"/>
         </xsl:call-template>
