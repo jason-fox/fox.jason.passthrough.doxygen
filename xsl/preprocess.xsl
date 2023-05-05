@@ -51,30 +51,32 @@
         <xsl:call-template name="all-nons"/>
       </xsl:variable>
 
-      <namespaces>
-        <compounddef id="globalns" kind="namespace" language="C++">
-        <compoundname>Global</compoundname>
-          <xsl:for-each select="$all-nons">
-            <xsl:variable name="id">
-              <xsl:value-of select="@id"/>
-            </xsl:variable>
-            
-              <xsl:element name="innerclass">
-                <xsl:attribute name="refid" select="$id"/>
-                <xsl:value-of select="compoundname"/>
-              </xsl:element>
-          </xsl:for-each>
-        </compounddef>          
-        <classes>
-          <xsl:copy-of select="$all-nons[@kind='class']"/>
-        </classes>
-        <enums>
-          <xsl:copy-of select="all-nons[@kind='enum']"/>
-        </enums>
-        <interfaces>
-          <xsl:copy-of select="all-nons[@kind='interface']"/>
-        </interfaces>
-      </namespaces>
+      <xsl:if test="exists($all-nons)">
+        <namespaces>
+          <compounddef id="globalns" kind="namespace" language="C++">
+          <compoundname>Global</compoundname>
+            <xsl:for-each select="$all-nons">
+              <xsl:variable name="id">
+                <xsl:value-of select="@id"/>
+              </xsl:variable>
+              
+                <xsl:element name="innerclass">
+                  <xsl:attribute name="refid" select="$id"/>
+                  <xsl:value-of select="compoundname"/>
+                </xsl:element>
+            </xsl:for-each>
+          </compounddef>          
+          <classes>
+            <xsl:copy-of select="$all-nons[@kind='class']"/>
+          </classes>
+          <enums>
+            <xsl:copy-of select="all-nons[@kind='enum']"/>
+          </enums>
+          <interfaces>
+            <xsl:copy-of select="all-nons[@kind='interface']"/>
+          </interfaces>
+        </namespaces>
+      </xsl:if>
   	</root>
   </xsl:template>
 
