@@ -40,18 +40,9 @@
                 <codeph class="+ topic/ph pr-d/codeph ">
                   <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'12')"/>
                   <xsl:call-template name="add-modifiers"/>
-                  <xsl:choose>
-                    <xsl:when test="type/ref/@refid">
-                      <xsl:call-template name="add-class-link">
-                        <xsl:with-param name="class" select="type/ref/@refid"/>
-                      </xsl:call-template>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:call-template name="add-class-link">
-                        <xsl:with-param name="class" select="type"/>
-                      </xsl:call-template>
-                    </xsl:otherwise>
-                  </xsl:choose>
+                  <xsl:call-template name="add-type-link">
+                    <xsl:with-param name="type" select="type"/>
+                  </xsl:call-template>
                 </codeph>
               </entry>
                <entry class="- topic/entry " colname="c2" align="left">
@@ -167,18 +158,9 @@
         <xsl:attribute name="xtrc" select="concat('codeblock:',generate-id(.),'8')"/>
         <xsl:value-of select="concat(@prot, ' ')"/>
         <xsl:call-template name="add-modifiers"/>
-        <xsl:choose>
-          <xsl:when test="type/ref/@refid">
-            <xsl:call-template name="add-class-link">
-              <xsl:with-param name="class" select="type/ref/@refid"/>
-            </xsl:call-template>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:call-template name="add-class-link">
-              <xsl:with-param name="class" select="type"/>
-            </xsl:call-template>
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="add-type-link">
+          <xsl:with-param name="type" select="type"/>
+        </xsl:call-template>
         <xsl:value-of select="concat(' ', $method)"/>
         <xsl:call-template name="add-signature"/>
       </codeblock>
@@ -318,56 +300,75 @@
       </p>
     </xsl:for-each>
   </xsl:template>
-    <!---
--->
-  <xsl:template name="add-class-link">
-    <xsl:param name="class"/>
-    <xsl:variable name="refid" select="replace(replace($class, '^(interface|class)', ''), '_1_1', '.')"/>
-    <xsl:variable name="reftext" select="replace($refid,'^.*\.','')"/>
-    <xsl:choose>
-      <xsl:when test="//compounddef[@kind='class' and @id=$class]">
-        <xsl:call-template name="add-link">
-          <xsl:with-param name="type" select="'topic'"/>
-          <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="$reftext"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="//compounddef[@kind='interface' and @id=$class]">
-        <xsl:call-template name="add-link">
-          <xsl:with-param name="type" select="'topic'"/>
-          <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="$reftext"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="//compounddef[@kind='interface' and @id=$class]">
-        <xsl:call-template name="add-link">
-          <xsl:with-param name="type" select="'topic'"/>
-          <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="$reftext"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="//memberdef[@id=$class]">
-        <xsl:call-template name="add-link">
-          <xsl:with-param name="type" select="'topic'"/>
-          <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="//memberdef[@id=$class]/name"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:when test="starts-with($class,'java.lang.')">
-         <xsl:value-of select="dita-ot:addZeroWidthSpaces($class)"/>
-      </xsl:when>
-      <xsl:when test="$class">
-        <xsl:variable name="signature" select="replace($class,'^.*\.','')"/>
-        <xsl:value-of
-          select="replace(replace($signature, '\s*&lt;\s*','&#8203;&lt;&#8203;'), '\s*&gt;\s*', '&#8203;&gt;&#8203;')"
-        />
 
-      </xsl:when>
+  <!-- Returns the section name prefix which is used to differentiate
+    members by prefixing i.e. typedef with "typedefs_" etc. -->
+  <xsl:template name="sectionname">
+    <xsl:param name="kind" select="@kind"/>
+    <xsl:choose>
+      <xsl:when test="$kind = 'typedef'"><xsl:text>typedefs</xsl:text></xsl:when>
+      <xsl:when test="$kind = 'function'"><xsl:text>methods</xsl:text></xsl:when>
+      <xsl:when test="$kind = 'enum'"><xsl:text>enums</xsl:text></xsl:when>
       <xsl:otherwise>
-        <xsl:text>????</xsl:text>
+        <xsl:text></xsl:text>
+        <xsl:message terminate="yes"><xsl:text>undefined kind for </xsl:text><xsl:value-of select="$kind"/></xsl:message>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+
+  <xsl:template name="add-type-link">
+    <xsl:param name="type"/>
+    <xsl:variable name="test-member" select ="//memberdef[@id = $type/ref/@refid]"/>
+    <xsl:variable name="refed-type-fullname">
+        <xsl:choose>
+          <!-- Empty text, so no ref -->
+          <xsl:when test="normalize-space($type) = ''">
+          </xsl:when>
+
+          <!-- Empty ref, so deliver text -->
+          <xsl:when test="not ($type/ref/@refid)">
+              <xsl:value-of select="$type"/>              
+          </xsl:when>
+        
+          <!-- refid points to a componddef -->
+          <xsl:when test="//compounddef[@id = $type/ref/@refid]/compoundname">
+              <xsl:value-of select ="//compounddef[@id = $type/ref/@refid]/compoundname"/>
+          </xsl:when>
+
+          <!-- refid points to a memberdef -->
+          <xsl:when test="//memberdef[@id = $type/ref/@refid]/ancestor::compounddef/compoundname">
+            <xsl:variable name="memberdef" select="//memberdef[@id = $type/ref/@refid]"/>
+            <xsl:variable name="section">
+              <xsl:call-template name="sectionname">
+                <xsl:with-param name="kind" select="$memberdef/@kind"/>
+              </xsl:call-template>
+            </xsl:variable>
+            <xsl:value-of select ="$memberdef/ancestor::compounddef/compoundname"/>
+            <xsl:value-of select="concat('/', $section,'_')"/>
+            <xsl:value-of select="$memberdef/name"/>
+          </xsl:when>
+
+          <xsl:otherwise>
+              <xsl:message terminate="yes"><xsl:text>add-type-link: Unable to find compound name for: </xsl:text><xsl:value-of select="type"/></xsl:message>
+          </xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="refid" select="dita-ot:name-to-id($refed-type-fullname)"/>
+    <xsl:variable name="reftext" select="replace($type,'^.*\.','')"/>
+    <xsl:choose>
+      <xsl:when test="$type/ref">
+        <xsl:call-template name="add-link">
+          <xsl:with-param name="type" select="'topic'"/>
+          <xsl:with-param name="href" select="concat('#', $refid)"/>
+          <xsl:with-param name="text" select="$reftext"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$reftext"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
 
   <xsl:template name="add-modifiers">
     <xsl:if test="@static='yes'">

@@ -364,8 +364,8 @@
                 <codeph class="+ topic/ph pr-d/codeph ">
                   <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'3')"/>
                   <xsl:call-template name="add-modifiers"/>
-                  <xsl:call-template name="add-class-link">
-                    <xsl:with-param name="class" select="type"/>
+                  <xsl:call-template name="add-type-link">
+                    <xsl:with-param name="type" select="type"/>
                   </xsl:call-template>
                 </codeph>
               </entry>
@@ -411,8 +411,8 @@
         <xsl:if test="@final='true'">
           <xsl:text>final </xsl:text>
         </xsl:if>
-        <xsl:call-template name="add-class-link">
-          <xsl:with-param name="class" select="type"/>
+        <xsl:call-template name="add-type-link">
+          <xsl:with-param name="type" select="type"/>
         </xsl:call-template>
         <xsl:value-of select="concat(' ',$field)"/>
       </codeph>

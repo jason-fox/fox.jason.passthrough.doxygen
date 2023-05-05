@@ -99,19 +99,25 @@
     <xsl:param name="type"/>
     <xsl:param name="href"/>
     <xsl:param name="text"/>
+    <xsl:variable name="href-sane">
+      <xsl:value-of select="replace( replace( replace($href,'(&lt;)','_lt_'), '(&gt;)','_gt_'), '~', '_dtor_')"/>
+    </xsl:variable>
+    
+    <xsl:variable name="validChars" select="'[a-zA-Z0-9_\.#/=-]+'"/>
+    <xsl:if test="string-length(replace($href-sane, $validChars, '')) != 0">
+      <xsl:message><xsl:text>add-link: invalid href: </xsl:text><xsl:value-of select="$href-sane"/></xsl:message>
+    </xsl:if>
 
     <xref class="- topic/xref " format="dita" scope="local">
       <xsl:attribute name="type">
         <xsl:value-of select="$type"/>
       </xsl:attribute>
       <xsl:attribute name="href">
-        <xsl:value-of select="replace($href,'(&lt;)|(&gt;)','')"/>
+        <xsl:value-of select="$href-sane"/>
       </xsl:attribute>
       <xsl:processing-instruction name="ditaot">
         <xsl:text>usertext</xsl:text>
-      </xsl:processing-instruction>
-      <xsl:value-of select="$text"/>
-    </xref>
+      </xsl:processing-instruction><xsl:value-of select="normalize-space($text)"/></xref>
   </xsl:template>
 
   <!--

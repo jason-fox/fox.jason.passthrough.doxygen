@@ -42,8 +42,8 @@
           <xsl:value-of select="concat(@prot, ' interface ')"/>
           <b class="+ topic/ph hi-d/b ">
           	<xsl:variable name="class" select="replace(compoundname, '^.*::','')"/>
-		        <xsl:call-template name="add-class-link">
-		          <xsl:with-param name="class" select="$class"/>
+		        <xsl:call-template name="add-type-link">
+		          <xsl:with-param name="type" select="$class"/>
 		        </xsl:call-template>
         	</b>
         </codeblock>
