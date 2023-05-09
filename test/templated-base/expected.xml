@@ -8,6 +8,9 @@
       <title>Namespaces</title>
       <ul>
         <li>
+          <xref format="dita" href="#Global" scope="local" type="topic">Global</xref>
+        </li>
+        <li>
           <xref format="dita" href="#Types" scope="local" type="topic">Types</xref>
         </li>
       </ul>
@@ -20,6 +23,14 @@
       </link>
     </linkpool>
   </related-links>
+  <topic id="Global" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
+    <title>Namespace Global</title>
+    <titlealts>
+      <navtitle>Global</navtitle>
+      <searchtitle>Global</searchtitle>
+    </titlealts>
+    <body outputclass="java"></body>
+  </topic>
   <topic id="Types" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
     <title>Namespace Types</title>
     <titlealts>
@@ -31,12 +42,14 @@
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#Types.MyBuffer" scope="local" type="topic">MyBuffer</xref>-</li>
+            <xref format="dita" href="#Types.MyBuffer" scope="local" type="topic">MyBuffer</xref>
+          </li>
           <li>
-            <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">RingBuffer</xref>-</li>
+            <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">RingBuffer</xref>
+          </li>
           <li>
-            <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">RingBufferBase</xref>- 
-    A customizable ring buffer</li>
+            <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">RingBufferBase</xref>
+          </li>
         </ul>
       </section>
     </body>
@@ -47,10 +60,19 @@
         <searchtitle>MyBuffer</searchtitle>
       </titlealts>
       <body outputclass="cpp">
+        <p>
+          <b>Direct Base Classes:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#Types.RingBuffer%20int" scope="local" type="topic">Types::RingBuffer&lt; int &gt;</xref>
+          </li>
+        </ul>
         <codeblock>public class
           <b>MyBuffer</b>extends
-          <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">Types::RingBuffer&lt; int &gt;</xref>
+          <xref format="dita" href="#Types.RingBuffer%20int" scope="local" type="topic">Types::RingBuffer&lt; int &gt;</xref>
         </codeblock>
+        <p></p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <p></p>
@@ -59,7 +81,7 @@
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class Types::
+                  <entry align="left" colname="col1">Methods inherited from Class Types::
                     <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">RingBuffer</xref>
                   </entry>
                 </row>
@@ -85,10 +107,44 @@
         <searchtitle>RingBuffer</searchtitle>
       </titlealts>
       <body outputclass="cpp">
+        <p>
+          <b>Direct Base Classes:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#Types.RingBufferBase%20ElementType" scope="local" type="topic">Types::RingBufferBase&lt; ElementType &gt;</xref>
+          </li>
+        </ul>
         <codeblock>public class
           <b>RingBuffer</b>extends
-          <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">Types::RingBufferBase&lt; ElementType &gt;</xref>
+          <xref format="dita" href="#Types.RingBufferBase%20ElementType" scope="local" type="topic">Types::RingBufferBase&lt; ElementType &gt;</xref>
         </codeblock>
+        <p></p>
+        <section outputclass="typedefs_summary">
+          <title>Types Summary</title>
+          <table outputclass="typedefs_summary">
+            <tgroup cols="2">
+              <colspec colname="col1" colnum="1" colwidth="25%"></colspec>
+              <colspec colname="col2" colnum="2" colwidth="75%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Name</entry>
+                  <entry align="left" colname="col2">Description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#Types.RingBuffer/typedefs_base" scope="local" type="table">base</xref>
+                    </codeph>
+                  </entry>
+                  <entry align="left" colname="col2"></entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -136,6 +192,28 @@
             </tgroup>
           </table>
         </section>
+        <section id="Types::RingBuffer_typedefs" outputclass="typedefs">
+          <title>Types Detail</title>
+          <table id="typedefs_base" outputclass="typedef_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">base</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>using Types::RingBuffer&lt; ElementType &gt;::base =  RingBufferBase&lt;ElementType&gt;</codeph>
+                    <p></p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+        </section>
         <section id="Types::RingBuffer_constructors" outputclass="constructors">
           <title>Constructor Detail</title>
           <table id="constructors_RingBuffer" outputclass="constructor_details">
@@ -150,6 +228,7 @@
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>RingBuffer(unsigned int numberOfElements)</codeblock>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -218,15 +297,16 @@
         </p>
         <ul>
           <li>
-            <xref format="dita" href="#Types::RingBuffer%3C%20int%20%3E" scope="local" type="topic">Types::RingBuffer&lt; int &gt;</xref>
+            <xref format="dita" href="#Types.RingBuffer%20int" scope="local" type="topic">Types::RingBuffer&lt; int &gt;</xref>
           </li>
           <li>
-            <xref format="dita" href="#Types::RingBuffer%3C%20ElementType%20%3E" scope="local" type="topic">Types::RingBuffer&lt; ElementType &gt;</xref>
+            <xref format="dita" href="#Types.RingBuffer%20ElementType" scope="local" type="topic">Types::RingBuffer&lt; ElementType &gt;</xref>
           </li>
         </ul>
         <codeblock>public class
           <b>RingBufferBase</b>
         </codeblock>
+        <p></p>
         <p>A customizable ring buffer</p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
@@ -286,7 +366,7 @@
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class Types::
+                  <entry align="left" colname="col1">Methods inherited from Class Types::
                     <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">RingBuffer</xref>
                   </entry>
                 </row>
@@ -308,7 +388,7 @@
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class Types::
+                  <entry align="left" colname="col1">Methods inherited from Class Types::
                     <xref format="dita" href="#Types.MyBuffer" scope="local" type="topic">MyBuffer</xref>
                   </entry>
                 </row>
@@ -326,7 +406,7 @@
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class Types::
+                  <entry align="left" colname="col1">Methods inherited from Class Types::
                     <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">RingBuffer</xref>
                   </entry>
                 </row>
@@ -357,6 +437,7 @@
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>RingBufferBase(unsigned int numberOfElements)</codeblock>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -383,6 +464,7 @@
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>~RingBufferBase()</codeblock>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>

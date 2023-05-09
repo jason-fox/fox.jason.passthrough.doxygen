@@ -8,6 +8,18 @@
       <title>Namespaces</title>
       <ul>
         <li>
+          <xref format="dita" href="#Global" scope="local" type="topic">Global</xref>
+        </li>
+        <li>
+          <xref format="dita" href="#org" scope="local" type="topic">org</xref>
+        </li>
+        <li>
+          <xref format="dita" href="#org.casbin" scope="local" type="topic">org::casbin</xref>
+        </li>
+        <li>
+          <xref format="dita" href="#org.casbin.jcasbin" scope="local" type="topic">org::casbin::jcasbin</xref>
+        </li>
+        <li>
           <xref format="dita" href="#org.casbin.jcasbin.config" scope="local" type="topic">org::casbin::jcasbin::config</xref>
         </li>
         <li>
@@ -47,6 +59,38 @@
       </link>
     </linkpool>
   </related-links>
+  <topic id="Global" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
+    <title>Namespace Global</title>
+    <titlealts>
+      <navtitle>Global</navtitle>
+      <searchtitle>Global</searchtitle>
+    </titlealts>
+    <body outputclass="java"></body>
+  </topic>
+  <topic id="org" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
+    <title>Namespace org</title>
+    <titlealts>
+      <navtitle>org</navtitle>
+      <searchtitle>org</searchtitle>
+    </titlealts>
+    <body outputclass="java"></body>
+  </topic>
+  <topic id="org.casbin" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
+    <title>Namespace org::casbin</title>
+    <titlealts>
+      <navtitle>org::casbin</navtitle>
+      <searchtitle>org::casbin</searchtitle>
+    </titlealts>
+    <body outputclass="java"></body>
+  </topic>
+  <topic id="org.casbin.jcasbin" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
+    <title>Namespace org::casbin::jcasbin</title>
+    <titlealts>
+      <navtitle>org::casbin::jcasbin</navtitle>
+      <searchtitle>org::casbin::jcasbin</searchtitle>
+    </titlealts>
+    <body outputclass="java"></body>
+  </topic>
   <topic id="org.casbin.jcasbin.config" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
     <title>Namespace org::casbin::jcasbin::config</title>
     <titlealts>
@@ -58,7 +102,8 @@
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.config.Config" scope="local" type="topic">Config</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.config.Config" scope="local" type="topic">Config</xref>
+          </li>
         </ul>
       </section>
     </body>
@@ -72,6 +117,7 @@
         <codeblock>public class
           <b>Config</b>
         </codeblock>
+        <p></p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -390,26 +436,15 @@ newConfigFromText create an empty configuration representation from text.</entry
                     <p>newConfig create an empty configuration representation from file.</p>
                     <p>HELLO WORLD!</p>
                     <p>This is a simple paragraph with some code within in.</p>
-                    <p>List 1
-
-
-list 2 
-
-
-
-
-This is another paragraph with some bold text within in.
-
-
-
-confName
-
-
-the path of the model file. 
-
-
-
-the constructor of Config.</p>
+                    <p>
+                      <ul>
+                        <li>List 1</li>
+                        <li>list 2
+                          <ul>
+                            <li></li>
+                          </ul>This is another paragraph with some bold text within in.</li>
+                      </ul>
+                    </p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -442,14 +477,7 @@ the path of the model file.</li>
                     <codeblock>public static
                       <xref format="dita" href="#org.casbin.jcasbin.config.Config" scope="local" type="topic">Config</xref>newConfigFromText(String text)</codeblock>
                     <p>newConfigFromText create an empty configuration representation from text.</p>
-                    <p>text
-
-
-the model text. 
-
-
-
-the constructor of Config.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -513,23 +541,22 @@ the model text.</li>
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.effect.DefaultEffector" scope="local" type="topic">DefaultEffector</xref>- 
-DefaultEffector is default effector for Casbin.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.effect.DefaultEffector" scope="local" type="topic">DefaultEffector</xref>DefaultEffector is default effector for Casbin.</li>
         </ul>
       </section>
       <section outputclass="interfaces_summary">
         <title>Interface Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.effect.Effector" scope="local" type="topic">Effector</xref>- 
-Effector is the interface for Casbin effectors.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.effect.Effector" scope="local" type="topic">Effector</xref>Effector is the interface for Casbin effectors.</li>
         </ul>
       </section>
       <section outputclass="enums_summary">
         <title>Enumeration Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.effect.Effect" scope="local" type="topic">Effect</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.effect.Effect" scope="local" type="topic">Effect</xref>
+          </li>
         </ul>
       </section>
     </body>
@@ -552,6 +579,7 @@ Effector is the interface for Casbin effectors.</li>
           <b>DefaultEffector</b>extends
           <xref format="dita" href="#org.casbin.jcasbin.effect.Effector" scope="local" type="topic">Effector</xref>
         </codeblock>
+        <p>DefaultEffector is default effector for Casbin.</p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -613,6 +641,7 @@ mergeEffects merges all matching results collected by the enforcer into a single
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>DefaultEffector()</codeblock>
+                    <p>DefaultEffector is the constructor for DefaultEffector.</p>
                   </entry>
                 </row>
               </tbody>
@@ -726,30 +755,7 @@ mergeEffects merges all matching results collected by the enforcer into a single
                   <entry align="left" colname="col1">
                     <codeblock>public boolean mergeEffects(String expr, Effect[] effects, float[] results)</codeblock>
                     <p>mergeEffects merges all matching results collected by the enforcer into a single decision.</p>
-                    <p>expr
-
-
-the expression of [policy_effect]. 
-
-
-
-
-effects
-
-
-the effects of all matched rules. 
-
-
-
-
-results
-
-
-the matcher results of all matched rules. 
-
-
-
-the final effect.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -809,13 +815,17 @@ the matcher results of all matched rules.</li>
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.exception.CasbinAdapterException" scope="local" type="topic">CasbinAdapterException</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.exception.CasbinAdapterException" scope="local" type="topic">CasbinAdapterException</xref>
+          </li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.exception.CasbinConfigException" scope="local" type="topic">CasbinConfigException</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.exception.CasbinConfigException" scope="local" type="topic">CasbinConfigException</xref>
+          </li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.exception.CasbinMatcherException" scope="local" type="topic">CasbinMatcherException</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.exception.CasbinMatcherException" scope="local" type="topic">CasbinMatcherException</xref>
+          </li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.exception.CasbinPolicyFileNotFoundException" scope="local" type="topic">CasbinPolicyFileNotFoundException</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.exception.CasbinPolicyFileNotFoundException" scope="local" type="topic">CasbinPolicyFileNotFoundException</xref>
+          </li>
         </ul>
       </section>
     </body>
@@ -827,7 +837,10 @@ the matcher results of all matched rules.</li>
       </titlealts>
       <body outputclass="java">
         <codeblock>public class
-          <b>CasbinAdapterException</b>extends RuntimeException</codeblock>
+          <b>CasbinAdapterException</b>extends
+          <xref format="dita" href="#RuntimeException" scope="local" type="topic">RuntimeException</xref>
+        </codeblock>
+        <p></p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -872,6 +885,7 @@ the matcher results of all matched rules.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>CasbinAdapterException(String message)</codeblock>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -898,6 +912,7 @@ the matcher results of all matched rules.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>CasbinAdapterException(String message, Throwable cause)</codeblock>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -926,7 +941,10 @@ the matcher results of all matched rules.</li>
       </titlealts>
       <body outputclass="java">
         <codeblock>public class
-          <b>CasbinConfigException</b>extends RuntimeException</codeblock>
+          <b>CasbinConfigException</b>extends
+          <xref format="dita" href="#RuntimeException" scope="local" type="topic">RuntimeException</xref>
+        </codeblock>
+        <p></p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -965,6 +983,7 @@ the matcher results of all matched rules.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>CasbinConfigException(String message, Throwable cause)</codeblock>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -993,7 +1012,10 @@ the matcher results of all matched rules.</li>
       </titlealts>
       <body outputclass="java">
         <codeblock>public class
-          <b>CasbinMatcherException</b>extends RuntimeException</codeblock>
+          <b>CasbinMatcherException</b>extends
+          <xref format="dita" href="#RuntimeException" scope="local" type="topic">RuntimeException</xref>
+        </codeblock>
+        <p></p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -1038,6 +1060,7 @@ the matcher results of all matched rules.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>CasbinMatcherException(String message)</codeblock>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -1064,6 +1087,7 @@ the matcher results of all matched rules.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>CasbinMatcherException(String message, Throwable cause)</codeblock>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -1092,7 +1116,10 @@ the matcher results of all matched rules.</li>
       </titlealts>
       <body outputclass="java">
         <codeblock>public class
-          <b>CasbinPolicyFileNotFoundException</b>extends RuntimeException</codeblock>
+          <b>CasbinPolicyFileNotFoundException</b>extends
+          <xref format="dita" href="#RuntimeException" scope="local" type="topic">RuntimeException</xref>
+        </codeblock>
+        <p></p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -1131,6 +1158,7 @@ the matcher results of all matched rules.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>CasbinPolicyFileNotFoundException(String message)</codeblock>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -1160,20 +1188,15 @@ the matcher results of all matched rules.</li>
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer" scope="local" type="topic">CoreEnforcer</xref>- 
-CoreEnforcer defines the core functionality of an enforcer.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer" scope="local" type="topic">CoreEnforcer</xref>CoreEnforcer defines the core functionality of an enforcer.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>- 
-Enforcer = ManagementEnforcer + RBAC API.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>Enforcer = ManagementEnforcer + RBAC API.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.main.InternalEnforcer" scope="local" type="topic">InternalEnforcer</xref>- 
-InternalEnforcer = CoreEnforcer + Internal API.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.main.InternalEnforcer" scope="local" type="topic">InternalEnforcer</xref>InternalEnforcer = CoreEnforcer + Internal API.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>- 
-ManagementEnforcer = InternalEnforcer + Management API.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>ManagementEnforcer = InternalEnforcer + Management API.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>- 
-SyncedEnforcer = ManagementEnforcer + RBAC API.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>SyncedEnforcer = ManagementEnforcer + RBAC API.</li>
         </ul>
       </section>
     </body>
@@ -1195,6 +1218,7 @@ SyncedEnforcer = ManagementEnforcer + RBAC API.</li>
         <codeblock>public class
           <b>CoreEnforcer</b>
         </codeblock>
+        <p>CoreEnforcer defines the core functionality of an enforcer.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -1434,7 +1458,7 @@ setWatcher sets the current watcher.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>
                   </entry>
                 </row>
@@ -1525,7 +1549,7 @@ setWatcher sets the current watcher.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>
                   </entry>
                 </row>
@@ -1679,7 +1703,7 @@ setWatcher sets the current watcher.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                   </entry>
                 </row>
@@ -1821,10 +1845,7 @@ setWatcher sets the current watcher.</entry>
                   <entry align="left" colname="col1">
                     <codeblock>public void enableAutoBuildRoleLinks(boolean autoBuildRoleLinks)</codeblock>
                     <p>enableAutoBuildRoleLinks controls whether to save a policy rule automatically to the adapter when it is added or removed.</p>
-                    <p>autoBuildRoleLinks
-
-
-whether to automatically build the role links.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -1852,10 +1873,7 @@ whether to automatically build the role links.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void enableAutoSave(boolean autoSave)</codeblock>
                     <p>enableAutoSave controls whether to save a policy rule automatically to the adapter when it is added or removed.</p>
-                    <p>autoSave
-
-
-whether to enable the AutoSave feature.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -1883,10 +1901,7 @@ whether to enable the AutoSave feature.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void enableEnforce(boolean enable)</codeblock>
                     <p>enableEnforce changes the enforcing state of Casbin, when Casbin is disabled, all access will be allowed by the enforce() function.</p>
-                    <p>enable
-
-
-whether to enable the enforcer.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -1914,10 +1929,7 @@ whether to enable the enforcer.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void enableLog(boolean enable)</codeblock>
                     <p>enableLog changes whether to print Casbin log to the standard output.</p>
-                    <p>enable
-
-
-whether to enable Casbin's log.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -1945,14 +1957,7 @@ whether to enable Casbin's log.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean enforce(Object... rvals)</codeblock>
                     <p>enforce decides whether a "subject" can access a "object" with the operation "action", input parameters are usually: (sub, obj, act).</p>
-                    <p>rvals
-
-
-the request needs to be mediated, usually an array of strings, can be class instances if ABAC is used. 
-
-
-
-whether to allow the request.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -1985,7 +1990,7 @@ the request needs to be mediated, usually an array of strings, can be class inst
                     <codeblock>public
                       <xref format="dita" href="#org.casbin.jcasbin.persist.Adapter" scope="local" type="topic">Adapter</xref>getAdapter()</codeblock>
                     <p>getAdapter gets the current adapter.</p>
-                    <p>the adapter of the enforcer.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -2010,7 +2015,7 @@ the request needs to be mediated, usually an array of strings, can be class inst
                     <codeblock>public
                       <xref format="dita" href="#org.casbin.jcasbin.model.Model" scope="local" type="topic">Model</xref>getModel()</codeblock>
                     <p>getModel gets the current model.</p>
-                    <p>the model of the enforcer.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -2034,7 +2039,7 @@ the request needs to be mediated, usually an array of strings, can be class inst
                   <entry align="left" colname="col1">
                     <codeblock>public boolean isFiltered()</codeblock>
                     <p>isFiltered returns true if the loaded policy has been filtered.</p>
-                    <p>if the loaded policy has been filtered.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -2058,10 +2063,7 @@ the request needs to be mediated, usually an array of strings, can be class inst
                   <entry align="left" colname="col1">
                     <codeblock>public void loadFilteredPolicy(Object filter)</codeblock>
                     <p>loadFilteredPolicy reloads a filtered policy from file/database.</p>
-                    <p>filter
-
-
-the filter used to specify which type of policy should be loaded.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -2129,7 +2131,7 @@ the filter used to specify which type of policy should be loaded.</li>
                     <codeblock>public static
                       <xref format="dita" href="#org.casbin.jcasbin.model.Model" scope="local" type="topic">Model</xref>newModel()</codeblock>
                     <p>newModel creates a model.</p>
-                    <p>an empty model.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -2154,14 +2156,7 @@ the filter used to specify which type of policy should be loaded.</li>
                     <codeblock>public static
                       <xref format="dita" href="#org.casbin.jcasbin.model.Model" scope="local" type="topic">Model</xref>newModel(String text)</codeblock>
                     <p>newModel creates a model.</p>
-                    <p>text
-
-
-the model text. 
-
-
-
-the model.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -2194,22 +2189,7 @@ the model text.</li>
                     <codeblock>public static
                       <xref format="dita" href="#org.casbin.jcasbin.model.Model" scope="local" type="topic">Model</xref>newModel(String modelPath, String unused)</codeblock>
                     <p>newModel creates a model.</p>
-                    <p>modelPath
-
-
-the path of the model file. 
-
-
-
-
-unused
-
-
-unused parameter, just for differentiating with newModel(String text). 
-
-
-
-the model.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -2263,10 +2243,7 @@ unused parameter, just for differentiating with newModel(String text).</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void setAdapter(Adapter adapter)</codeblock>
                     <p>setAdapter sets the current adapter.</p>
-                    <p>adapter
-
-
-the adapter.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -2294,10 +2271,7 @@ the adapter.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void setEffector(Effector eft)</codeblock>
                     <p>setEffector sets the current effector.</p>
-                    <p>eft
-
-
-the effector.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -2325,10 +2299,7 @@ the effector.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void setModel(Model model)</codeblock>
                     <p>setModel sets the current model.</p>
-                    <p>model
-
-
-the model.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -2356,10 +2327,7 @@ the model.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void setRoleManager(RoleManager rm)</codeblock>
                     <p>SetRoleManager sets the current role manager.</p>
-                    <p>rm
-
-
-the role manager.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -2387,10 +2355,7 @@ the role manager.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void setWatcher(Watcher watcher)</codeblock>
                     <p>setWatcher sets the current watcher.</p>
-                    <p>watcher
-
-
-the watcher.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -2449,6 +2414,14 @@ the watcher.</li>
       </titlealts>
       <body outputclass="java">
         <p>
+          <b>Direct Base Classes:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">org.casbin.jcasbin.main.ManagementEnforcer</xref>
+          </li>
+        </ul>
+        <p>
           <b>Direct Known Subclasses:</b>
         </p>
         <ul>
@@ -2460,6 +2433,7 @@ the watcher.</li>
           <b>Enforcer</b>extends
           <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>
         </codeblock>
+        <p>Enforcer = ManagementEnforcer + RBAC API.</p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -2764,7 +2738,7 @@ hasRoleForUser determines whether a user has a role.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>
                   </entry>
                 </row>
@@ -2855,7 +2829,7 @@ hasRoleForUser determines whether a user has a role.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>
                   </entry>
                 </row>
@@ -3018,6 +2992,7 @@ hasRoleForUser determines whether a user has a role.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>Enforcer()</codeblock>
+                    <p>Enforcer is the default constructor.</p>
                   </entry>
                 </row>
               </tbody>
@@ -3036,18 +3011,8 @@ hasRoleForUser determines whether a user has a role.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>Enforcer(String modelPath, String policyFile)</codeblock>
-                    <p>modelPath
-
-
-the path of the model file. 
-
-
-
-
-policyFile
-
-
-the path of the policy file.</p>
+                    <p>Enforcer initializes an enforcer with a model file and a policy file.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3077,18 +3042,8 @@ the path of the policy file.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>Enforcer(String modelPath, Adapter adapter)</codeblock>
-                    <p>modelPath
-
-
-the path of the model file. 
-
-
-
-
-adapter
-
-
-the adapter.</p>
+                    <p>Enforcer initializes an enforcer with a database adapter.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3118,18 +3073,8 @@ the adapter.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>Enforcer(Model m, Adapter adapter)</codeblock>
-                    <p>m
-
-
-the model. 
-
-
-
-
-adapter
-
-
-the adapter.</p>
+                    <p>Enforcer initializes an enforcer with a model and a database adapter.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3159,10 +3104,8 @@ the adapter.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>Enforcer(Model m)</codeblock>
-                    <p>m
-
-
-the model.</p>
+                    <p>Enforcer initializes an enforcer with a model.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3189,10 +3132,8 @@ the model.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>Enforcer(String modelPath)</codeblock>
-                    <p>modelPath
-
-
-the path of the model file.</p>
+                    <p>Enforcer initializes an enforcer with a model file.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3219,26 +3160,8 @@ the path of the model file.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>Enforcer(String modelPath, String policyFile, boolean enableLog)</codeblock>
-                    <p>modelPath
-
-
-the path of the model file. 
-
-
-
-
-policyFile
-
-
-the path of the policy file. 
-
-
-
-
-enableLog
-
-
-whether to enable Casbin's log.</p>
+                    <p>Enforcer initializes an enforcer with a model file, a policy file and an enable log flag.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3276,22 +3199,7 @@ whether to enable Casbin's log.</li>
                     <codeblock>public boolean addPermissionForUser(String user, String... permission)</codeblock>
                     <p>addPermissionForUser adds a permission for a user or role.</p>
                     <p>Returns false if the user or role already has the permission (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3327,22 +3235,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                     <codeblock>public boolean addPermissionForUser(String user, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;permission)</codeblock>
                     <p>addPermissionForUser adds a permission for a user or role.</p>
                     <p>Returns false if the user or role already has the permission (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3378,22 +3271,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                     <codeblock>public boolean addRoleForUser(String user, String role)</codeblock>
                     <p>addRoleForUser adds a role for a user.</p>
                     <p>Returns false if the user already has the role (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3429,30 +3307,7 @@ the role.</li>
                     <codeblock>public boolean addRoleForUserInDomain(String user, String role, String domain)</codeblock>
                     <p>addRoleForUserInDomain adds a role for a user inside a domain.</p>
                     <p>Returns false if the user already has the role (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-
-domain
-
-
-the domain. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3491,14 +3346,7 @@ the domain.</li>
                     <codeblock>public boolean deletePermission(String... permission)</codeblock>
                     <p>deletePermission deletes a permission.</p>
                     <p>Returns false if the permission does not exist (aka not affected).</p>
-                    <p>permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3531,14 +3379,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                     <codeblock>public boolean deletePermission(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;permission)</codeblock>
                     <p>deletePermission deletes a permission.</p>
                     <p>Returns false if the permission does not exist (aka not affected).</p>
-                    <p>permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3571,22 +3412,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                     <codeblock>public boolean deletePermissionForUser(String user, String... permission)</codeblock>
                     <p>deletePermissionForUser deletes a permission for a user or role.</p>
                     <p>Returns false if the user or role does not have the permission (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3622,22 +3448,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                     <codeblock>public boolean deletePermissionForUser(String user, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;permission)</codeblock>
                     <p>deletePermissionForUser deletes a permission for a user or role.</p>
                     <p>Returns false if the user or role does not have the permission (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3673,14 +3484,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                     <codeblock>public boolean deletePermissionsForUser(String user)</codeblock>
                     <p>deletePermissionsForUser deletes permissions for a user or role.</p>
                     <p>Returns false if the user or role does not have any permissions (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3712,10 +3516,7 @@ the user.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void deleteRole(String role)</codeblock>
                     <p>deleteRole deletes a role.</p>
-                    <p>role
-
-
-the role.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3744,22 +3545,7 @@ the role.</li>
                     <codeblock>public boolean deleteRoleForUser(String user, String role)</codeblock>
                     <p>deleteRoleForUser deletes a role for a user.</p>
                     <p>Returns false if the user does not have the role (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3795,30 +3581,7 @@ the role.</li>
                     <codeblock>public boolean deleteRoleForUserInDomain(String user, String role, String domain)</codeblock>
                     <p>deleteRoleForUserInDomain deletes a role for a user inside a domain.</p>
                     <p>Returns false if the user does not have the role (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-
-domain
-
-
-the domain. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3857,14 +3620,7 @@ the domain.</li>
                     <codeblock>public boolean deleteRolesForUser(String user)</codeblock>
                     <p>deleteRolesForUser deletes all roles for a user.</p>
                     <p>Returns false if the user does not have any roles (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3897,14 +3653,7 @@ the user.</li>
                     <codeblock>public boolean deleteUser(String user)</codeblock>
                     <p>deleteUser deletes a user.</p>
                     <p>Returns false if the user does not exist (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3938,14 +3687,7 @@ the user.</li>
                     <p>getImplicitPermissionsForUser gets implicit permissions for a user or role.</p>
                     <p>Compared to getPermissionsForUser(), this function retrieves permissions for inherited roles. For example: p, admin, data1, read p, alice, data2, read g, alice, admin</p>
                     <p>getPermissionsForUser("alice") can only get: [["alice", "data2", "read"]]. But getImplicitPermissionsForUser("alice") will get: [["admin", "data1", "read"], ["alice", "data2", "read"]].</p>
-                    <p>user
-
-
-the user. 
-
-
-
-implicit permissions for a user or role.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -3977,22 +3719,7 @@ the user.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getImplicitPermissionsForUserInDomain(String user, String domain)</codeblock>
                     <p>getImplicitPermissionsForUserInDomain gets implicit permissions for a user or role in domain.</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-domain
-
-
-the domain. 
-
-
-
-implicit permissions for a user or role in domain.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4029,22 +3756,7 @@ the domain.</li>
                     <p>getImplicitRolesForUser gets implicit roles that a user has.</p>
                     <p>Compared to getRolesForUser(), this function retrieves indirect roles besides direct roles. For example: g, alice, role:admin g, role:admin, role:user</p>
                     <p>getRolesForUser("alice") can only get: ["role:admin"]. But getImplicitRolesForUser("alice") will get: ["role:admin", "role:user"].</p>
-                    <p>name
-
-
-the user 
-
-
-
-
-domain
-
-
-the domain 
-
-
-
-implicit roles that a user has.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4079,14 +3791,7 @@ the domain</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPermissionsForUser(String user)</codeblock>
                     <p>getPermissionsForUser gets permissions for a user or role.</p>
-                    <p>user
-
-
-the user. 
-
-
-
-the permissions, a permission is usually like (obj, act). It is actually the rule without the subject.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4118,22 +3823,7 @@ the user.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPermissionsForUserInDomain(String user, String domain)</codeblock>
                     <p>getPermissionsForUserInDomain gets permissions for a user or role inside a domain.</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-domain
-
-
-the domain. 
-
-
-
-the permissions, a permission is usually like (obj, act). It is actually the rule without the subject.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4168,14 +3858,7 @@ the domain.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getRolesForUser(String name)</codeblock>
                     <p>getRolesForUser gets the roles that a user has.</p>
-                    <p>name
-
-
-the user. 
-
-
-
-the roles that the user has.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4207,22 +3890,7 @@ the user.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getRolesForUserInDomain(String name, String domain)</codeblock>
                     <p>getRolesForUserInDomain gets the roles that a user has inside a domain.</p>
-                    <p>name
-
-
-the user. 
-
-
-
-
-domain
-
-
-the domain. 
-
-
-
-the roles that the user has in the domain.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4257,14 +3925,7 @@ the domain.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getUsersForRole(String name)</codeblock>
                     <p>getUsersForRole gets the users that has a role.</p>
-                    <p>name
-
-
-the role. 
-
-
-
-the users that has the role.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4296,22 +3957,7 @@ the role.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasPermissionForUser(String user, String... permission)</codeblock>
                     <p>hasPermissionForUser determines whether a user has a permission.</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-whether the user has the permission.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4346,22 +3992,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasPermissionForUser(String user, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;permission)</codeblock>
                     <p>hasPermissionForUser determines whether a user has a permission.</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-whether the user has the permission.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4396,22 +4027,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasRoleForUser(String name, String role)</codeblock>
                     <p>hasRoleForUser determines whether a user has a role.</p>
-                    <p>name
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-whether the user has the role.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -4444,6 +4060,14 @@ the role.</li>
       </titlealts>
       <body outputclass="java">
         <p>
+          <b>Direct Base Classes:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer" scope="local" type="topic">org.casbin.jcasbin.main.CoreEnforcer</xref>
+          </li>
+        </ul>
+        <p>
           <b>Direct Known Subclasses:</b>
         </p>
         <ul>
@@ -4455,6 +4079,7 @@ the role.</li>
           <b>InternalEnforcer</b>extends
           <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer" scope="local" type="topic">CoreEnforcer</xref>
         </codeblock>
+        <p>InternalEnforcer = CoreEnforcer + Internal API.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <p></p>
@@ -4463,7 +4088,7 @@ the role.</li>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>
                   </entry>
                 </row>
@@ -4554,7 +4179,7 @@ the role.</li>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>
                   </entry>
                 </row>
@@ -4708,7 +4333,7 @@ the role.</li>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                   </entry>
                 </row>
@@ -4815,7 +4440,10 @@ the role.</li>
           </li>
         </ul>
         <codeblock>public class
-          <b>ManagementEnforcer</b>extends org.casbin.jcasbin.main.InternalEnforcer</codeblock>
+          <b>ManagementEnforcer</b>extends
+          <xref format="dita" href="#org.casbin.jcasbin.main.InternalEnforcer" scope="local" type="topic">InternalEnforcer</xref>
+        </codeblock>
+        <p>ManagementEnforcer = InternalEnforcer + Management API.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -5243,7 +4871,7 @@ removePolicy removes an authorization rule from the current policy.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>
                   </entry>
                 </row>
@@ -5334,7 +4962,7 @@ removePolicy removes an authorization rule from the current policy.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                   </entry>
                 </row>
@@ -5438,18 +5066,7 @@ removePolicy removes an authorization rule from the current policy.</entry>
                   <entry align="left" colname="col1">
                     <codeblock>public void addFunction(String name, AviatorFunction function)</codeblock>
                     <p>addFunction adds a customized function.</p>
-                    <p>name
-
-
-the name of the new function. 
-
-
-
-
-function
-
-
-the function.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5481,14 +5098,7 @@ the function.</li>
                     <codeblock>public boolean addGroupingPolicy(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>addGroupingPolicy adds a role inheritance rule to the current policy.</p>
                     <p>If the rule already exists, the function returns false and the rule will not be added. Otherwise the function returns true by adding the new rule.</p>
-                    <p>params
-
-
-the "g" policy rule, ptype "g" is implicitly used. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5521,14 +5131,7 @@ the "g" policy rule, ptype "g" is implicitly used.</li>
                     <codeblock>public boolean addGroupingPolicy(String... params)</codeblock>
                     <p>addGroupingPolicy adds a role inheritance rule to the current policy.</p>
                     <p>If the rule already exists, the function returns false and the rule will not be added. Otherwise the function returns true by adding the new rule.</p>
-                    <p>params
-
-
-the "g" policy rule, ptype "g" is implicitly used. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5561,22 +5164,7 @@ the "g" policy rule, ptype "g" is implicitly used.</li>
                     <codeblock>public boolean addNamedGroupingPolicy(String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>addNamedGroupingPolicy adds a named role inheritance rule to the current policy.</p>
                     <p>If the rule already exists, the function returns false and the rule will not be added. Otherwise the function returns true by adding the new rule.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-
-params
-
-
-the "g" policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5612,22 +5200,7 @@ the "g" policy rule.</li>
                     <codeblock>public boolean addNamedGroupingPolicy(String ptype, String... params)</codeblock>
                     <p>addNamedGroupingPolicy adds a named role inheritance rule to the current policy.</p>
                     <p>If the rule already exists, the function returns false and the rule will not be added. Otherwise the function returns true by adding the new rule.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-
-params
-
-
-the "g" policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5663,22 +5236,7 @@ the "g" policy rule.</li>
                     <codeblock>public boolean addNamedPolicy(String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>AddNamedPolicy adds an authorization rule to the current named policy.</p>
                     <p>If the rule already exists, the function returns false and the rule will not be added. Otherwise the function returns true by adding the new rule.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-
-params
-
-
-the "p" policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5714,22 +5272,7 @@ the "p" policy rule.</li>
                     <codeblock>public boolean addNamedPolicy(String ptype, String... params)</codeblock>
                     <p>AddNamedPolicy adds an authorization rule to the current named policy.</p>
                     <p>If the rule already exists, the function returns false and the rule will not be added. Otherwise the function returns true by adding the new rule.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-
-params
-
-
-the "p" policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5765,14 +5308,7 @@ the "p" policy rule.</li>
                     <codeblock>public boolean addPolicy(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>addPolicy adds an authorization rule to the current policy.</p>
                     <p>If the rule already exists, the function returns false and the rule will not be added. Otherwise the function returns true by adding the new rule.</p>
-                    <p>params
-
-
-the "p" policy rule, ptype "p" is implicitly used. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5805,14 +5341,7 @@ the "p" policy rule, ptype "p" is implicitly used.</li>
                     <codeblock>public boolean addPolicy(String... params)</codeblock>
                     <p>addPolicy adds an authorization rule to the current policy.</p>
                     <p>If the rule already exists, the function returns false and the rule will not be added. Otherwise the function returns true by adding the new rule.</p>
-                    <p>params
-
-
-the "p" policy rule, ptype "p" is implicitly used. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5844,7 +5373,7 @@ the "p" policy rule, ptype "p" is implicitly used.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllActions()</codeblock>
                     <p>getAllActions gets the list of actions that show up in the current policy.</p>
-                    <p>all the actions in "p" policy rules. It actually collects the 2-index elements of "p" policy rules. So make sure your action is the 2-index element, like (sub, obj, act). Duplicates are removed.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -5868,14 +5397,7 @@ the "p" policy rule, ptype "p" is implicitly used.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllNamedActions(String ptype)</codeblock>
                     <p>GetAllNamedActions gets the list of actions that show up in the current named policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-all the actions in policy rules of the ptype type. It actually collects the 2-index elements of the policy rules. So make sure your action is the 2-index element, like (sub, obj, act). Duplicates are removed.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5907,14 +5429,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllNamedObjects(String ptype)</codeblock>
                     <p>getAllNamedObjects gets the list of objects that show up in the current named policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-all the objects in policy rules of the ptype type. It actually collects the 1-index elements of the policy rules. So make sure your object is the 1-index element, like (sub, obj, act). Duplicates are removed.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5946,14 +5461,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllNamedRoles(String ptype)</codeblock>
                     <p>getAllNamedRoles gets the list of roles that show up in the current named policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-all the subjects in policy rules of the ptype type. It actually collects the 0-index elements of the policy rules. So make sure your subject is the 0-index element, like (sub, obj, act). Duplicates are removed.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -5985,14 +5493,7 @@ the policy type, can be "g", "g2", "g3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllNamedSubjects(String ptype)</codeblock>
                     <p>GetAllNamedSubjects gets the list of subjects that show up in the currentnamed policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-all the subjects in policy rules of the ptype type. It actually collects the 0-index elements of the policy rules. So make sure your subject is the 0-index element, like (sub, obj, act). Duplicates are removed.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6024,7 +5525,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllObjects()</codeblock>
                     <p>getAllObjects gets the list of objects that show up in the current policy.</p>
-                    <p>all the objects in "p" policy rules. It actually collects the 1-index elements of "p" policy rules. So make sure your object is the 1-index element, like (sub, obj, act). Duplicates are removed.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -6048,7 +5549,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllRoles()</codeblock>
                     <p>getAllRoles gets the list of roles that show up in the current policy.</p>
-                    <p>all the roles in "g" policy rules. It actually collects the 1-index elements of "g" policy rules. So make sure your role is the 1-index element, like (sub, role). Duplicates are removed.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -6072,7 +5573,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllSubjects()</codeblock>
                     <p>getAllSubjects gets the list of subjects that show up in the current policy.</p>
-                    <p>all the subjects in "p" policy rules. It actually collects the 0-index elements of "p" policy rules. So make sure your subject is the 0-index element, like (sub, obj, act). Duplicates are removed.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -6096,22 +5597,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredGroupingPolicy(int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredGroupingPolicy gets all the role inheritance rules in the policy, field filters can be specified.</p>
-                    <p>fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-the filtered "g" policy rules.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6146,30 +5632,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredNamedGroupingPolicy(String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredNamedGroupingPolicy gets all the role inheritance rules in the policy, field filters can be specified.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-
-fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-the filtered "g" policy rules of the specified ptype.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6207,30 +5670,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredNamedPolicy(String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredNamedPolicy gets all the authorization rules in the named policy, field filters can be specified.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-
-fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-the filtered "p" policy rules of the specified ptype.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6268,22 +5708,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredPolicy(int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredPolicy gets all the authorization rules in the policy, field filters can be specified.</p>
-                    <p>fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-the filtered "p" policy rules.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6318,7 +5743,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getGroupingPolicy()</codeblock>
                     <p>getGroupingPolicy gets all the role inheritance rules in the policy.</p>
-                    <p>all the "g" policy rules.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -6342,14 +5767,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getNamedGroupingPolicy(String ptype)</codeblock>
                     <p>getNamedGroupingPolicy gets all the role inheritance rules in the policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-the "g" policy rules of the specified ptype.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6381,14 +5799,7 @@ the policy type, can be "g", "g2", "g3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getNamedPolicy(String ptype)</codeblock>
                     <p>getNamedPolicy gets all the authorization rules in the named policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-the "p" policy rules of the specified ptype.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6420,7 +5831,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPolicy()</codeblock>
                     <p>getPolicy gets all the authorization rules in the policy.</p>
-                    <p>all the "p" policy rules.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -6444,14 +5855,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasGroupingPolicy(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>hasGroupingPolicy determines whether a role inheritance rule exists.</p>
-                    <p>params
-
-
-the "g" policy rule, ptype "g" is implicitly used. 
-
-
-
-whether the rule exists.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6483,14 +5887,7 @@ the "g" policy rule, ptype "g" is implicitly used.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasGroupingPolicy(String... params)</codeblock>
                     <p>hasGroupingPolicy determines whether a role inheritance rule exists.</p>
-                    <p>params
-
-
-the "g" policy rule, ptype "g" is implicitly used. 
-
-
-
-whether the rule exists.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6522,22 +5919,7 @@ the "g" policy rule, ptype "g" is implicitly used.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasNamedGroupingPolicy(String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>hasNamedGroupingPolicy determines whether a named role inheritance rule exists.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-
-params
-
-
-the "g" policy rule. 
-
-
-
-whether the rule exists.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6572,22 +5954,7 @@ the "g" policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasNamedGroupingPolicy(String ptype, String... params)</codeblock>
                     <p>hasNamedGroupingPolicy determines whether a named role inheritance rule exists.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-
-params
-
-
-the "g" policy rule. 
-
-
-
-whether the rule exists.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6622,22 +5989,7 @@ the "g" policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasNamedPolicy(String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>hasNamedPolicy determines whether a named authorization rule exists.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-
-params
-
-
-the "p" policy rule. 
-
-
-
-whether the rule exists.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6672,22 +6024,7 @@ the "p" policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasNamedPolicy(String ptype, String... params)</codeblock>
                     <p>hasNamedPolicy determines whether a named authorization rule exists.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-
-params
-
-
-the "p" policy rule. 
-
-
-
-whether the rule exists.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6722,14 +6059,7 @@ the "p" policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasPolicy(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>hasPolicy determines whether an authorization rule exists.</p>
-                    <p>params
-
-
-the "p" policy rule, ptype "p" is implicitly used. 
-
-
-
-whether the rule exists.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6761,14 +6091,7 @@ the "p" policy rule, ptype "p" is implicitly used.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasPolicy(String... params)</codeblock>
                     <p>hasPolicy determines whether an authorization rule exists.</p>
-                    <p>params
-
-
-the "p" policy rule, ptype "p" is implicitly used. 
-
-
-
-whether the rule exists.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6800,22 +6123,7 @@ the "p" policy rule, ptype "p" is implicitly used.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeFilteredGroupingPolicy(int fieldIndex, String... fieldValues)</codeblock>
                     <p>removeFilteredGroupingPolicy removes a role inheritance rule from the current policy, field filters can be specified.</p>
-                    <p>fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6850,30 +6158,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeFilteredNamedGroupingPolicy(String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>removeFilteredNamedGroupingPolicy removes a role inheritance rule from the current named policy, field filters can be specified.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-
-fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6911,30 +6196,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeFilteredNamedPolicy(String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>removeFilteredNamedPolicy removes an authorization rule from the current named policy, field filters can be specified.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-
-fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -6972,22 +6234,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeFilteredPolicy(int fieldIndex, String... fieldValues)</codeblock>
                     <p>removeFilteredPolicy removes an authorization rule from the current policy, field filters can be specified.</p>
-                    <p>fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7022,14 +6269,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeGroupingPolicy(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>removeGroupingPolicy removes a role inheritance rule from the current policy.</p>
-                    <p>params
-
-
-the "g" policy rule, ptype "g" is implicitly used. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7061,14 +6301,7 @@ the "g" policy rule, ptype "g" is implicitly used.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeGroupingPolicy(String... params)</codeblock>
                     <p>removeGroupingPolicy removes a role inheritance rule from the current policy.</p>
-                    <p>params
-
-
-the "g" policy rule, ptype "g" is implicitly used. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7100,22 +6333,7 @@ the "g" policy rule, ptype "g" is implicitly used.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeNamedGroupingPolicy(String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>removeNamedGroupingPolicy removes a role inheritance rule from the current named policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-
-params
-
-
-the "g" policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7150,22 +6368,7 @@ the "g" policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeNamedGroupingPolicy(String ptype, String... params)</codeblock>
                     <p>removeNamedGroupingPolicy removes a role inheritance rule from the current named policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "g", "g2", "g3", .. 
-
-
-
-
-params
-
-
-the "g" policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7200,22 +6403,7 @@ the "g" policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeNamedPolicy(String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>removeNamedPolicy removes an authorization rule from the current named policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-
-params
-
-
-the "p" policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7250,22 +6438,7 @@ the "p" policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeNamedPolicy(String ptype, String... params)</codeblock>
                     <p>removeNamedPolicy removes an authorization rule from the current named policy.</p>
-                    <p>ptype
-
-
-the policy type, can be "p", "p2", "p3", .. 
-
-
-
-
-params
-
-
-the "p" policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7300,14 +6473,7 @@ the "p" policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removePolicy(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;params)</codeblock>
                     <p>removePolicy removes an authorization rule from the current policy.</p>
-                    <p>params
-
-
-the "p" policy rule, ptype "p" is implicitly used. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7339,14 +6505,7 @@ the "p" policy rule, ptype "p" is implicitly used.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removePolicy(String... params)</codeblock>
                     <p>removePolicy removes an authorization rule from the current policy.</p>
-                    <p>params
-
-
-the "p" policy rule, ptype "p" is implicitly used. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7375,10 +6534,19 @@ the "p" policy rule, ptype "p" is implicitly used.</li>
         <searchtitle>SyncedEnforcer</searchtitle>
       </titlealts>
       <body outputclass="java">
+        <p>
+          <b>Direct Base Classes:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">org.casbin.jcasbin.main.Enforcer</xref>
+          </li>
+        </ul>
         <codeblock>public class
           <b>SyncedEnforcer</b>extends
           <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
         </codeblock>
+        <p>SyncedEnforcer = ManagementEnforcer + RBAC API.</p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -7674,7 +6842,7 @@ hasRoleForUser determines whether a user has a role.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>
                   </entry>
                 </row>
@@ -7828,7 +6996,7 @@ hasRoleForUser determines whether a user has a role.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::main::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
                     <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                   </entry>
                 </row>
@@ -7931,6 +7099,7 @@ hasRoleForUser determines whether a user has a role.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>SyncedEnforcer()</codeblock>
+                    <p>; SyncedEnforcer is the default constructor.</p>
                   </entry>
                 </row>
               </tbody>
@@ -7949,18 +7118,8 @@ hasRoleForUser determines whether a user has a role.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>SyncedEnforcer(String modelPath, String policyFile)</codeblock>
-                    <p>modelPath
-
-
-the path of the model file. 
-
-
-
-
-policyFile
-
-
-the path of the policy file.</p>
+                    <p>SyncedEnforcer initializes an enforcer with a model file and a policy file.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -7990,18 +7149,8 @@ the path of the policy file.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>SyncedEnforcer(String modelPath, Adapter adapter)</codeblock>
-                    <p>modelPath
-
-
-the path of the model file. 
-
-
-
-
-adapter
-
-
-the adapter.</p>
+                    <p>SyncedEnforcer initializes an enforcer with a database adapter.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8031,18 +7180,8 @@ the adapter.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>SyncedEnforcer(Model m, Adapter adapter)</codeblock>
-                    <p>m
-
-
-the model. 
-
-
-
-
-adapter
-
-
-the adapter.</p>
+                    <p>SyncedEnforcer initializes an enforcer with a model and a database adapter.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8072,10 +7211,8 @@ the adapter.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>SyncedEnforcer(Model m)</codeblock>
-                    <p>m
-
-
-the model.</p>
+                    <p>SyncedEnforcer initializes an enforcer with a model.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8102,10 +7239,8 @@ the model.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>SyncedEnforcer(String modelPath)</codeblock>
-                    <p>modelPath
-
-
-the path of the model file.</p>
+                    <p>SyncedEnforcer initializes an enforcer with a model file.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8132,26 +7267,8 @@ the path of the model file.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>SyncedEnforcer(String modelPath, String policyFile, boolean enableLog)</codeblock>
-                    <p>modelPath
-
-
-the path of the model file. 
-
-
-
-
-policyFile
-
-
-the path of the policy file. 
-
-
-
-
-enableLog
-
-
-whether to enable Casbin's log.</p>
+                    <p>SyncedEnforcer initializes an enforcer with a model file, a policy file and an enable log flag.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8200,22 +7317,7 @@ whether to enable Casbin's log.</li>
                       </codeph>
                     </p>
                     <p>Returns false if the user or role already has the permission (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8262,22 +7364,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                       </codeph>
                     </p>
                     <p>Returns false if the user or role already has the permission (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8324,22 +7411,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                       </codeph>
                     </p>
                     <p>Returns false if the user already has the role (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8386,30 +7458,7 @@ the role.</li>
                       </codeph>
                     </p>
                     <p>Returns false if the user already has the role (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-
-domain
-
-
-the domain. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8459,14 +7508,7 @@ the domain.</li>
                       </codeph>
                     </p>
                     <p>Returns false if the permission does not exist (aka not affected).</p>
-                    <p>permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8510,14 +7552,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                       </codeph>
                     </p>
                     <p>Returns false if the permission does not exist (aka not affected).</p>
-                    <p>permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8561,22 +7596,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                       </codeph>
                     </p>
                     <p>Returns false if the user or role does not have the permission (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8623,22 +7643,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                       </codeph>
                     </p>
                     <p>Returns false if the user or role does not have the permission (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8685,14 +7690,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                       </codeph>
                     </p>
                     <p>Returns false if the user or role does not have any permissions (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8735,10 +7733,7 @@ the user.</li>
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>role
-
-
-the role.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8778,22 +7773,7 @@ the role.</li>
                       </codeph>
                     </p>
                     <p>Returns false if the user does not have the role (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8840,30 +7820,7 @@ the role.</li>
                       </codeph>
                     </p>
                     <p>Returns false if the user does not have the role (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-
-domain
-
-
-the domain. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8913,14 +7870,7 @@ the domain.</li>
                       </codeph>
                     </p>
                     <p>Returns false if the user does not have any roles (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -8964,14 +7914,7 @@ the user.</li>
                       </codeph>
                     </p>
                     <p>Returns false if the user does not exist (aka not affected).</p>
-                    <p>user
-
-
-the user. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9016,14 +7959,7 @@ the user.</li>
                     </p>
                     <p>Compared to getPermissionsForUser(), this function retrieves permissions for inherited roles. For example: p, admin, data1, read p, alice, data2, read g, alice, admin</p>
                     <p>getPermissionsForUser("alice") can only get: [["alice", "data2", "read"]]. But getImplicitPermissionsForUser("alice") will get: [["admin", "data1", "read"], ["alice", "data2", "read"]].</p>
-                    <p>user
-
-
-the user. 
-
-
-
-implicit permissions for a user or role.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9068,22 +8004,7 @@ the user.</li>
                     </p>
                     <p>Compared to getRolesForUser(), this function retrieves indirect roles besides direct roles. For example: g, alice, role:admin g, role:admin, role:user</p>
                     <p>getRolesForUser("alice") can only get: ["role:admin"]. But getImplicitRolesForUser("alice") will get: ["role:admin", "role:user"].</p>
-                    <p>name
-
-
-the user 
-
-
-
-
-domain
-
-
-the domain 
-
-
-
-implicit roles that a user has.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9129,14 +8050,7 @@ the domain</li>
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>user
-
-
-the user. 
-
-
-
-the permissions, a permission is usually like (obj, act). It is actually the rule without the subject.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9179,22 +8093,7 @@ the user.</li>
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-domain
-
-
-the domain. 
-
-
-
-the permissions, a permission is usually like (obj, act). It is actually the rule without the subject.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9240,14 +8139,7 @@ the domain.</li>
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>name
-
-
-the user. 
-
-
-
-the roles that the user has.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9290,22 +8182,7 @@ the user.</li>
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>name
-
-
-the user. 
-
-
-
-
-domain
-
-
-the domain. 
-
-
-
-the roles that the user has in the domain.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9351,14 +8228,7 @@ the domain.</li>
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>name
-
-
-the role. 
-
-
-
-the users that has the role.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9401,22 +8271,7 @@ the role.</li>
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-whether the user has the permission.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9462,22 +8317,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>user
-
-
-the user. 
-
-
-
-
-permission
-
-
-the permission, usually be (obj, act). It is actually the rule without the subject. 
-
-
-
-whether the user has the permission.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9523,22 +8363,7 @@ the permission, usually be (obj, act). It is actually the rule without the subje
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>name
-
-
-the user. 
-
-
-
-
-role
-
-
-the role. 
-
-
-
-whether the user has the role.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9575,17 +8400,14 @@ the role.</li>
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.model.Assertion" scope="local" type="topic">Assertion</xref>- 
-Assertion represents an expression in a section of the model. 
-    For example: r = sub, obj, act</li>
+            <xref format="dita" href="#org.casbin.jcasbin.model.Assertion" scope="local" type="topic">Assertion</xref>Assertion represents an expression in a section of the model.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.model.FunctionMap" scope="local" type="topic">FunctionMap</xref>- 
-FunctionMap represents the collection of Function.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.model.FunctionMap" scope="local" type="topic">FunctionMap</xref>FunctionMap represents the collection of Function.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.model.Model" scope="local" type="topic">Model</xref>- 
-Model represents the whole access control model.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.model.Model" scope="local" type="topic">Model</xref>Model represents the whole access control model.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.model.Policy" scope="local" type="topic">Policy</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.model.Policy" scope="local" type="topic">Policy</xref>
+          </li>
         </ul>
       </section>
     </body>
@@ -9599,6 +8421,7 @@ Model represents the whole access control model.</li>
         <codeblock>public class
           <b>Assertion</b>
         </codeblock>
+        <p>Assertion represents an expression in a section of the model.</p>
         <p>For example: r = sub, obj, act</p>
         <section outputclass="fields_summary">
           <title>Field Summary</title>
@@ -9705,6 +8528,7 @@ Model represents the whole access control model.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>RoleManager rm</codeph>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>
@@ -9723,6 +8547,7 @@ Model represents the whole access control model.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>String key</codeph>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>
@@ -9741,6 +8566,7 @@ Model represents the whole access control model.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; policy</codeph>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>
@@ -9759,6 +8585,7 @@ Model represents the whole access control model.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>String value</codeph>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>
@@ -9777,6 +8604,7 @@ Model represents the whole access control model.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>String[] tokens</codeph>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>
@@ -9798,6 +8626,7 @@ Model represents the whole access control model.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>Assertion()</codeblock>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>
@@ -9817,6 +8646,7 @@ Model represents the whole access control model.</li>
         <codeblock>public class
           <b>FunctionMap</b>
         </codeblock>
+        <p>FunctionMap represents the collection of Function.</p>
         <section outputclass="fields_summary">
           <title>Field Summary</title>
           <table outputclass="field_summary">
@@ -9895,6 +8725,7 @@ loadFunctionMap loads an initial function map.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>Map&#8203;&lt;&#8203;String, AviatorFunction&#8203;&gt;&#8203; fm</codeph>
+                    <p>AviatorFunction represents a function that is used in the matchers, used to get attributes in ABAC.</p>
                   </entry>
                 </row>
               </tbody>
@@ -9917,18 +8748,7 @@ loadFunctionMap loads an initial function map.</entry>
                   <entry align="left" colname="col1">
                     <codeblock>public void addFunction(String name, AviatorFunction function)</codeblock>
                     <p>addFunction adds an expression function.</p>
-                    <p>name
-
-
-the name of the new function. 
-
-
-
-
-function
-
-
-the function.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -9960,7 +8780,7 @@ the function.</li>
                     <codeblock>public static
                       <xref format="dita" href="#org.casbin.jcasbin.model.FunctionMap" scope="local" type="topic">FunctionMap</xref>loadFunctionMap()</codeblock>
                     <p>loadFunctionMap loads an initial function map.</p>
-                    <p>the constructor of FunctionMap.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -9981,10 +8801,19 @@ the function.</li>
         <searchtitle>Model</searchtitle>
       </titlealts>
       <body outputclass="java">
+        <p>
+          <b>Direct Base Classes:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#org.casbin.jcasbin.model.Policy" scope="local" type="topic">org.casbin.jcasbin.model.Policy</xref>
+          </li>
+        </ul>
         <codeblock>public class
           <b>Model</b>extends
           <xref format="dita" href="#org.casbin.jcasbin.model.Policy" scope="local" type="topic">Policy</xref>
         </codeblock>
+        <p>Model represents the whole access control model.</p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -10082,6 +8911,7 @@ saveModelToText saves the model to the text.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>Model()</codeblock>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>
@@ -10104,30 +8934,7 @@ saveModelToText saves the model to the text.</entry>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean addDef(String sec, String key, String value)</codeblock>
                     <p>addDef adds an assertion to the model.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-key
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-value
-
-
-the policy rule, separated by ", ". 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10165,10 +8972,7 @@ the policy rule, separated by ", ".</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void loadModel(String path)</codeblock>
                     <p>loadModel loads the model from model CONF file.</p>
-                    <p>path
-
-
-the path of the model file.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10196,10 +9000,7 @@ the path of the model file.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void loadModelFromText(String text)</codeblock>
                     <p>loadModelFromText loads the model from the text.</p>
-                    <p>text
-
-
-the model text.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10246,7 +9047,7 @@ the model text.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public String saveModelToText()</codeblock>
                     <p>saveModelToText saves the model to the text.</p>
-                    <p>the model text.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -10278,6 +9079,7 @@ the model text.</li>
         <codeblock>public class
           <b>Policy</b>
         </codeblock>
+        <p></p>
         <section outputclass="fields_summary">
           <title>Field Summary</title>
           <table outputclass="field_summary">
@@ -10426,7 +9228,7 @@ savePolicyToText saves the policy to the text.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::model::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::model::
                     <xref format="dita" href="#org.casbin.jcasbin.model.Model" scope="local" type="topic">Model</xref>
                   </entry>
                 </row>
@@ -10469,6 +9271,7 @@ savePolicyToText saves the policy to the text.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>Map&#8203;&lt;&#8203;String, Map&#8203;&lt;&#8203;String, Assertion&#8203;&gt;&#8203;&#8203;&gt;&#8203; model</codeph>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>
@@ -10491,30 +9294,7 @@ savePolicyToText saves the policy to the text.</entry>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean addPolicy(String sec, String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;rule)</codeblock>
                     <p>addPolicy adds a policy rule to the model.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-rule
-
-
-the policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10552,10 +9332,7 @@ the policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void buildRoleLinks(RoleManager rm)</codeblock>
                     <p>buildRoleLinks initializes the roles in RBAC.</p>
-                    <p>rm
-
-
-the role manager.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10602,38 +9379,7 @@ the role manager.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredPolicy(String sec, String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredPolicy gets rules based on field filters from a policy.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-the filtered policy rules of section sec and policy type ptype.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10674,22 +9420,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPolicy(String sec, String ptype)</codeblock>
                     <p>getPolicy gets all rules in a policy.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-the policy rules of section sec and policy type ptype.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10724,30 +9455,7 @@ the policy type, "p", "p2", .. or "g", "g2", ..</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getValuesForFieldInPolicy(String sec, String ptype, int fieldIndex)</codeblock>
                     <p>getValuesForFieldInPolicy gets all values for a field for all rules in a policy, duplicated values are removed.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-fieldIndex
-
-
-the policy rule's index. 
-
-
-
-the field values specified by fieldIndex.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10785,30 +9493,7 @@ the policy rule's index.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean hasPolicy(String sec, String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;rule)</codeblock>
                     <p>hasPolicy determines whether a model has the specified policy rule.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-rule
-
-
-the policy rule. 
-
-
-
-whether the rule exists.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10865,38 +9550,7 @@ the policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removeFilteredPolicy(String sec, String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>removeFilteredPolicy removes policy rules based on field filters from the model.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10937,30 +9591,7 @@ the field values to be matched, value "" means not to match this field.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public boolean removePolicy(String sec, String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;rule)</codeblock>
                     <p>removePolicy removes a policy rule from the model.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-rule
-
-
-the policy rule. 
-
-
-
-succeeds or not.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -10998,7 +9629,7 @@ the policy rule.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public String savePolicyToText()</codeblock>
                     <p>savePolicyToText saves the policy to the text.</p>
-                    <p>the policy text.</p>
+                    <p></p>
                     <p>
                       <b>Returns:</b>
                     </p>
@@ -11024,18 +9655,17 @@ the policy rule.</li>
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.persist.Helper" scope="local" type="topic">Helper</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.persist.Helper" scope="local" type="topic">Helper</xref>
+          </li>
         </ul>
       </section>
       <section outputclass="interfaces_summary">
         <title>Interface Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.persist.Adapter" scope="local" type="topic">Adapter</xref>- 
-Adapter is the interface for Casbin adapters.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.persist.Adapter" scope="local" type="topic">Adapter</xref>Adapter is the interface for Casbin adapters.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.persist.Watcher" scope="local" type="topic">Watcher</xref>- 
-Watcher is the interface for Casbin watchers.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.persist.Watcher" scope="local" type="topic">Watcher</xref>Watcher is the interface for Casbin watchers.</li>
         </ul>
       </section>
     </body>
@@ -11049,6 +9679,7 @@ Watcher is the interface for Casbin watchers.</li>
         <codeblock>public class
           <b>Helper</b>
         </codeblock>
+        <p></p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -11198,26 +9829,7 @@ savePolicy saves all policy rules to the storage.</entry>
                     <codeblock>public void addPolicy(String sec, String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;rule)</codeblock>
                     <p>addPolicy adds a policy rule to the storage.</p>
                     <p>This is part of the Auto-Save feature.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-rule
-
-
-the rule, like (sub, obj, act).</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -11251,10 +9863,7 @@ the rule, like (sub, obj, act).</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void loadPolicy(Model model)</codeblock>
                     <p>loadPolicy loads all policy rules from the storage.</p>
-                    <p>model
-
-
-the model.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -11283,34 +9892,7 @@ the model.</li>
                     <codeblock>public void removeFilteredPolicy(String sec, String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>removeFilteredPolicy removes policy rules that match the filter from the storage.</p>
                     <p>This is part of the Auto-Save feature.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-fieldIndex
-
-
-the policy rule's start index to be matched. 
-
-
-
-
-fieldValues
-
-
-the field values to be matched, value "" means not to match this field.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -11348,26 +9930,7 @@ the field values to be matched, value "" means not to match this field.</li>
                     <codeblock>public void removePolicy(String sec, String ptype, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;rule)</codeblock>
                     <p>removePolicy removes a policy rule from the storage.</p>
                     <p>This is part of the Auto-Save feature.</p>
-                    <p>sec
-
-
-the section, "p" or "g". 
-
-
-
-
-ptype
-
-
-the policy type, "p", "p2", .. or "g", "g2", .. 
-
-
-
-
-rule
-
-
-the rule, like (sub, obj, act).</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -11401,10 +9964,7 @@ the rule, like (sub, obj, act).</li>
                   <entry align="left" colname="col1">
                     <codeblock>public void savePolicy(Model model)</codeblock>
                     <p>savePolicy saves all policy rules to the storage.</p>
-                    <p>model
-
-
-the model.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -11483,10 +10043,7 @@ Update calls the update callback of other instances to synchronize their policy.
                     <codeblock>public void setUpdateCallback(Runnable runnable)</codeblock>
                     <p>SetUpdateCallback sets the callback function that the watcher will call when the policy in DB has been changed by other instances.</p>
                     <p>A classic callback is Enforcer.loadPolicy().</p>
-                    <p>runnable
-
-
-the callback function, will be called when policy is updated.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -11536,9 +10093,7 @@ the callback function, will be called when policy is updated.</li>
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.persist.file_adapter.FileAdapter" scope="local" type="topic">FileAdapter</xref>- 
-FileAdapter is the file adapter for Casbin. 
-    It can load policy from file or save policy to file.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.persist.file_adapter.FileAdapter" scope="local" type="topic">FileAdapter</xref>FileAdapter is the file adapter for Casbin.</li>
         </ul>
       </section>
     </body>
@@ -11561,6 +10116,7 @@ FileAdapter is the file adapter for Casbin.
           <b>FileAdapter</b>extends
           <xref format="dita" href="#org.casbin.jcasbin.persist.Adapter" scope="local" type="topic">Adapter</xref>
         </codeblock>
+        <p>FileAdapter is the file adapter for Casbin.</p>
         <p>It can load policy from file or save policy to file.</p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
@@ -11665,10 +10221,8 @@ savePolicy saves all policy rules to the storage.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>FileAdapter(String filePath)</codeblock>
-                    <p>filePath
-
-
-the path of the policy file.</p>
+                    <p>FileAdapter is the constructor for FileAdapter.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -11695,10 +10249,8 @@ the path of the policy file.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>FileAdapter(InputStream inputStream)</codeblock>
-                    <p>inputStream
-
-
-the policy file.inputStream</p>
+                    <p>FileAdapter is the constructor for FileAdapter.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -11942,21 +10494,20 @@ the policy file.inputStream</li>
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.rbac.DefaultRoleManager" scope="local" type="topic">DefaultRoleManager</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.rbac.DefaultRoleManager" scope="local" type="topic">DefaultRoleManager</xref>
+          </li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.rbac.GroupRoleManager" scope="local" type="topic">GroupRoleManager</xref>- 
-GroupRoleManager is used for authorization if the user's group is the role who has permission, but the group information is in the default format (policy start with "g") and the role information is in named format (policy start with "g2", "g3", ...). 
-    e.g. p, admin, domain1, data1, read g, alice, group1 g2, group1, admin, domain1</li>
+            <xref format="dita" href="#org.casbin.jcasbin.rbac.GroupRoleManager" scope="local" type="topic">GroupRoleManager</xref>GroupRoleManager is used for authorization if the user's group is the role who has permission, but the group information is in the default format (policy start with "g") and the role information is in named format (policy start with "g2", "g3", ...).</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.rbac.Role" scope="local" type="topic">Role</xref>- 
-Role represents the data structure for a role in RBAC.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.rbac.Role" scope="local" type="topic">Role</xref>Role represents the data structure for a role in RBAC.</li>
         </ul>
       </section>
       <section outputclass="interfaces_summary">
         <title>Interface Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.rbac.RoleManager" scope="local" type="topic">RoleManager</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.rbac.RoleManager" scope="local" type="topic">RoleManager</xref>
+          </li>
         </ul>
       </section>
     </body>
@@ -11987,6 +10538,7 @@ Role represents the data structure for a role in RBAC.</li>
           <b>DefaultRoleManager</b>extends
           <xref format="dita" href="#org.casbin.jcasbin.rbac.RoleManager" scope="local" type="topic">RoleManager</xref>
         </codeblock>
+        <p></p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -12093,7 +10645,7 @@ printRoles prints all the roles to log.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::rbac::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::rbac::
                     <xref format="dita" href="#org.casbin.jcasbin.rbac.GroupRoleManager" scope="local" type="topic">GroupRoleManager</xref>
                   </entry>
                 </row>
@@ -12124,10 +10676,8 @@ printRoles prints all the roles to log.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>DefaultRoleManager(int maxHierarchyLevel)</codeblock>
-                    <p>maxHierarchyLevel
-
-
-the maximized allowed RBAC hierarchy level.</p>
+                    <p>DefaultRoleManager is the constructor for creating an instance of the default RoleManager implementation.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -12449,10 +10999,19 @@ the maximized allowed RBAC hierarchy level.</li>
         <searchtitle>GroupRoleManager</searchtitle>
       </titlealts>
       <body outputclass="java">
+        <p>
+          <b>Direct Base Classes:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#org.casbin.jcasbin.rbac.DefaultRoleManager" scope="local" type="topic">org.casbin.jcasbin.rbac.DefaultRoleManager</xref>
+          </li>
+        </ul>
         <codeblock>public class
           <b>GroupRoleManager</b>extends
           <xref format="dita" href="#org.casbin.jcasbin.rbac.DefaultRoleManager" scope="local" type="topic">DefaultRoleManager</xref>
         </codeblock>
+        <p>GroupRoleManager is used for authorization if the user's group is the role who has permission, but the group information is in the default format (policy start with "g") and the role information is in named format (policy start with "g2", "g3", ...).</p>
         <p>e.g. p, admin, domain1, data1, read g, alice, group1 g2, group1, admin, domain1</p>
         <p>As for the previous example, alice should have the permission to read data1, but if we use the DefaultRoleManager, it will return false. GroupRoleManager is to handle this situation.</p>
         <section outputclass="contructors_summary">
@@ -12507,7 +11066,7 @@ hasLink determines whether role: name1 inherits role: name2.</entry>
               <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
               <thead>
                 <row>
-                  <entry align="left" colname="col1">Methods inherited from class Class org::casbin::jcasbin::rbac::
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::rbac::
                     <xref format="dita" href="#org.casbin.jcasbin.rbac.DefaultRoleManager" scope="local" type="topic">DefaultRoleManager</xref>
                   </entry>
                 </row>
@@ -12556,10 +11115,8 @@ hasLink determines whether role: name1 inherits role: name2.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeblock>GroupRoleManager(int maxHierarchyLevel)</codeblock>
-                    <p>maxHierarchyLevel
-
-
-the maximized allowed RBAC hierarchy level.</p>
+                    <p>GroupRoleManager is the constructor for creating an instance of the GroupRoleManager implementation.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -12641,6 +11198,7 @@ the maximized allowed RBAC hierarchy level.</li>
         <codeblock>package class
           <b>Role</b>
         </codeblock>
+        <p>Role represents the data structure for a role in RBAC.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -12803,26 +11361,7 @@ printRoles prints all the roles to log.</entry>
                     <codeblock>public void addLink(String name1, String name2, String... domain)</codeblock>
                     <p>addLink adds the inheritance link between two roles.</p>
                     <p>role: name1 and role: name2. domain is a prefix to the roles.</p>
-                    <p>name1
-
-
-the first role (or user). 
-
-
-
-
-name2
-
-
-the second role. 
-
-
-
-
-domain
-
-
-the domain the roles belong to.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -12876,26 +11415,7 @@ the domain the roles belong to.</li>
                     <codeblock>public void deleteLink(String name1, String name2, String... domain)</codeblock>
                     <p>deleteLink deletes the inheritance link between two roles.</p>
                     <p>role: name1 and role: name2. domain is a prefix to the roles.</p>
-                    <p>name1
-
-
-the first role (or user). 
-
-
-
-
-name2
-
-
-the second role. 
-
-
-
-
-domain
-
-
-the domain the roles belong to.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -12930,22 +11450,7 @@ the domain the roles belong to.</li>
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getRoles(String name, String... domain)</codeblock>
                     <p>getRoles gets the roles that a user inherits.</p>
                     <p>domain is a prefix to the roles.</p>
-                    <p>name
-
-
-the user (or a role). 
-
-
-
-
-domain
-
-
-the domain the roles belong to. 
-
-
-
-the roles.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -12980,14 +11485,7 @@ the domain the roles belong to.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getUsers(String name)</codeblock>
                     <p>getUsers gets the users that inherits a role.</p>
-                    <p>name
-
-
-the role. 
-
-
-
-the users.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13020,30 +11518,7 @@ the role.</li>
                     <codeblock>public boolean hasLink(String name1, String name2, String... domain)</codeblock>
                     <p>hasLink determines whether a link exists between two roles.</p>
                     <p>role: name1 inherits role: name2. domain is a prefix to the roles.</p>
-                    <p>name1
-
-
-the first role (or a user). 
-
-
-
-
-name2
-
-
-the second role. 
-
-
-
-
-domain
-
-
-the domain the roles belong to. 
-
-
-
-whether name1 inherits name2 (name1 has role name2).</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13102,9 +11577,11 @@ the domain the roles belong to.</li>
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.util.BuiltInFunctions" scope="local" type="topic">BuiltInFunctions</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.util.BuiltInFunctions" scope="local" type="topic">BuiltInFunctions</xref>
+          </li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.util.Util" scope="local" type="topic">Util</xref>-</li>
+            <xref format="dita" href="#org.casbin.jcasbin.util.Util" scope="local" type="topic">Util</xref>
+          </li>
         </ul>
       </section>
     </body>
@@ -13118,6 +11595,7 @@ the domain the roles belong to.</li>
         <codeblock>public class
           <b>BuiltInFunctions</b>
         </codeblock>
+        <p></p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -13204,22 +11682,7 @@ regexMatch determines whether key1 matches the pattern of key2 in regular expres
                   <entry align="left" colname="col1">
                     <codeblock>public static AviatorFunction generateGFunction(String name, RoleManager rm)</codeblock>
                     <p>generateGFunction is the factory method of the g(_, _) function.</p>
-                    <p>name
-
-
-the name of the g(_, _) function, can be "g", "g2", .. 
-
-
-
-
-rm
-
-
-the role manager used by the function. 
-
-
-
-the function.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13255,22 +11718,7 @@ the role manager used by the function.</li>
                     <codeblock>public static boolean ipMatch(String ip1, String ip2)</codeblock>
                     <p>ipMatch determines whether IP address ip1 matches the pattern of IP address ip2, ip2 can be an IP address or a CIDR pattern.</p>
                     <p>For example, "192.168.2.123" matches "192.168.2.0/24"</p>
-                    <p>ip1
-
-
-the first argument. 
-
-
-
-
-ip2
-
-
-the second argument. 
-
-
-
-whether ip1 matches ip2.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13306,22 +11754,7 @@ the second argument.</li>
                     <codeblock>public static boolean keyMatch(String key1, String key2)</codeblock>
                     <p>keyMatch determines whether key1 matches the pattern of key2 (similar to RESTful path), key2 can contain a *.</p>
                     <p>For example, "/foo/bar" matches "/foo/*"</p>
-                    <p>key1
-
-
-the first argument. 
-
-
-
-
-key2
-
-
-the second argument. 
-
-
-
-whether key1 matches key2.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13357,22 +11790,7 @@ the second argument.</li>
                     <codeblock>public static boolean keyMatch2(String key1, String key2)</codeblock>
                     <p>keyMatch2 determines whether key1 matches the pattern of key2 (similar to RESTful path), key2 can contain a *.</p>
                     <p>For example, "/foo/bar" matches "/foo/*", "/resource1" matches "/:resource"</p>
-                    <p>key1
-
-
-the first argument. 
-
-
-
-
-key2
-
-
-the second argument. 
-
-
-
-whether key1 matches key2.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13408,22 +11826,7 @@ the second argument.</li>
                     <codeblock>public static boolean keyMatch3(String key1, String key2)</codeblock>
                     <p>keyMatch3 determines whether key1 matches the pattern of key2 (similar to RESTful path), key2 can contain a *.</p>
                     <p>For example, "/foo/bar" matches "/foo/*", "/resource1" matches "/{resource}"</p>
-                    <p>key1
-
-
-the first argument. 
-
-
-
-
-key2
-
-
-the second argument. 
-
-
-
-whether key1 matches key2.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13458,22 +11861,7 @@ the second argument.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static boolean regexMatch(String key1, String key2)</codeblock>
                     <p>regexMatch determines whether key1 matches the pattern of key2 in regular expression.</p>
-                    <p>key1
-
-
-the first argument. 
-
-
-
-
-key2
-
-
-the second argument. 
-
-
-
-whether key1 matches key2.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13508,6 +11896,7 @@ the second argument.</li>
         <codeblock>public class
           <b>Util</b>
         </codeblock>
+        <p></p>
         <section outputclass="fields_summary">
           <title>Field Summary</title>
           <table outputclass="field_summary">
@@ -13674,6 +12063,7 @@ setEquals determines whether two string sets are identical.</entry>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>boolean enableLog</codeph>
+                    <p></p>
                   </entry>
                 </row>
               </tbody>
@@ -13696,22 +12086,7 @@ setEquals determines whether two string sets are identical.</entry>
                   <entry align="left" colname="col1">
                     <codeblock>public static boolean array2DEquals(List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;a, List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;b)</codeblock>
                     <p>array2DEquals determines whether two 2-dimensional string arrays are identical.</p>
-                    <p>a
-
-
-the first 2-dimensional array. 
-
-
-
-
-b
-
-
-the second 2-dimensional array. 
-
-
-
-whether a equals to b.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13746,22 +12121,7 @@ the second 2-dimensional array.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static boolean arrayEquals(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;a, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;b)</codeblock>
                     <p>arrayEquals determines whether two string arrays are identical.</p>
-                    <p>a
-
-
-the first array. 
-
-
-
-
-b
-
-
-the second array. 
-
-
-
-whether a equals to b.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13796,14 +12156,7 @@ the second array.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static boolean arrayRemoveDuplicates(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;s)</codeblock>
                     <p>arrayRemoveDuplicates removes any duplicated elements in a string array.</p>
-                    <p>s
-
-
-the array. 
-
-
-
-the array without duplicates.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13835,14 +12188,7 @@ the array.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static String arrayToString(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;s)</codeblock>
                     <p>arrayToString gets a printable string for a string array.</p>
-                    <p>s
-
-
-the array. 
-
-
-
-the string joined by the array elements.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13874,14 +12220,7 @@ the array.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static String escapeAssertion(String s)</codeblock>
                     <p>escapeAssertion escapes the dots in the assertion, because the expression evaluation doesn't support such variable names.</p>
-                    <p>s
-
-
-the value of the matcher and effect assertions. 
-
-
-
-the escaped value.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13913,10 +12252,7 @@ the value of the matcher and effect assertions.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static void logPrint(String v)</codeblock>
                     <p>logPrint prints the log.</p>
-                    <p>v
-
-
-the log.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13944,18 +12280,7 @@ the log.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static void logPrintf(String format, String... v)</codeblock>
                     <p>logPrintf prints the log with the format.</p>
-                    <p>format
-
-
-the format of the log. 
-
-
-
-
-v
-
-
-the log.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -13986,18 +12311,7 @@ the log.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static void logPrintfError(String format, Object... v)</codeblock>
                     <p>logPrintf prints the log with the format as an error.</p>
-                    <p>format
-
-
-the format of the log. 
-
-
-
-
-v
-
-
-the log.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -14028,18 +12342,7 @@ the log.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static void logPrintfWarn(String format, Object... v)</codeblock>
                     <p>logPrintf prints the log with the format as a warning.</p>
-                    <p>format
-
-
-the format of the log. 
-
-
-
-
-v
-
-
-the log.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -14070,14 +12373,7 @@ the log.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static String paramsToString(String[] s)</codeblock>
                     <p>paramsToString gets a printable string for variable number of parameters.</p>
-                    <p>s
-
-
-the parameters. 
-
-
-
-the string joined by the parameters.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -14109,14 +12405,7 @@ the parameters.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static String removeComments(String s)</codeblock>
                     <p>removeComments removes the comments starting with # in the text.</p>
-                    <p>s
-
-
-a line in the model. 
-
-
-
-the line without comments.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -14148,22 +12437,7 @@ a line in the model.</li>
                   <entry align="left" colname="col1">
                     <codeblock>public static boolean setEquals(List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;a, List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;b)</codeblock>
                     <p>setEquals determines whether two string sets are identical.</p>
-                    <p>a
-
-
-the first set. 
-
-
-
-
-b
-
-
-the second set. 
-
-
-
-whether a equals to b.</p>
+                    <p></p>
                     <p>
                       <b>Parameters:</b>
                     </p>
@@ -14200,20 +12474,15 @@ the second set.</li>
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.util.function.IPMatchFunc" scope="local" type="topic">IPMatchFunc</xref>- 
-IPMatchFunc is the wrapper for ipMatch.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.util.function.IPMatchFunc" scope="local" type="topic">IPMatchFunc</xref>IPMatchFunc is the wrapper for ipMatch.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.util.function.KeyMatch2Func" scope="local" type="topic">KeyMatch2Func</xref>- 
-KeyMatch2Func is the wrapper for keyMatch2.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.util.function.KeyMatch2Func" scope="local" type="topic">KeyMatch2Func</xref>KeyMatch2Func is the wrapper for keyMatch2.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.util.function.KeyMatch3Func" scope="local" type="topic">KeyMatch3Func</xref>- 
-KeyMatch3Func is the wrapper for keyMatch2.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.util.function.KeyMatch3Func" scope="local" type="topic">KeyMatch3Func</xref>KeyMatch3Func is the wrapper for keyMatch2.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.util.function.KeyMatchFunc" scope="local" type="topic">KeyMatchFunc</xref>- 
-KeyMatchFunc is the wrapper for keyMatch.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.util.function.KeyMatchFunc" scope="local" type="topic">KeyMatchFunc</xref>KeyMatchFunc is the wrapper for keyMatch.</li>
           <li>
-            <xref format="dita" href="#org.casbin.jcasbin.util.function.RegexMatchFunc" scope="local" type="topic">RegexMatchFunc</xref>- 
-RegexMatchFunc is the wrapper for regexMatch.</li>
+            <xref format="dita" href="#org.casbin.jcasbin.util.function.RegexMatchFunc" scope="local" type="topic">RegexMatchFunc</xref>RegexMatchFunc is the wrapper for regexMatch.</li>
         </ul>
       </section>
     </body>
@@ -14225,7 +12494,10 @@ RegexMatchFunc is the wrapper for regexMatch.</li>
       </titlealts>
       <body outputclass="java">
         <codeblock>public class
-          <b>IPMatchFunc</b>extends AbstractFunction</codeblock>
+          <b>IPMatchFunc</b>extends
+          <xref format="dita" href="#AbstractFunction" scope="local" type="topic">AbstractFunction</xref>
+        </codeblock>
+        <p>IPMatchFunc is the wrapper for ipMatch.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -14338,7 +12610,10 @@ RegexMatchFunc is the wrapper for regexMatch.</li>
       </titlealts>
       <body outputclass="java">
         <codeblock>public class
-          <b>KeyMatch2Func</b>extends AbstractFunction</codeblock>
+          <b>KeyMatch2Func</b>extends
+          <xref format="dita" href="#AbstractFunction" scope="local" type="topic">AbstractFunction</xref>
+        </codeblock>
+        <p>KeyMatch2Func is the wrapper for keyMatch2.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -14451,7 +12726,10 @@ RegexMatchFunc is the wrapper for regexMatch.</li>
       </titlealts>
       <body outputclass="java">
         <codeblock>public class
-          <b>KeyMatch3Func</b>extends AbstractFunction</codeblock>
+          <b>KeyMatch3Func</b>extends
+          <xref format="dita" href="#AbstractFunction" scope="local" type="topic">AbstractFunction</xref>
+        </codeblock>
+        <p>KeyMatch3Func is the wrapper for keyMatch2.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -14564,7 +12842,10 @@ RegexMatchFunc is the wrapper for regexMatch.</li>
       </titlealts>
       <body outputclass="java">
         <codeblock>public class
-          <b>KeyMatchFunc</b>extends AbstractFunction</codeblock>
+          <b>KeyMatchFunc</b>extends
+          <xref format="dita" href="#AbstractFunction" scope="local" type="topic">AbstractFunction</xref>
+        </codeblock>
+        <p>KeyMatchFunc is the wrapper for keyMatch.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -14677,7 +12958,10 @@ RegexMatchFunc is the wrapper for regexMatch.</li>
       </titlealts>
       <body outputclass="java">
         <codeblock>public class
-          <b>RegexMatchFunc</b>extends AbstractFunction</codeblock>
+          <b>RegexMatchFunc</b>extends
+          <xref format="dita" href="#AbstractFunction" scope="local" type="topic">AbstractFunction</xref>
+        </codeblock>
+        <p>RegexMatchFunc is the wrapper for regexMatch.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">

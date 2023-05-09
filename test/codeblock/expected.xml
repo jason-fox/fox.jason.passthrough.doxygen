@@ -8,6 +8,9 @@
       <title>Namespaces</title>
       <ul>
         <li>
+          <xref format="dita" href="#Global" scope="local" type="topic">Global</xref>
+        </li>
+        <li>
           <xref format="dita" href="#IODriver" scope="local" type="topic">IODriver</xref>
         </li>
       </ul>
@@ -20,6 +23,14 @@
       </link>
     </linkpool>
   </related-links>
+  <topic id="Global" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
+    <title>Namespace Global</title>
+    <titlealts>
+      <navtitle>Global</navtitle>
+      <searchtitle>Global</searchtitle>
+    </titlealts>
+    <body outputclass="java"></body>
+  </topic>
   <topic id="IODriver" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
     <title>Namespace IODriver</title>
     <titlealts>
@@ -31,10 +42,8 @@
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#IODriver.IOMessageLogging" scope="local" type="topic">IOMessageLogging</xref>- 
-    Class used to add a generic logging layer to all drivers and plugins Example: &lt;extensions&gt;
-&lt;/extensions&gt;
- Additionally channelId, messageId and messageName is supported.</li>
+            <xref format="dita" href="#IODriver.IOMessageLogging" scope="local" type="topic">IOMessageLogging</xref>
+          </li>
         </ul>
       </section>
     </body>
@@ -46,7 +55,10 @@
       </titlealts>
       <body outputclass="cpp">
         <codeblock>public class
-          <b>IOMessageLogging</b>extends QObject</codeblock>
+          <b>IOMessageLogging</b>extends
+          <xref format="dita" href="#QObject" scope="local" type="topic">QObject</xref>
+        </codeblock>
+        <p></p>
         <p>Class used to add a generic logging layer to all drivers and plugins Example:
           <codeblock>&lt;extensions&gt;
 &lt;/extensions&gt;</codeblock>Additionally channelId, messageId and messageName is supported.</p>
