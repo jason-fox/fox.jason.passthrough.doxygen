@@ -23,14 +23,6 @@
       </link>
     </linkpool>
   </related-links>
-  <topic id="Global" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
-    <title>Namespace Global</title>
-    <titlealts>
-      <navtitle>Global</navtitle>
-      <searchtitle>Global</searchtitle>
-    </titlealts>
-    <body outputclass="java"></body>
-  </topic>
   <topic id="Types" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
     <title>Namespace Types</title>
     <titlealts>

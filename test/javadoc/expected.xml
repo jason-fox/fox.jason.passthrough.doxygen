@@ -8,18 +8,6 @@
       <title>Namespaces</title>
       <ul>
         <li>
-          <xref format="dita" href="#Global" scope="local" type="topic">Global</xref>
-        </li>
-        <li>
-          <xref format="dita" href="#org" scope="local" type="topic">org</xref>
-        </li>
-        <li>
-          <xref format="dita" href="#org.casbin" scope="local" type="topic">org::casbin</xref>
-        </li>
-        <li>
-          <xref format="dita" href="#org.casbin.jcasbin" scope="local" type="topic">org::casbin::jcasbin</xref>
-        </li>
-        <li>
           <xref format="dita" href="#org.casbin.jcasbin.config" scope="local" type="topic">org::casbin::jcasbin::config</xref>
         </li>
         <li>
@@ -59,38 +47,6 @@
       </link>
     </linkpool>
   </related-links>
-  <topic id="Global" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
-    <title>Namespace Global</title>
-    <titlealts>
-      <navtitle>Global</navtitle>
-      <searchtitle>Global</searchtitle>
-    </titlealts>
-    <body outputclass="java"></body>
-  </topic>
-  <topic id="org" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
-    <title>Namespace org</title>
-    <titlealts>
-      <navtitle>org</navtitle>
-      <searchtitle>org</searchtitle>
-    </titlealts>
-    <body outputclass="java"></body>
-  </topic>
-  <topic id="org.casbin" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
-    <title>Namespace org::casbin</title>
-    <titlealts>
-      <navtitle>org::casbin</navtitle>
-      <searchtitle>org::casbin</searchtitle>
-    </titlealts>
-    <body outputclass="java"></body>
-  </topic>
-  <topic id="org.casbin.jcasbin" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
-    <title>Namespace org::casbin::jcasbin</title>
-    <titlealts>
-      <navtitle>org::casbin::jcasbin</navtitle>
-      <searchtitle>org::casbin::jcasbin</searchtitle>
-    </titlealts>
-    <body outputclass="java"></body>
-  </topic>
   <topic id="org.casbin.jcasbin.config" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
     <title>Namespace org::casbin::jcasbin::config</title>
     <titlealts>
