@@ -111,7 +111,7 @@
     
    
     <xsl:variable name="inherited_methods">
-      <xsl:text>Methods inherited from class </xsl:text>
+      <xsl:text>Methods inherited from </xsl:text>
       <xsl:value-of select="concat ('Class ',replace($inherited_id, '::\w*$','::'))"/>
 
       <xsl:call-template name="add-link">
@@ -323,30 +323,37 @@
   <xsl:template name="add-class-link">
     <xsl:param name="class"/>
     <xsl:variable name="refid" select="replace(replace($class, '^(interface|class)', ''), '_1_1', '.')"/>
-
+    <xsl:variable name="reftext" select="replace($refid,'^.*\.','')"/>
     <xsl:choose>
       <xsl:when test="//compounddef[@kind='class' and @id=$class]">
         <xsl:call-template name="add-link">
           <xsl:with-param name="type" select="'topic'"/>
           <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="replace($refid,'^.*\.','')"/>
+          <xsl:with-param name="text" select="$reftext"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:when test="//compounddef[@kind='interface' and @id=$class]">
         <xsl:call-template name="add-link">
           <xsl:with-param name="type" select="'topic'"/>
           <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="replace($refid,'^.*\.','')"/>
+          <xsl:with-param name="text" select="$reftext"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:when test="//compounddef[@kind='interface' and @id=$class]">
         <xsl:call-template name="add-link">
           <xsl:with-param name="type" select="'topic'"/>
           <xsl:with-param name="href" select="concat('#', $refid)"/>
-          <xsl:with-param name="text" select="replace($refid,'^.*\.','')"/>
+          <xsl:with-param name="text" select="$reftext"/>
         </xsl:call-template>
       </xsl:when>
-       <xsl:when test="starts-with($class,'java.lang.')">
+      <xsl:when test="//memberdef[@id=$class]">
+        <xsl:call-template name="add-link">
+          <xsl:with-param name="type" select="'topic'"/>
+          <xsl:with-param name="href" select="concat('#', $refid)"/>
+          <xsl:with-param name="text" select="//memberdef[@id=$class]/name"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="starts-with($class,'java.lang.')">
          <xsl:value-of select="dita-ot:addZeroWidthSpaces($class)"/>
       </xsl:when>
       <xsl:when test="$class">

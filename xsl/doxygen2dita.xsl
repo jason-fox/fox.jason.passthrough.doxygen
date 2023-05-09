@@ -105,7 +105,7 @@
         <xsl:value-of select="$type"/>
       </xsl:attribute>
       <xsl:attribute name="href">
-        <xsl:value-of select="$href"/>
+        <xsl:value-of select="replace($href,'(&lt;)|(&gt;)','')"/>
       </xsl:attribute>
       <xsl:processing-instruction name="ditaot">
         <xsl:text>usertext</xsl:text>

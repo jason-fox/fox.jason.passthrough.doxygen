@@ -47,11 +47,29 @@
               </b>
             </p>
             <ul class="- topic/ul ">
-              <xsl:for-each select="basecompoundref">
+              <xsl:for-each select="basecompoundref[starts-with(@refid, 'interface')]">
                 <li class="- topic/li ">
                   <xsl:call-template name="add-link">
                     <xsl:with-param name="type" select="'topic'"/>
-                    <xsl:with-param name="href" select="concat('#', .)"/>
+                    <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(.))"/>
+                    <xsl:with-param name="text" select="."/>
+                  </xsl:call-template>
+                </li>
+              </xsl:for-each>
+            </ul>
+          </xsl:if>
+          <xsl:if test="not(starts-with(basecompoundref/@refid, 'interface'))">
+            <p class="- topic/p ">
+              <b class="+ topic/ph hi-d/b ">
+                <xsl:text>Direct Base Classes:</xsl:text>
+              </b>
+            </p>
+            <ul class="- topic/ul ">
+              <xsl:for-each select="basecompoundref[not(starts-with(@refid, 'interface'))]">
+                <li class="- topic/li ">
+                  <xsl:call-template name="add-link">
+                    <xsl:with-param name="type" select="'topic'"/>
+                    <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(.))"/>
                     <xsl:with-param name="text" select="."/>
                   </xsl:call-template>
                 </li>
@@ -70,7 +88,7 @@
                <li class="- topic/li ">
                 <xsl:call-template name="add-link">
                   <xsl:with-param name="type" select="'topic'"/>
-                  <xsl:with-param name="href" select="concat('#', encode-for-uri(.))"/>
+                  <xsl:with-param name="href" select="concat('#', dita-ot:name-to-id(.))"/>
                   <xsl:with-param name="text" select="."/>
                 </xsl:call-template>
               </li>
@@ -83,35 +101,47 @@
           <xsl:value-of select="concat(@prot, ' class ')"/>
           <b class="+ topic/ph hi-d/b "><xsl:value-of select="replace(compoundname,'^.*::','')"/></b>
           <xsl:choose>
-            <xsl:when test="basecompoundref/@refid">
+            <xsl:when test="basecompoundref">
               <xsl:text> extends </xsl:text>
              
               <xsl:for-each select="basecompoundref">
                 <xsl:variable name="extends" select="@refid"/>
-                <xsl:variable name="extends-name" select="//compounddef[@id=$extends]/compoundname"/>
-                <xsl:if test="$extends-name">
-                  
-                <xsl:call-template name="add-link">
-                  <xsl:with-param name="type" select="'topic'"/>
-                  <xsl:with-param
-                    name="href"
-                      select="concat('#',   dita-ot:name-to-id($extends-name))"
-                  />
-                  <xsl:with-param name="text" select="replace(.,'^.*\.','')"/>
-                </xsl:call-template>
-                </xsl:if>
+                <xsl:variable name="extends-name" select="text()"/>
+                <xsl:choose>
+                    <xsl:when test="$extends-name">
+                        <xsl:call-template name="add-link">
+                          <xsl:with-param name="type" select="'topic'"/>
+                          <xsl:with-param
+                            name="href"
+                              select="concat('#',   dita-ot:name-to-id($extends-name))"
+                          />
+                          <xsl:with-param name="text" select="replace(.,'^.*\.','')"/>
+                        </xsl:call-template>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="."/>
+                    </xsl:otherwise>
+                    
+                </xsl:choose>
                 <xsl:if test="count(basecompoundref) &gt; 1">
                   <xsl:text> </xsl:text>
                 </xsl:if>
               </xsl:for-each>
             </xsl:when>
-            <xsl:when test="basecompoundref">
-              <xsl:value-of select="concat(' extends ', basecompoundref)"/>
-            </xsl:when>
           </xsl:choose>
         </codeblock>
+        <xsl:call-template name="parse-brief-description"/>
         <xsl:call-template name="parse-detailed-description"/>
 
+        <xsl:if test="sectiondef/memberdef[@kind='typedef' and @prot='public']">
+          <!-- Class typedef Summary -->
+          <section class="- topic/section " outputclass="typedefs_summary">
+            <title class="- topic/title ">
+              <xsl:text>Types Summary</xsl:text>
+            </title>
+            <xsl:call-template name="add-typedefs-summary"/>
+          </section>
+        </xsl:if>
         <xsl:if test="sectiondef[contains(@kind,'-attrib')]/memberdef[@kind='variable' and @prot='public']">
           <!-- Class Field Summary -->
           <section class="- topic/section " outputclass="fields_summary">
@@ -142,6 +172,25 @@
           </xsl:if>
           <xsl:call-template name="add-inherited-method-summary"/>
         </section>
+
+         <xsl:if test="sectiondef/memberdef[@kind='typedef'and @prot='public']">
+          <!-- typedef Detail -->
+          <section class="- topic/section " outputclass="typedefs">
+            <xsl:attribute name="id">
+              <xsl:value-of select="concat(compoundname, '_typedefs')"/>
+            </xsl:attribute>
+            <title class="- topic/title ">
+              <xsl:text>Types Detail</xsl:text>
+            </title>
+            <xsl:apply-templates
+              select="sectiondef/memberdef[@kind='typedef' and @prot='public']"
+              mode="typedef"
+            >
+              <xsl:sort select="@id"/>
+            </xsl:apply-templates>
+          </section>
+        </xsl:if>
+
 
          <xsl:if test="sectiondef[contains(@kind,'-attrib')]/memberdef[@kind='variable'and @prot='public']">
           <!-- field Detail -->
@@ -262,13 +311,11 @@
         <xsl:value-of select="$constructor"/>
         <xsl:call-template name="add-signature"/>
       </codeblock>
+      <xsl:call-template name="parse-brief-description"/>
       <xsl:choose>
-        <xsl:when test="detaileddescription/node()">
+          <xsl:when test="detaileddescription/node()">
           <xsl:call-template name="parse-detailed-description"/>
         </xsl:when>
-        <xsl:otherwise>
-          <xsl:call-template name="parse-brief-description"/>
-        </xsl:otherwise>
       </xsl:choose>
       <xsl:call-template name="parameter-description"/>
     </xsl:variable>
@@ -369,6 +416,7 @@
         </xsl:call-template>
         <xsl:value-of select="concat(' ',$field)"/>
       </codeph>
+      <xsl:call-template name="parse-brief-description"/>
       <xsl:call-template name="parse-detailed-description"/>
     </xsl:variable>
 
@@ -388,4 +436,93 @@
     </table>
     <p class="- topic/p "/>
   </xsl:template>
+
+
+  <!--
+    Typedefs Summary
+  -->
+  <xsl:template name="add-typedefs-summary">
+    <table class="- topic/table " outputclass="typedefs_summary">
+      <tgroup class="- topic/tgroup " cols="2">
+        <colspec class="- topic/colspec " colname="c1" colnum="1" colwidth="25%"/>
+        <colspec class="- topic/colspec " colname="c2" colnum="2" colwidth="75%"/>
+        <thead class="- topic/thead ">
+          <row class="- topic/row ">
+            <entry class="- topic/entry " colname="c1" align="left">
+              <xsl:text>Name</xsl:text>
+            </entry>
+            <entry class="- topic/entry " colname="c2" align="left">
+              <xsl:text>Description</xsl:text>
+            </entry>
+          </row>
+        </thead>
+        <tbody class="- topic/tbody ">
+          <xsl:for-each select="sectiondef/memberdef[@kind='typedef' and @prot='public']">
+            <xsl:sort select="name"/>
+            <xsl:variable name="field" select="name"/>
+            <row class="- topic/row ">
+              <entry class="- topic/entry " colname="c1" align="left">
+                <codeph class="+ topic/ph pr-d/codeph ">
+                  <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'3')"/>
+                  <xsl:call-template name="add-link">
+                    <xsl:with-param name="type" select="'table'"/>
+                    <xsl:with-param name="href">
+                      <xsl:value-of
+                        select="concat('#', dita-ot:name-to-id(ancestor::compounddef/compoundname), '/typedefs_', $field)"
+                      />
+                      <xsl:if test="count(../memberdef[name=$field])&gt;1">
+                        <xsl:value-of select="count(following-sibling::memberdef[name=$field])"/>
+                      </xsl:if>
+                    </xsl:with-param>
+                    <xsl:with-param name="text" select="$field"/>
+                  </xsl:call-template>
+                </codeph>
+              </entry>
+              <entry class="- topic/entry " colname="c2" align="left">
+                <xsl:if test="normalize-space(briefdescription)!=''">
+                  <xsl:value-of select="concat (' - ', briefdescription)"/>
+                </xsl:if>
+              </entry>
+            </row>
+          </xsl:for-each>
+        </tbody>
+      </tgroup>
+    </table>
+  </xsl:template>
+  
+
+  <!--
+      typedef Details
+  -->
+  <xsl:template match="memberdef" mode="typedef">
+    <xsl:variable name="field" select="name"/>
+    <xsl:variable name="field_details">
+      <codeph class="+ topic/ph pr-d/codeph ">
+        <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'5')"/>
+        <xsl:value-of select="concat(' ',./definition)"/>
+      </codeph>
+      <xsl:call-template name="parse-brief-description"/>
+      <xsl:call-template name="parse-detailed-description"/>
+    </xsl:variable>
+
+    <table class="- topic/table " outputclass="typedef_details">
+      <xsl:attribute name="id">
+        <xsl:value-of select="concat('typedefs_',$field)"/>
+        <xsl:if test="count(../memberdef[name=$field])&gt;1">
+          <xsl:value-of select="count(following-sibling::memberdef[name=$field])"/>
+        </xsl:if>
+      </xsl:attribute>
+      <xsl:call-template name="mini-table">
+        <xsl:with-param name="header">
+          <xsl:value-of select="$field"/>
+        </xsl:with-param>
+        <xsl:with-param name="body" select="$field_details"/>
+      </xsl:call-template>
+    </table>
+    <p class="- topic/p "/>
+  </xsl:template>
+
+
+
+
 </xsl:stylesheet>

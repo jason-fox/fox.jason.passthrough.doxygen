@@ -30,7 +30,14 @@
       </b>
     </p>
   </xsl:template>
-
+  
+  <!--
+    Process white spaces in code blocks
+  -->
+  <xsl:template match="sp" mode="html">
+    <xsl:text> </xsl:text>
+  </xsl:template>
+  
   <!--
     Paragraph processing
   -->
@@ -47,6 +54,35 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- 
+    description itemized list 
+  -->
+  <xsl:template match="itemizedlist" mode="html">
+    <ul class="- topic/ul ">
+      <xsl:apply-templates mode="html"/>
+    </ul>
+  </xsl:template>
+  <xsl:template match="itemizedlist/listitem" mode="html">
+    <li class="- topic/li ">
+      <xsl:apply-templates mode="html"/>
+    </li>
+  </xsl:template>
+  
+  
+
+  <!-- 
+    Parameter list (ignore, since duplicated)
+  -->
+  <xsl:template match="parameterlist" mode="html">
+  </xsl:template>
+  
+  <!--
+    simplesect kind=return return value doc (ignore, since duplicated) 
+  -->
+  <xsl:template match="simplesect[@kind='return']" mode="html">
+  </xsl:template>
+  
+  
   <!--
     Unordered list processing
   -->

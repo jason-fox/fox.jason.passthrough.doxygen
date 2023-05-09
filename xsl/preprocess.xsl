@@ -11,7 +11,7 @@
 
   <xsl:template match="/">
   	<root>
-      <xsl:for-each select="doxygen/compounddef[@kind='namespace' and innerclass]">
+      <xsl:for-each select="doxygen/compounddef[@kind='namespace' and (innerclass or innernamespace)]">
         <xsl:sort select="@id"/>
         <xsl:variable name="id">
           <xsl:value-of select="@id"/>
@@ -47,6 +47,48 @@
            </interfaces>
         </namespaces>
       </xsl:for-each>
+      <xsl:variable name="all-nons" as="node()*">
+        <xsl:call-template name="all-nons"/>
+      </xsl:variable>
+
+      <namespaces>
+        <compounddef id="globalns" kind="namespace" language="C++">
+        <compoundname>Global</compoundname>
+          <xsl:for-each select="$all-nons">
+            <xsl:variable name="id">
+              <xsl:value-of select="@id"/>
+            </xsl:variable>
+            
+              <xsl:element name="innerclass">
+                <xsl:attribute name="refid" select="$id"/>
+                <xsl:value-of select="compoundname"/>
+              </xsl:element>
+          </xsl:for-each>
+        </compounddef>          
+        <classes>
+          <xsl:copy-of select="$all-nons[@kind='class']"/>
+        </classes>
+        <enums>
+          <xsl:copy-of select="all-nons[@kind='enum']"/>
+        </enums>
+        <interfaces>
+          <xsl:copy-of select="all-nons[@kind='interface']"/>
+        </interfaces>
+      </namespaces>
   	</root>
   </xsl:template>
+
+  <xsl:template name="all-nons" as="element()*">
+    <xsl:for-each select="/doxygen/compounddef[@kind != 'namespace' and @kind != 'file' and @kind != 'dir']">
+      <xsl:variable name="id">
+        <xsl:value-of select="@id"/>
+      </xsl:variable>
+      <xsl:if test="empty(//innerclass[@refid = $id]/parent::node()[@kind != 'file'])">
+        <xsl:copy-of select="."/>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:template>
+
+
+  
 </xsl:stylesheet>

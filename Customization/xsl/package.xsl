@@ -128,7 +128,7 @@
         <xsl:with-param name="text" select="replace(compoundname, '^.*::','')"/>
       </xsl:call-template>
       <xsl:if test="briefdescription">
-        <xsl:value-of select="concat (' - ', briefdescription, detaileddescription/para[1])"/>
+        <xsl:value-of select="briefdescription"/>
       </xsl:if>
     </li>
   </xsl:template>
