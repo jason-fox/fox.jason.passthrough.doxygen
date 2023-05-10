@@ -8,9 +8,6 @@
       <title>Namespaces</title>
       <ul>
         <li>
-          <xref format="dita" href="#Global" scope="local" type="topic">Global</xref>
-        </li>
-        <li>
           <xref format="dita" href="#Types" scope="local" type="topic">Types</xref>
         </li>
       </ul>
