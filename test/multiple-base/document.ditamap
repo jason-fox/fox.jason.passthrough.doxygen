@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+    <appendices>
+      <topicmeta>
+        <navtitle>Appendices</navtitle>
+      </topicmeta>
+      <appendix format="dita" href="topic.dita">
+      	<topicref format="doxygen" type="topic" href="multibase.xml"/>
+      </appendix>
+   </appendices>
+</bookmap>
+
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  This file is part of the DITA-OT Doxygen Plug-in project.
+  See the accompanying LICENSE file for applicable licenses.
+-->
+<project basedir="." default="unit-test">
+	<import file="../bootstrap.xml"/>
+	<description>
+		Expect that C++ comments converted to a Doxygen file is generated to DITA
+	</description>
+	<target name="unit-test">
+		<property name="file" value="${basedir}/out/doxygen.xml"/>
+		<exec-transtype transtype="dita"/>
+		<xmltask
+      expandEntityReferences="false"
+      dest="${file}"
+      outputter="simple"
+      source="${file}"
+    >
+			<xmlcatalog>
+				<dtd publicId="-//OASIS//DTD DITA Topic//EN" location="../fake.dtd"/>
+			</xmlcatalog>
+		</xmltask>
+		<compare-output suffix=".xml" result="${file}"/>
+	</target>
+</project>
