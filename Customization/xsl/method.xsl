@@ -75,19 +75,13 @@
   </xsl:template>
   <xsl:template name="add-inherited-method-summary">
 
-    <xsl:variable name="current_id" select="@id"/>
-
-    <xsl:for-each select="inheritancegraph/node">
-      <xsl:if test="childnode[@relation='public-inheritance']">
-        <xsl:variable name="extends">
-          <xsl:value-of select="link/@refid"/>
-        </xsl:variable>
-        <xsl:if test="link/@refid and $extends!=$current_id">
-          <xsl:call-template name="inheritance-method-summary">
-              <xsl:with-param name="extends" select="//compounddef[@kind='class' and @id=$extends]"/>
-          </xsl:call-template>
-        </xsl:if>
-      </xsl:if>
+    <xsl:for-each select="basecompoundref">
+      <xsl:variable name="extends">
+        <xsl:value-of select="@refid"/>
+      </xsl:variable>
+        <xsl:call-template name="inheritance-method-summary">
+            <xsl:with-param name="extends" select="//compounddef[@kind='class' and @id=$extends]"/>
+        </xsl:call-template>
     </xsl:for-each>
   </xsl:template>
 
@@ -112,8 +106,6 @@
         <xsl:with-param name="text" select="replace($inherited_id, '^.*::','')"/>
       </xsl:call-template>
     </xsl:variable>
-
-    <!--xsl:variable name="inherited_methods_details" select="''" /-->
 
     <xsl:variable name="inherited_methods_details">
       <xsl:for-each
@@ -140,13 +132,15 @@
       </xsl:for-each>
     </xsl:variable>
 
-    <p class="- topic/p "/>
-    <table class="- topic/table " outputclass="method_details">
-      <xsl:call-template name="mini-table">
-        <xsl:with-param name="header" select="$inherited_methods"/>
-        <xsl:with-param name="body" select="$inherited_methods_details"/>
-      </xsl:call-template>
-    </table>
+    <xsl:if test="normalize-space($inherited_methods_details)">
+      <p class="- topic/p "/>
+      <table class="- topic/table " outputclass="method_details">
+        <xsl:call-template name="mini-table">
+          <xsl:with-param name="header" select="$inherited_methods"/>
+          <xsl:with-param name="body" select="$inherited_methods_details"/>
+        </xsl:call-template>
+      </table>
+    </xsl:if>
   </xsl:template>
 
   <!--
