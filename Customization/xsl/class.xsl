@@ -43,8 +43,8 @@
             <xsl:value-of select="dita-ot:prismjs(@language)"/>
         </xsl:attribute>
 
-        <xsl:if test="basecompoundref/@refid">
-          <xsl:if test="starts-with(basecompoundref/@refid, 'interface')">
+        <xsl:if test="basecompoundref[1]/@refid">
+          <xsl:if test="starts-with(basecompoundref[1]/@refid, 'interface')">
             <p class="- topic/p ">
               <b class="+ topic/ph hi-d/b ">
                 <xsl:text>All Implemented Interfaces:</xsl:text>
@@ -62,7 +62,7 @@
               </xsl:for-each>
             </ul>
           </xsl:if>
-          <xsl:if test="not(starts-with(basecompoundref/@refid, 'interface'))">
+          <xsl:if test="not(starts-with(basecompoundref[1]/@refid, 'interface'))">
             <p class="- topic/p ">
               <b class="+ topic/ph hi-d/b ">
                 <xsl:text>Direct Base Classes:</xsl:text>
