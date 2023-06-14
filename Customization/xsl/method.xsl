@@ -306,10 +306,11 @@
       <xsl:when test="$kind = 'function'"><xsl:text>methods</xsl:text></xsl:when>
       <xsl:when test="$kind = 'enum'"><xsl:text>enums</xsl:text></xsl:when>
       <xsl:when test="$kind = 'slot'"><xsl:text>methods</xsl:text></xsl:when>
+      <xsl:when test="$kind = 'signal'"><xsl:text>signals</xsl:text></xsl:when>
       <xsl:when test="$kind = 'property'"><xsl:text>properties</xsl:text></xsl:when>
       <xsl:otherwise>
         <xsl:text></xsl:text>
-        <xsl:message terminate="yes"><xsl:text>undefined kind for </xsl:text><xsl:value-of select="$kind"/></xsl:message>
+        <xsl:message terminate="yes"><xsl:text>******** Warning: undefined kind for </xsl:text><xsl:value-of select="$kind"/></xsl:message>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -360,7 +361,7 @@
           </xsl:when>
 
           <xsl:otherwise>
-              <xsl:message terminate="yes"><xsl:text>add-type-link: Unable to find compound name for: </xsl:text><xsl:value-of select="type"/></xsl:message>
+              <xsl:message terminate="no"><xsl:text>********** Warning: add-type-link: Unable to find compound name for: </xsl:text><xsl:value-of select="type"/><xsl:text> for </xsl:text><xsl:value-of select="$refid"/></xsl:message>
           </xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
