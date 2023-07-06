@@ -22,9 +22,9 @@
       <xsl:attribute name="id">
         <xsl:value-of select="dita-ot:name-to-id(compoundname)"/>
       </xsl:attribute>
-      <xsl:attribute name="keys">
+      <!--xsl:attribute name="keys">
         <xsl:value-of select="concat('doxygen-',dita-ot:name-to-id(compoundname))"/>
-      </xsl:attribute>
+      </xsl:attribute-->
       
       <xsl:attribute name="outputclass">
         <xsl:text>class</xsl:text>

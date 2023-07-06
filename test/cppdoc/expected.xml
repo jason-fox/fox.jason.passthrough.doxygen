@@ -65,7 +65,8 @@
         </codeblock>
         <p></p>
         <p>Standard bicycle class.</p>
-        <p>Bicycle implements a standard bicycle. Bicycles are a useful way of transporting oneself, without too much effort (unless you go uphill or against the wind). If there are a lot of people on the road, you can use RingBell to ring your bell (note, not all bicycles have bells!).</p>
+        <p>
+          <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">Bicycle</xref>implements a standard bicycle. Bicycles are a useful way of transporting oneself, without too much effort (unless you go uphill or against the wind). If there are a lot of people on the road, you can use RingBell to ring your bell (note, not all bicycles have bells!).</p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -80,7 +81,7 @@
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>
-                      <xref format="dita" href="#transport.Bicycle/constructors_~Bicycle" scope="local" type="table">~Bicycle</xref>()</codeph>- 
+                      <xref format="dita" href="#transport.Bicycle/constructors__dtor_Bicycle" scope="local" type="table">~Bicycle</xref>()</codeph>- 
 Default destructor.</entry>
                 </row>
               </tbody>
@@ -116,56 +117,6 @@ PedalHarder makes you go faster (usually).</entry>
                   <entry align="left" colname="col2">
                     <codeph>
                       <xref format="dita" href="#transport.Bicycle/methods_RingBell" scope="local" type="table">RingBell</xref>()</codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class transport::
-                    <xref format="dita" href="#transport.RacingBike" scope="local" type="topic">RacingBike</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#transport.RacingBike/methods_PedalHarder" scope="local" type="table">PedalHarder</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#transport.RacingBike/methods_RingBell" scope="local" type="table">RingBell</xref>
-                    </codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class transport::
-                    <xref format="dita" href="#transport.MountainBike" scope="local" type="topic">MountainBike</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#transport.MountainBike/methods_ChangeBreak" scope="local" type="table">ChangeBreak</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#transport.MountainBike/methods_SetSuspension" scope="local" type="table">SetSuspension</xref>
-                    </codeph>
                   </entry>
                 </row>
               </tbody>
@@ -259,8 +210,12 @@ PedalHarder makes you go faster (usually).</entry>
           <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">transport::Bicycle</xref>
         </codeblock>
         <p></p>
-        <p>Mountain bike implementation of a Bicycle.</p>
-        <p>MountainBike is an implementation of a Bicycle providing a bike for cycling on rough terrain. Mountain bikes are pretty cool because they have stuff like Suspension (and you can even adjust it using SetSuspension). If you're looking for a bike for use on the road, you might be better off using a RacingBike though.</p>
+        <p>Mountain bike implementation of a
+          <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">Bicycle</xref>.</p>
+        <p>
+          <xref format="dita" href="#transport.MountainBike" scope="local" type="topic">MountainBike</xref>is an implementation of a
+          <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">Bicycle</xref>providing a bike for cycling on rough terrain. Mountain bikes are pretty cool because they have stuff like Suspension (and you can even adjust it using SetSuspension). If you're looking for a bike for use on the road, you might be better off using a
+          <xref format="dita" href="#transport.RacingBike" scope="local" type="topic">RacingBike</xref>though.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -290,6 +245,31 @@ PedalHarder makes you go faster (usually).</entry>
                   <entry align="left" colname="col2">
                     <codeph>
                       <xref format="dita" href="#transport.MountainBike/methods_SetSuspension" scope="local" type="table">SetSuspension</xref>(double stiffness)</codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+          <table outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Methods inherited from Class transport::
+                    <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">Bicycle</xref>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#transport.Bicycle/methods_PedalHarder" scope="local" type="table">PedalHarder</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#transport.Bicycle/methods_RingBell" scope="local" type="table">RingBell</xref>
+                    </codeph>
                   </entry>
                 </row>
               </tbody>
@@ -390,7 +370,8 @@ PedalHarder makes you go faster (usually).</entry>
         </codeblock>
         <p></p>
         <p>Racing bike class.</p>
-        <p>RacingBike is a special kind of bike which can go much faster on the road, with much less effort (even uphill!). It doesn't make sense to call RingBell on a racing bike for they don't have bells.</p>
+        <p>
+          <xref format="dita" href="#transport.RacingBike" scope="local" type="topic">RacingBike</xref>is a special kind of bike which can go much faster on the road, with much less effort (even uphill!). It doesn't make sense to call RingBell on a racing bike for they don't have bells.</p>
         <section outputclass="methods_summary">
           <title>Method Summary</title>
           <table outputclass="method_summary">
@@ -420,6 +401,31 @@ PedalHarder makes you go faster (usually).</entry>
                   <entry align="left" colname="col2">
                     <codeph>
                       <xref format="dita" href="#transport.RacingBike/methods_RingBell" scope="local" type="table">RingBell</xref>()</codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+          <table outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Methods inherited from Class transport::
+                    <xref format="dita" href="#transport.Bicycle" scope="local" type="topic">Bicycle</xref>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#transport.Bicycle/methods_PedalHarder" scope="local" type="table">PedalHarder</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#transport.Bicycle/methods_RingBell" scope="local" type="table">RingBell</xref>
+                    </codeph>
                   </entry>
                 </row>
               </tbody>

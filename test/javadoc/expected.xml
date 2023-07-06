@@ -1408,345 +1408,6 @@ setWatcher sets the current watcher.</entry>
               </tbody>
             </tgroup>
           </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addPermissionForUser1" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addPermissionForUser0" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addRoleForUser" scope="local" type="table">addRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addRoleForUserInDomain" scope="local" type="table">addRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermission1" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermission0" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionForUser1" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionForUser0" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionsForUser" scope="local" type="table">deletePermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRole" scope="local" type="table">deleteRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRoleForUser" scope="local" type="table">deleteRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRoleForUserInDomain" scope="local" type="table">deleteRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRolesForUser" scope="local" type="table">deleteRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteUser" scope="local" type="table">deleteUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getImplicitPermissionsForUser" scope="local" type="table">getImplicitPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getImplicitRolesForUser" scope="local" type="table">getImplicitRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getPermissionsForUser" scope="local" type="table">getPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getPermissionsForUserInDomain" scope="local" type="table">getPermissionsForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getRolesForUser" scope="local" type="table">getRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getRolesForUserInDomain" scope="local" type="table">getRolesForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getUsersForRole" scope="local" type="table">getUsersForRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasPermissionForUser1" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasPermissionForUser0" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasRoleForUser" scope="local" type="table">hasRoleForUser</xref>
-                    </codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addFunction" scope="local" type="table">addFunction</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addGroupingPolicy1" scope="local" type="table">addGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addGroupingPolicy0" scope="local" type="table">addGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedGroupingPolicy1" scope="local" type="table">addNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedGroupingPolicy0" scope="local" type="table">addNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedPolicy1" scope="local" type="table">addNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedPolicy0" scope="local" type="table">addNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addPolicy1" scope="local" type="table">addPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addPolicy0" scope="local" type="table">addPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllActions" scope="local" type="table">getAllActions</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedActions" scope="local" type="table">getAllNamedActions</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedObjects" scope="local" type="table">getAllNamedObjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedRoles" scope="local" type="table">getAllNamedRoles</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedSubjects" scope="local" type="table">getAllNamedSubjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllObjects" scope="local" type="table">getAllObjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllRoles" scope="local" type="table">getAllRoles</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllSubjects" scope="local" type="table">getAllSubjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredGroupingPolicy" scope="local" type="table">getFilteredGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredNamedGroupingPolicy" scope="local" type="table">getFilteredNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredNamedPolicy" scope="local" type="table">getFilteredNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredPolicy" scope="local" type="table">getFilteredPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getGroupingPolicy" scope="local" type="table">getGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getNamedGroupingPolicy" scope="local" type="table">getNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getNamedPolicy" scope="local" type="table">getNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getPolicy" scope="local" type="table">getPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasGroupingPolicy1" scope="local" type="table">hasGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasGroupingPolicy0" scope="local" type="table">hasGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedGroupingPolicy1" scope="local" type="table">hasNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedGroupingPolicy0" scope="local" type="table">hasNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedPolicy1" scope="local" type="table">hasNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedPolicy0" scope="local" type="table">hasNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasPolicy1" scope="local" type="table">hasPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasPolicy0" scope="local" type="table">hasPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredGroupingPolicy" scope="local" type="table">removeFilteredGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredNamedGroupingPolicy" scope="local" type="table">removeFilteredNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredNamedPolicy" scope="local" type="table">removeFilteredNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredPolicy" scope="local" type="table">removeFilteredPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeGroupingPolicy1" scope="local" type="table">removeGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeGroupingPolicy0" scope="local" type="table">removeGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedGroupingPolicy1" scope="local" type="table">removeNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedGroupingPolicy0" scope="local" type="table">removeNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedPolicy1" scope="local" type="table">removeNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedPolicy0" scope="local" type="table">removeNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removePolicy1" scope="local" type="table">removePolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removePolicy0" scope="local" type="table">removePolicy</xref>
-                    </codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addPermissionForUser1" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addPermissionForUser0" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addRoleForUser" scope="local" type="table">addRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addRoleForUserInDomain" scope="local" type="table">addRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermission1" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermission0" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermissionForUser1" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermissionForUser0" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermissionsForUser" scope="local" type="table">deletePermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRole" scope="local" type="table">deleteRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRoleForUser" scope="local" type="table">deleteRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRoleForUserInDomain" scope="local" type="table">deleteRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRolesForUser" scope="local" type="table">deleteRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteUser" scope="local" type="table">deleteUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getImplicitPermissionsForUser" scope="local" type="table">getImplicitPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getImplicitPermissionsForUserInDomain" scope="local" type="table">getImplicitPermissionsForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getImplicitRolesForUser" scope="local" type="table">getImplicitRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getPermissionsForUser" scope="local" type="table">getPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getPermissionsForUserInDomain" scope="local" type="table">getPermissionsForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getRolesForUser" scope="local" type="table">getRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getRolesForUserInDomain" scope="local" type="table">getRolesForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getUsersForRole" scope="local" type="table">getUsersForRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasPermissionForUser1" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasPermissionForUser0" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasRoleForUser" scope="local" type="table">hasRoleForUser</xref>
-                    </codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
         </section>
         <section id="org::casbin::jcasbin::main::CoreEnforcer_methods" outputclass="methods">
           <title>Method Detail</title>
@@ -2588,7 +2249,7 @@ deleteUser deletes a user.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -2597,7 +2258,7 @@ getImplicitPermissionsForUser gets implicit permissions for a user or role.</ent
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -2606,7 +2267,7 @@ getImplicitPermissionsForUserInDomain gets implicit permissions for a user or ro
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -2615,7 +2276,7 @@ getImplicitRolesForUser gets implicit roles that a user has.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -2624,7 +2285,7 @@ getPermissionsForUser gets permissions for a user or role.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -2633,7 +2294,7 @@ getPermissionsForUserInDomain gets permissions for a user or role inside a domai
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -2642,7 +2303,7 @@ getRolesForUser gets the roles that a user has.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -2651,7 +2312,7 @@ getRolesForUserInDomain gets the roles that a user has inside a domain.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -2684,97 +2345,6 @@ hasPermissionForUser determines whether a user has a permission.</entry>
                     <codeph>
                       <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasRoleForUser" scope="local" type="table">hasRoleForUser</xref>(String name, String role)</codeph>- 
 hasRoleForUser determines whether a user has a role.</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addPermissionForUser1" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addPermissionForUser0" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addRoleForUser" scope="local" type="table">addRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addRoleForUserInDomain" scope="local" type="table">addRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermission1" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermission0" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionForUser1" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionForUser0" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionsForUser" scope="local" type="table">deletePermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRole" scope="local" type="table">deleteRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRoleForUser" scope="local" type="table">deleteRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRoleForUserInDomain" scope="local" type="table">deleteRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRolesForUser" scope="local" type="table">deleteRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteUser" scope="local" type="table">deleteUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getImplicitPermissionsForUser" scope="local" type="table">getImplicitPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getImplicitRolesForUser" scope="local" type="table">getImplicitRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getPermissionsForUser" scope="local" type="table">getPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getPermissionsForUserInDomain" scope="local" type="table">getPermissionsForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getRolesForUser" scope="local" type="table">getRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getRolesForUserInDomain" scope="local" type="table">getRolesForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getUsersForRole" scope="local" type="table">getUsersForRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasPermissionForUser1" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasPermissionForUser0" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasRoleForUser" scope="local" type="table">hasRoleForUser</xref>
-                    </codeph>
-                  </entry>
                 </row>
               </tbody>
             </tgroup>
@@ -3639,9 +3209,10 @@ the user.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getImplicitPermissionsForUser(String user)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getImplicitPermissionsForUser(String user)</codeblock>
                     <p>getImplicitPermissionsForUser gets implicit permissions for a user or role.</p>
-                    <p>Compared to getPermissionsForUser(), this function retrieves permissions for inherited roles. For example: p, admin, data1, read p, alice, data2, read g, alice, admin</p>
+                    <p>Compared to
+                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getPermissionsForUser" scope="local" type="table">getPermissionsForUser()</xref>, this function retrieves permissions for inherited roles. For example: p, admin, data1, read p, alice, data2, read g, alice, admin</p>
                     <p>getPermissionsForUser("alice") can only get: [["alice", "data2", "read"]]. But getImplicitPermissionsForUser("alice") will get: [["admin", "data1", "read"], ["alice", "data2", "read"]].</p>
                     <p></p>
                     <p>
@@ -3673,7 +3244,7 @@ the user.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getImplicitPermissionsForUserInDomain(String user, String domain)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getImplicitPermissionsForUserInDomain(String user, String domain)</codeblock>
                     <p>getImplicitPermissionsForUserInDomain gets implicit permissions for a user or role in domain.</p>
                     <p></p>
                     <p>
@@ -3708,9 +3279,10 @@ the domain.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getImplicitRolesForUser(String name, String... domain)</codeblock>
+                    <codeblock>public List&lt; String &gt; getImplicitRolesForUser(String name, String... domain)</codeblock>
                     <p>getImplicitRolesForUser gets implicit roles that a user has.</p>
-                    <p>Compared to getRolesForUser(), this function retrieves indirect roles besides direct roles. For example: g, alice, role:admin g, role:admin, role:user</p>
+                    <p>Compared to
+                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getRolesForUser" scope="local" type="table">getRolesForUser()</xref>, this function retrieves indirect roles besides direct roles. For example: g, alice, role:admin g, role:admin, role:user</p>
                     <p>getRolesForUser("alice") can only get: ["role:admin"]. But getImplicitRolesForUser("alice") will get: ["role:admin", "role:user"].</p>
                     <p></p>
                     <p>
@@ -3745,7 +3317,7 @@ the domain</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPermissionsForUser(String user)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getPermissionsForUser(String user)</codeblock>
                     <p>getPermissionsForUser gets permissions for a user or role.</p>
                     <p></p>
                     <p>
@@ -3777,7 +3349,7 @@ the user.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPermissionsForUserInDomain(String user, String domain)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getPermissionsForUserInDomain(String user, String domain)</codeblock>
                     <p>getPermissionsForUserInDomain gets permissions for a user or role inside a domain.</p>
                     <p></p>
                     <p>
@@ -3812,7 +3384,7 @@ the domain.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getRolesForUser(String name)</codeblock>
+                    <codeblock>public List&lt; String &gt; getRolesForUser(String name)</codeblock>
                     <p>getRolesForUser gets the roles that a user has.</p>
                     <p></p>
                     <p>
@@ -3844,7 +3416,7 @@ the user.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getRolesForUserInDomain(String name, String domain)</codeblock>
+                    <codeblock>public List&lt; String &gt; getRolesForUserInDomain(String name, String domain)</codeblock>
                     <p>getRolesForUserInDomain gets the roles that a user has inside a domain.</p>
                     <p></p>
                     <p>
@@ -3879,7 +3451,7 @@ the domain.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getUsersForRole(String name)</codeblock>
+                    <codeblock>public List&lt; String &gt; getUsersForRole(String name)</codeblock>
                     <p>getUsersForRole gets the users that has a role.</p>
                     <p></p>
                     <p>
@@ -4045,7 +3617,7 @@ the role.</li>
               <thead>
                 <row>
                   <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>
+                    <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer" scope="local" type="topic">CoreEnforcer</xref>
                   </entry>
                 </row>
               </thead>
@@ -4053,324 +3625,73 @@ the role.</li>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addPermissionForUser1" scope="local" type="table">addPermissionForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_buildRoleLinks" scope="local" type="table">buildRoleLinks</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addPermissionForUser0" scope="local" type="table">addPermissionForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_clearPolicy" scope="local" type="table">clearPolicy</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addRoleForUser" scope="local" type="table">addRoleForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_enableAutoBuildRoleLinks" scope="local" type="table">enableAutoBuildRoleLinks</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addRoleForUserInDomain" scope="local" type="table">addRoleForUserInDomain</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_enableAutoSave" scope="local" type="table">enableAutoSave</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermission1" scope="local" type="table">deletePermission</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_enableEnforce" scope="local" type="table">enableEnforce</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermission0" scope="local" type="table">deletePermission</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_enableLog" scope="local" type="table">enableLog</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionForUser1" scope="local" type="table">deletePermissionForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_enforce" scope="local" type="table">enforce</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionForUser0" scope="local" type="table">deletePermissionForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_getAdapter" scope="local" type="table">getAdapter</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionsForUser" scope="local" type="table">deletePermissionsForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_getModel" scope="local" type="table">getModel</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRole" scope="local" type="table">deleteRole</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_isFiltered" scope="local" type="table">isFiltered</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRoleForUser" scope="local" type="table">deleteRoleForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_loadFilteredPolicy" scope="local" type="table">loadFilteredPolicy</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRoleForUserInDomain" scope="local" type="table">deleteRoleForUserInDomain</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_loadModel" scope="local" type="table">loadModel</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRolesForUser" scope="local" type="table">deleteRolesForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_loadPolicy" scope="local" type="table">loadPolicy</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteUser" scope="local" type="table">deleteUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_newModel2" scope="local" type="table">newModel</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getImplicitPermissionsForUser" scope="local" type="table">getImplicitPermissionsForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_newModel1" scope="local" type="table">newModel</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getImplicitRolesForUser" scope="local" type="table">getImplicitRolesForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_newModel0" scope="local" type="table">newModel</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getPermissionsForUser" scope="local" type="table">getPermissionsForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_savePolicy" scope="local" type="table">savePolicy</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getPermissionsForUserInDomain" scope="local" type="table">getPermissionsForUserInDomain</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_setAdapter" scope="local" type="table">setAdapter</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getRolesForUser" scope="local" type="table">getRolesForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_setEffector" scope="local" type="table">setEffector</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getRolesForUserInDomain" scope="local" type="table">getRolesForUserInDomain</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_setModel" scope="local" type="table">setModel</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getUsersForRole" scope="local" type="table">getUsersForRole</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_setRoleManager" scope="local" type="table">setRoleManager</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasPermissionForUser1" scope="local" type="table">hasPermissionForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_setWatcher" scope="local" type="table">setWatcher</xref>
                     </codeph>,
                     <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasPermissionForUser0" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasRoleForUser" scope="local" type="table">hasRoleForUser</xref>
-                    </codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addFunction" scope="local" type="table">addFunction</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addGroupingPolicy1" scope="local" type="table">addGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addGroupingPolicy0" scope="local" type="table">addGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedGroupingPolicy1" scope="local" type="table">addNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedGroupingPolicy0" scope="local" type="table">addNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedPolicy1" scope="local" type="table">addNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedPolicy0" scope="local" type="table">addNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addPolicy1" scope="local" type="table">addPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addPolicy0" scope="local" type="table">addPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllActions" scope="local" type="table">getAllActions</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedActions" scope="local" type="table">getAllNamedActions</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedObjects" scope="local" type="table">getAllNamedObjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedRoles" scope="local" type="table">getAllNamedRoles</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedSubjects" scope="local" type="table">getAllNamedSubjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllObjects" scope="local" type="table">getAllObjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllRoles" scope="local" type="table">getAllRoles</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllSubjects" scope="local" type="table">getAllSubjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredGroupingPolicy" scope="local" type="table">getFilteredGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredNamedGroupingPolicy" scope="local" type="table">getFilteredNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredNamedPolicy" scope="local" type="table">getFilteredNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredPolicy" scope="local" type="table">getFilteredPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getGroupingPolicy" scope="local" type="table">getGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getNamedGroupingPolicy" scope="local" type="table">getNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getNamedPolicy" scope="local" type="table">getNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getPolicy" scope="local" type="table">getPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasGroupingPolicy1" scope="local" type="table">hasGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasGroupingPolicy0" scope="local" type="table">hasGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedGroupingPolicy1" scope="local" type="table">hasNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedGroupingPolicy0" scope="local" type="table">hasNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedPolicy1" scope="local" type="table">hasNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedPolicy0" scope="local" type="table">hasNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasPolicy1" scope="local" type="table">hasPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasPolicy0" scope="local" type="table">hasPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredGroupingPolicy" scope="local" type="table">removeFilteredGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredNamedGroupingPolicy" scope="local" type="table">removeFilteredNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredNamedPolicy" scope="local" type="table">removeFilteredNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredPolicy" scope="local" type="table">removeFilteredPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeGroupingPolicy1" scope="local" type="table">removeGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeGroupingPolicy0" scope="local" type="table">removeGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedGroupingPolicy1" scope="local" type="table">removeNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedGroupingPolicy0" scope="local" type="table">removeNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedPolicy1" scope="local" type="table">removeNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedPolicy0" scope="local" type="table">removeNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removePolicy1" scope="local" type="table">removePolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removePolicy0" scope="local" type="table">removePolicy</xref>
-                    </codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addPermissionForUser1" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addPermissionForUser0" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addRoleForUser" scope="local" type="table">addRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addRoleForUserInDomain" scope="local" type="table">addRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermission1" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermission0" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermissionForUser1" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermissionForUser0" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermissionsForUser" scope="local" type="table">deletePermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRole" scope="local" type="table">deleteRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRoleForUser" scope="local" type="table">deleteRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRoleForUserInDomain" scope="local" type="table">deleteRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRolesForUser" scope="local" type="table">deleteRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteUser" scope="local" type="table">deleteUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getImplicitPermissionsForUser" scope="local" type="table">getImplicitPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getImplicitPermissionsForUserInDomain" scope="local" type="table">getImplicitPermissionsForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getImplicitRolesForUser" scope="local" type="table">getImplicitRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getPermissionsForUser" scope="local" type="table">getPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getPermissionsForUserInDomain" scope="local" type="table">getPermissionsForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getRolesForUser" scope="local" type="table">getRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getRolesForUserInDomain" scope="local" type="table">getRolesForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getUsersForRole" scope="local" type="table">getUsersForRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasPermissionForUser1" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasPermissionForUser0" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasRoleForUser" scope="local" type="table">hasRoleForUser</xref>
+                      <xref format="dita" href="#org.casbin.jcasbin.main.CoreEnforcer/methods_validateEnforce" scope="local" type="table">validateEnforce</xref>
                     </codeph>
                   </entry>
                 </row>
@@ -4496,7 +3817,7 @@ addPolicy adds an authorization rule to the current policy.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4505,7 +3826,7 @@ getAllActions gets the list of actions that show up in the current policy.</entr
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4514,7 +3835,7 @@ GetAllNamedActions gets the list of actions that show up in the current named po
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4523,7 +3844,7 @@ getAllNamedObjects gets the list of objects that show up in the current named po
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4532,7 +3853,7 @@ getAllNamedRoles gets the list of roles that show up in the current named policy
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4541,7 +3862,7 @@ GetAllNamedSubjects gets the list of subjects that show up in the currentnamed p
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4550,7 +3871,7 @@ getAllObjects gets the list of objects that show up in the current policy.</entr
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4559,7 +3880,7 @@ getAllRoles gets the list of roles that show up in the current policy.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4568,7 +3889,7 @@ getAllSubjects gets the list of subjects that show up in the current policy.</en
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4577,7 +3898,7 @@ getFilteredGroupingPolicy gets all the role inheritance rules in the policy, fie
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4586,7 +3907,7 @@ getFilteredNamedGroupingPolicy gets all the role inheritance rules in the policy
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4595,7 +3916,7 @@ getFilteredNamedPolicy gets all the authorization rules in the named policy, fie
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4604,7 +3925,7 @@ getFilteredPolicy gets all the authorization rules in the policy, field filters 
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4613,7 +3934,7 @@ getGroupingPolicy gets all the role inheritance rules in the policy.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4622,7 +3943,7 @@ getNamedGroupingPolicy gets all the role inheritance rules in the policy.</entry
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4631,7 +3952,7 @@ getNamedPolicy gets all the authorization rules in the named policy.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -4817,191 +4138,6 @@ removePolicy removes an authorization rule from the current policy.</entry>
                     <codeph>
                       <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removePolicy0" scope="local" type="table">removePolicy</xref>(String... params)</codeph>- 
 removePolicy removes an authorization rule from the current policy.</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer" scope="local" type="topic">SyncedEnforcer</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addPermissionForUser1" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addPermissionForUser0" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addRoleForUser" scope="local" type="table">addRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_addRoleForUserInDomain" scope="local" type="table">addRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermission1" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermission0" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionForUser1" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionForUser0" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deletePermissionsForUser" scope="local" type="table">deletePermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRole" scope="local" type="table">deleteRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRoleForUser" scope="local" type="table">deleteRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRoleForUserInDomain" scope="local" type="table">deleteRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteRolesForUser" scope="local" type="table">deleteRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_deleteUser" scope="local" type="table">deleteUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getImplicitPermissionsForUser" scope="local" type="table">getImplicitPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getImplicitRolesForUser" scope="local" type="table">getImplicitRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getPermissionsForUser" scope="local" type="table">getPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getPermissionsForUserInDomain" scope="local" type="table">getPermissionsForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getRolesForUser" scope="local" type="table">getRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getRolesForUserInDomain" scope="local" type="table">getRolesForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getUsersForRole" scope="local" type="table">getUsersForRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasPermissionForUser1" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasPermissionForUser0" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasRoleForUser" scope="local" type="table">hasRoleForUser</xref>
-                    </codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addPermissionForUser1" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addPermissionForUser0" scope="local" type="table">addPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addRoleForUser" scope="local" type="table">addRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_addRoleForUserInDomain" scope="local" type="table">addRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermission1" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermission0" scope="local" type="table">deletePermission</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermissionForUser1" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermissionForUser0" scope="local" type="table">deletePermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deletePermissionsForUser" scope="local" type="table">deletePermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRole" scope="local" type="table">deleteRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRoleForUser" scope="local" type="table">deleteRoleForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRoleForUserInDomain" scope="local" type="table">deleteRoleForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteRolesForUser" scope="local" type="table">deleteRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_deleteUser" scope="local" type="table">deleteUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getImplicitPermissionsForUser" scope="local" type="table">getImplicitPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getImplicitPermissionsForUserInDomain" scope="local" type="table">getImplicitPermissionsForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getImplicitRolesForUser" scope="local" type="table">getImplicitRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getPermissionsForUser" scope="local" type="table">getPermissionsForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getPermissionsForUserInDomain" scope="local" type="table">getPermissionsForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getRolesForUser" scope="local" type="table">getRolesForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getRolesForUserInDomain" scope="local" type="table">getRolesForUserInDomain</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_getUsersForRole" scope="local" type="table">getUsersForRole</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasPermissionForUser1" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasPermissionForUser0" scope="local" type="table">hasPermissionForUser</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer/methods_hasRoleForUser" scope="local" type="table">hasRoleForUser</xref>
-                    </codeph>
-                  </entry>
                 </row>
               </tbody>
             </tgroup>
@@ -5327,7 +4463,7 @@ the "p" policy rule, ptype "p" is implicitly used.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllActions()</codeblock>
+                    <codeblock>public List&lt; String &gt; getAllActions()</codeblock>
                     <p>getAllActions gets the list of actions that show up in the current policy.</p>
                     <p></p>
                     <p>
@@ -5351,7 +4487,7 @@ the "p" policy rule, ptype "p" is implicitly used.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllNamedActions(String ptype)</codeblock>
+                    <codeblock>public List&lt; String &gt; getAllNamedActions(String ptype)</codeblock>
                     <p>GetAllNamedActions gets the list of actions that show up in the current named policy.</p>
                     <p></p>
                     <p>
@@ -5383,7 +4519,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllNamedObjects(String ptype)</codeblock>
+                    <codeblock>public List&lt; String &gt; getAllNamedObjects(String ptype)</codeblock>
                     <p>getAllNamedObjects gets the list of objects that show up in the current named policy.</p>
                     <p></p>
                     <p>
@@ -5415,7 +4551,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllNamedRoles(String ptype)</codeblock>
+                    <codeblock>public List&lt; String &gt; getAllNamedRoles(String ptype)</codeblock>
                     <p>getAllNamedRoles gets the list of roles that show up in the current named policy.</p>
                     <p></p>
                     <p>
@@ -5447,7 +4583,7 @@ the policy type, can be "g", "g2", "g3", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllNamedSubjects(String ptype)</codeblock>
+                    <codeblock>public List&lt; String &gt; getAllNamedSubjects(String ptype)</codeblock>
                     <p>GetAllNamedSubjects gets the list of subjects that show up in the currentnamed policy.</p>
                     <p></p>
                     <p>
@@ -5479,7 +4615,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllObjects()</codeblock>
+                    <codeblock>public List&lt; String &gt; getAllObjects()</codeblock>
                     <p>getAllObjects gets the list of objects that show up in the current policy.</p>
                     <p></p>
                     <p>
@@ -5503,7 +4639,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllRoles()</codeblock>
+                    <codeblock>public List&lt; String &gt; getAllRoles()</codeblock>
                     <p>getAllRoles gets the list of roles that show up in the current policy.</p>
                     <p></p>
                     <p>
@@ -5527,7 +4663,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getAllSubjects()</codeblock>
+                    <codeblock>public List&lt; String &gt; getAllSubjects()</codeblock>
                     <p>getAllSubjects gets the list of subjects that show up in the current policy.</p>
                     <p></p>
                     <p>
@@ -5551,7 +4687,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredGroupingPolicy(int fieldIndex, String... fieldValues)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getFilteredGroupingPolicy(int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredGroupingPolicy gets all the role inheritance rules in the policy, field filters can be specified.</p>
                     <p></p>
                     <p>
@@ -5586,7 +4722,7 @@ the field values to be matched, value "" means not to match this field.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredNamedGroupingPolicy(String ptype, int fieldIndex, String... fieldValues)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getFilteredNamedGroupingPolicy(String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredNamedGroupingPolicy gets all the role inheritance rules in the policy, field filters can be specified.</p>
                     <p></p>
                     <p>
@@ -5624,7 +4760,7 @@ the field values to be matched, value "" means not to match this field.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredNamedPolicy(String ptype, int fieldIndex, String... fieldValues)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getFilteredNamedPolicy(String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredNamedPolicy gets all the authorization rules in the named policy, field filters can be specified.</p>
                     <p></p>
                     <p>
@@ -5662,7 +4798,7 @@ the field values to be matched, value "" means not to match this field.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredPolicy(int fieldIndex, String... fieldValues)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getFilteredPolicy(int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredPolicy gets all the authorization rules in the policy, field filters can be specified.</p>
                     <p></p>
                     <p>
@@ -5697,7 +4833,7 @@ the field values to be matched, value "" means not to match this field.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getGroupingPolicy()</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getGroupingPolicy()</codeblock>
                     <p>getGroupingPolicy gets all the role inheritance rules in the policy.</p>
                     <p></p>
                     <p>
@@ -5721,7 +4857,7 @@ the field values to be matched, value "" means not to match this field.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getNamedGroupingPolicy(String ptype)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getNamedGroupingPolicy(String ptype)</codeblock>
                     <p>getNamedGroupingPolicy gets all the role inheritance rules in the policy.</p>
                     <p></p>
                     <p>
@@ -5753,7 +4889,7 @@ the policy type, can be "g", "g2", "g3", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getNamedPolicy(String ptype)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getNamedPolicy(String ptype)</codeblock>
                     <p>getNamedPolicy gets all the authorization rules in the named policy.</p>
                     <p></p>
                     <p>
@@ -5785,7 +4921,7 @@ the policy type, can be "p", "p2", "p3", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPolicy()</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getPolicy()</codeblock>
                     <p>getPolicy gets all the authorization rules in the policy.</p>
                     <p></p>
                     <p>
@@ -6701,7 +5837,7 @@ deleteUser deletes a user.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -6710,7 +5846,7 @@ getImplicitPermissionsForUser gets implicit permissions for a user or role.</ent
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -6719,7 +5855,7 @@ getImplicitRolesForUser gets implicit roles that a user has.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -6728,7 +5864,7 @@ getPermissionsForUser gets permissions for a user or role.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -6737,7 +5873,7 @@ getPermissionsForUserInDomain gets permissions for a user or role inside a domai
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -6746,7 +5882,7 @@ getRolesForUser gets the roles that a user has.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -6755,7 +5891,7 @@ getRolesForUserInDomain gets the roles that a user has inside a domain.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -6788,160 +5924,6 @@ hasPermissionForUser determines whether a user has a permission.</entry>
                     <codeph>
                       <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_hasRoleForUser" scope="local" type="table">hasRoleForUser</xref>(String name, String role)</codeph>- 
 hasRoleForUser determines whether a user has a role.</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::main::
-                    <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer" scope="local" type="topic">ManagementEnforcer</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addFunction" scope="local" type="table">addFunction</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addGroupingPolicy1" scope="local" type="table">addGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addGroupingPolicy0" scope="local" type="table">addGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedGroupingPolicy1" scope="local" type="table">addNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedGroupingPolicy0" scope="local" type="table">addNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedPolicy1" scope="local" type="table">addNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addNamedPolicy0" scope="local" type="table">addNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addPolicy1" scope="local" type="table">addPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_addPolicy0" scope="local" type="table">addPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllActions" scope="local" type="table">getAllActions</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedActions" scope="local" type="table">getAllNamedActions</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedObjects" scope="local" type="table">getAllNamedObjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedRoles" scope="local" type="table">getAllNamedRoles</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllNamedSubjects" scope="local" type="table">getAllNamedSubjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllObjects" scope="local" type="table">getAllObjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllRoles" scope="local" type="table">getAllRoles</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getAllSubjects" scope="local" type="table">getAllSubjects</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredGroupingPolicy" scope="local" type="table">getFilteredGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredNamedGroupingPolicy" scope="local" type="table">getFilteredNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredNamedPolicy" scope="local" type="table">getFilteredNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getFilteredPolicy" scope="local" type="table">getFilteredPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getGroupingPolicy" scope="local" type="table">getGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getNamedGroupingPolicy" scope="local" type="table">getNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getNamedPolicy" scope="local" type="table">getNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_getPolicy" scope="local" type="table">getPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasGroupingPolicy1" scope="local" type="table">hasGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasGroupingPolicy0" scope="local" type="table">hasGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedGroupingPolicy1" scope="local" type="table">hasNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedGroupingPolicy0" scope="local" type="table">hasNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedPolicy1" scope="local" type="table">hasNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasNamedPolicy0" scope="local" type="table">hasNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasPolicy1" scope="local" type="table">hasPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_hasPolicy0" scope="local" type="table">hasPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredGroupingPolicy" scope="local" type="table">removeFilteredGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredNamedGroupingPolicy" scope="local" type="table">removeFilteredNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredNamedPolicy" scope="local" type="table">removeFilteredNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeFilteredPolicy" scope="local" type="table">removeFilteredPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeGroupingPolicy1" scope="local" type="table">removeGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeGroupingPolicy0" scope="local" type="table">removeGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedGroupingPolicy1" scope="local" type="table">removeNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedGroupingPolicy0" scope="local" type="table">removeNamedGroupingPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedPolicy1" scope="local" type="table">removeNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removeNamedPolicy0" scope="local" type="table">removeNamedPolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removePolicy1" scope="local" type="table">removePolicy</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.main.ManagementEnforcer/methods_removePolicy0" scope="local" type="table">removePolicy</xref>
-                    </codeph>
-                  </entry>
                 </row>
               </tbody>
             </tgroup>
@@ -7900,7 +6882,7 @@ the user.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getImplicitPermissionsForUser(String user)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getImplicitPermissionsForUser(String user)</codeblock>
                     <p>getImplicitPermissionsForUser gets implicit permissions for a user or role.</p>
                     <p>
                       <b>Overrides:</b>
@@ -7913,7 +6895,8 @@ the user.</li>
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>Compared to getPermissionsForUser(), this function retrieves permissions for inherited roles. For example: p, admin, data1, read p, alice, data2, read g, alice, admin</p>
+                    <p>Compared to
+                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getPermissionsForUser" scope="local" type="table">getPermissionsForUser()</xref>, this function retrieves permissions for inherited roles. For example: p, admin, data1, read p, alice, data2, read g, alice, admin</p>
                     <p>getPermissionsForUser("alice") can only get: [["alice", "data2", "read"]]. But getImplicitPermissionsForUser("alice") will get: [["admin", "data1", "read"], ["alice", "data2", "read"]].</p>
                     <p></p>
                     <p>
@@ -7945,7 +6928,7 @@ the user.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getImplicitRolesForUser(String name, String... domain)</codeblock>
+                    <codeblock>public List&lt; String &gt; getImplicitRolesForUser(String name, String... domain)</codeblock>
                     <p>getImplicitRolesForUser gets implicit roles that a user has.</p>
                     <p>
                       <b>Overrides:</b>
@@ -7958,7 +6941,8 @@ the user.</li>
                         <xref format="dita" href="#org.casbin.jcasbin.main.Enforcer" scope="local" type="topic">Enforcer</xref>
                       </codeph>
                     </p>
-                    <p>Compared to getRolesForUser(), this function retrieves indirect roles besides direct roles. For example: g, alice, role:admin g, role:admin, role:user</p>
+                    <p>Compared to
+                      <xref format="dita" href="#org.casbin.jcasbin.main.SyncedEnforcer/methods_getRolesForUser" scope="local" type="table">getRolesForUser()</xref>, this function retrieves indirect roles besides direct roles. For example: g, alice, role:admin g, role:admin, role:user</p>
                     <p>getRolesForUser("alice") can only get: ["role:admin"]. But getImplicitRolesForUser("alice") will get: ["role:admin", "role:user"].</p>
                     <p></p>
                     <p>
@@ -7993,7 +6977,7 @@ the domain</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPermissionsForUser(String user)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getPermissionsForUser(String user)</codeblock>
                     <p>getPermissionsForUser gets permissions for a user or role.</p>
                     <p>
                       <b>Overrides:</b>
@@ -8036,7 +7020,7 @@ the user.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPermissionsForUserInDomain(String user, String domain)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getPermissionsForUserInDomain(String user, String domain)</codeblock>
                     <p>getPermissionsForUserInDomain gets permissions for a user or role inside a domain.</p>
                     <p>
                       <b>Overrides:</b>
@@ -8082,7 +7066,7 @@ the domain.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getRolesForUser(String name)</codeblock>
+                    <codeblock>public List&lt; String &gt; getRolesForUser(String name)</codeblock>
                     <p>getRolesForUser gets the roles that a user has.</p>
                     <p>
                       <b>Overrides:</b>
@@ -8125,7 +7109,7 @@ the user.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getRolesForUserInDomain(String name, String domain)</codeblock>
+                    <codeblock>public List&lt; String &gt; getRolesForUserInDomain(String name, String domain)</codeblock>
                     <p>getRolesForUserInDomain gets the roles that a user has inside a domain.</p>
                     <p>
                       <b>Overrides:</b>
@@ -8171,7 +7155,7 @@ the domain.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getUsersForRole(String name)</codeblock>
+                    <codeblock>public List&lt; String &gt; getUsersForRole(String name)</codeblock>
                     <p>getUsersForRole gets the users that has a role.</p>
                     <p>
                       <b>Overrides:</b>
@@ -8404,7 +7388,7 @@ the role.</li>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -8414,7 +7398,9 @@ the role.</li>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>RoleManager</codeph>
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.rbac.RoleManager" scope="local" type="topic">RoleManager</xref>
+                    </codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -8483,7 +7469,8 @@ the role.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>RoleManager rm</codeph>
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.rbac.RoleManager" scope="local" type="topic">RoleManager</xref>rm</codeph>
                     <p></p>
                   </entry>
                 </row>
@@ -8521,7 +7508,7 @@ the role.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; policy</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt; policy</codeph>
                     <p></p>
                   </entry>
                 </row>
@@ -8618,7 +7605,7 @@ the role.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>Map&#8203;&lt;&#8203;String, AviatorFunction&#8203;&gt;&#8203;</codeph>
+                    <codeph>Map&lt; String, AviatorFunction &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -8680,7 +7667,7 @@ loadFunctionMap loads an initial function map.</entry>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>Map&#8203;&lt;&#8203;String, AviatorFunction&#8203;&gt;&#8203; fm</codeph>
+                    <codeph>Map&lt; String, AviatorFunction &gt; fm</codeph>
                     <p>AviatorFunction represents a function that is used in the matchers, used to get attributes in ABAC.</p>
                   </entry>
                 </row>
@@ -8848,6 +7835,58 @@ printModel prints the model to the log.</entry>
                     <codeph>
                       <xref format="dita" href="#org.casbin.jcasbin.model.Model/methods_saveModelToText" scope="local" type="table">saveModelToText</xref>()</codeph>- 
 saveModelToText saves the model to the text.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+          <table outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::model::
+                    <xref format="dita" href="#org.casbin.jcasbin.model.Policy" scope="local" type="topic">Policy</xref>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_addPolicy" scope="local" type="table">addPolicy</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_buildRoleLinks" scope="local" type="table">buildRoleLinks</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_clearPolicy" scope="local" type="table">clearPolicy</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_getFilteredPolicy" scope="local" type="table">getFilteredPolicy</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_getPolicy" scope="local" type="table">getPolicy</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_getValuesForFieldInPolicy" scope="local" type="table">getValuesForFieldInPolicy</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_hasPolicy" scope="local" type="table">hasPolicy</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_printPolicy" scope="local" type="table">printPolicy</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_removeFilteredPolicy" scope="local" type="table">removeFilteredPolicy</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_removePolicy" scope="local" type="table">removePolicy</xref>
+                    </codeph>,
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Policy/methods_savePolicyToText" scope="local" type="table">savePolicyToText</xref>
+                    </codeph>
+                  </entry>
                 </row>
               </tbody>
             </tgroup>
@@ -9051,7 +8090,9 @@ the model text.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>Map&#8203;&lt;&#8203;String, Map&#8203;&lt;&#8203;String, Assertion&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Assertion" scope="local" type="topic">Map&lt; String, Map&lt; String, Assertion &gt; &gt;</xref>
+                    </codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -9105,7 +8146,7 @@ clearPolicy clears all current policy.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -9114,7 +8155,7 @@ getFilteredPolicy gets rules based on field filters from a policy.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; List&lt; String &gt; &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -9123,7 +8164,7 @@ getPolicy gets all rules in a policy.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -9178,40 +8219,6 @@ savePolicyToText saves the policy to the text.</entry>
               </tbody>
             </tgroup>
           </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::model::
-                    <xref format="dita" href="#org.casbin.jcasbin.model.Model" scope="local" type="topic">Model</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.model.Model/methods_addDef" scope="local" type="table">addDef</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.model.Model/methods_loadModel" scope="local" type="table">loadModel</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.model.Model/methods_loadModelFromText" scope="local" type="table">loadModelFromText</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.model.Model/methods_printModel" scope="local" type="table">printModel</xref>
-                    </codeph>,
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.model.Model/methods_saveModelToText" scope="local" type="table">saveModelToText</xref>
-                    </codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
         </section>
         <section id="org::casbin::jcasbin::model::Policy_fields" outputclass="fields">
           <title>Field Detail</title>
@@ -9226,7 +8233,8 @@ savePolicyToText saves the policy to the text.</entry>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>Map&#8203;&lt;&#8203;String, Map&#8203;&lt;&#8203;String, Assertion&#8203;&gt;&#8203;&#8203;&gt;&#8203; model</codeph>
+                    <codeph>
+                      <xref format="dita" href="#org.casbin.jcasbin.model.Assertion" scope="local" type="topic">Map&lt; String, Map&lt; String, Assertion &gt; &gt;</xref>model</codeph>
                     <p></p>
                   </entry>
                 </row>
@@ -9333,7 +8341,7 @@ the role manager.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getFilteredPolicy(String sec, String ptype, int fieldIndex, String... fieldValues)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getFilteredPolicy(String sec, String ptype, int fieldIndex, String... fieldValues)</codeblock>
                     <p>getFilteredPolicy gets rules based on field filters from a policy.</p>
                     <p></p>
                     <p>
@@ -9374,7 +8382,7 @@ the field values to be matched, value "" means not to match this field.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;&#8203;&gt;&#8203; getPolicy(String sec, String ptype)</codeblock>
+                    <codeblock>public List&lt; List&lt; String &gt; &gt; getPolicy(String sec, String ptype)</codeblock>
                     <p>getPolicy gets all rules in a policy.</p>
                     <p></p>
                     <p>
@@ -9409,7 +8417,7 @@ the policy type, "p", "p2", .. or "g", "g2", ..</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getValuesForFieldInPolicy(String sec, String ptype, int fieldIndex)</codeblock>
+                    <codeblock>public List&lt; String &gt; getValuesForFieldInPolicy(String sec, String ptype, int fieldIndex)</codeblock>
                     <p>getValuesForFieldInPolicy gets all values for a field for all rules in a policy, duplicated values are removed.</p>
                     <p></p>
                     <p>
@@ -10558,7 +9566,7 @@ deleteLink deletes the inheritance link between role: name1 and role: name2.</en
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -10567,7 +9575,7 @@ getRoles gets the roles that a subject inherits.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -10591,28 +9599,6 @@ hasLink determines whether role: name1 inherits role: name2.</entry>
                     <codeph>
                       <xref format="dita" href="#org.casbin.jcasbin.rbac.DefaultRoleManager/methods_printRoles" scope="local" type="table">printRoles</xref>()</codeph>- 
 printRoles prints all the roles to log.</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-          <p></p>
-          <table outputclass="method_details">
-            <tgroup cols="1">
-              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
-              <thead>
-                <row>
-                  <entry align="left" colname="col1">Methods inherited from Class org::casbin::jcasbin::rbac::
-                    <xref format="dita" href="#org.casbin.jcasbin.rbac.GroupRoleManager" scope="local" type="topic">GroupRoleManager</xref>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry align="left" colname="col1">
-                    <codeph>
-                      <xref format="dita" href="#org.casbin.jcasbin.rbac.GroupRoleManager/methods_hasLink" scope="local" type="table">hasLink</xref>
-                    </codeph>
-                  </entry>
                 </row>
               </tbody>
             </tgroup>
@@ -10782,7 +9768,7 @@ the maximized allowed RBAC hierarchy level.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getRoles(String name, String... domain)</codeblock>
+                    <codeblock>public List&lt; String &gt; getRoles(String name, String... domain)</codeblock>
                     <p>getRoles gets the roles that a subject inherits.</p>
                     <p>
                       <b>Overrides:</b>
@@ -10830,7 +9816,7 @@ the maximized allowed RBAC hierarchy level.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getUsers(String name)</codeblock>
+                    <codeblock>public List&lt; String &gt; getUsers(String name)</codeblock>
                     <p>getUsers gets the users that inherits a subject.</p>
                     <p>
                       <b>Overrides:</b>
@@ -10969,7 +9955,9 @@ the maximized allowed RBAC hierarchy level.</li>
         </codeblock>
         <p>GroupRoleManager is used for authorization if the user's group is the role who has permission, but the group information is in the default format (policy start with "g") and the role information is in named format (policy start with "g2", "g3", ...).</p>
         <p>e.g. p, admin, domain1, data1, read g, alice, group1 g2, group1, admin, domain1</p>
-        <p>As for the previous example, alice should have the permission to read data1, but if we use the DefaultRoleManager, it will return false. GroupRoleManager is to handle this situation.</p>
+        <p>As for the previous example, alice should have the permission to read data1, but if we use the
+          <xref format="dita" href="#org.casbin.jcasbin.rbac.DefaultRoleManager" scope="local" type="topic">DefaultRoleManager</xref>, it will return false.
+          <xref format="dita" href="#org.casbin.jcasbin.rbac.GroupRoleManager" scope="local" type="topic">GroupRoleManager</xref>is to handle this situation.</p>
         <section outputclass="contructors_summary">
           <title>Constructor Summary</title>
           <table outputclass="constructor_summary">
@@ -11263,7 +10251,7 @@ deleteLink deletes the inheritance link between two roles.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -11272,7 +10260,7 @@ getRoles gets the roles that a user inherits.</entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeph>List&#8203;&lt;&#8203;String&#8203;&gt;&#8203;</codeph>
+                    <codeph>List&lt; String &gt;</codeph>
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
@@ -11403,7 +10391,7 @@ the domain the roles belong to.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getRoles(String name, String... domain)</codeblock>
+                    <codeblock>public List&lt; String &gt; getRoles(String name, String... domain)</codeblock>
                     <p>getRoles gets the roles that a user inherits.</p>
                     <p>domain is a prefix to the roles.</p>
                     <p></p>
@@ -11439,7 +10427,7 @@ the domain the roles belong to.</li>
               <tbody>
                 <row>
                   <entry align="left" colname="col1">
-                    <codeblock>public List&#8203;&lt;&#8203;String&#8203;&gt;&#8203; getUsers(String name)</codeblock>
+                    <codeblock>public List&lt; String &gt; getUsers(String name)</codeblock>
                     <p>getUsers gets the users that inherits a role.</p>
                     <p></p>
                     <p>
