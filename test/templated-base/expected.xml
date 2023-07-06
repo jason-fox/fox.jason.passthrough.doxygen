@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<?path2rootmap-uri ./?>
+<topic id="sample" props="doxygen" specializations="@props/deliveryTarget">
+  <title>API Reference</title>
+  <body>
+    <section>
+      <title>Namespaces</title>
+      <ul>
+        <li>
+          <xref format="dita" href="#Types" scope="local" type="topic">Types</xref>
+        </li>
+      </ul>
+    </section>
+  </body>
+  <related-links>
+    <linkpool>
+      <link format="dita" href="topic.dita" role="parent" scope="local" type="topic">
+        <linktext>topic</linktext>
+      </link>
+    </linkpool>
+  </related-links>
+  <topic id="Types" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
+    <title>Namespace Types</title>
+    <titlealts>
+      <navtitle>Types</navtitle>
+      <searchtitle>Types</searchtitle>
+    </titlealts>
+    <body outputclass="java">
+      <section outputclass="class_summary">
+        <title>Class Summary</title>
+        <ul>
+          <li>
+            <xref format="dita" href="#Types.MyBuffer" scope="local" type="topic">MyBuffer</xref>
+          </li>
+          <li>
+            <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">RingBuffer</xref>
+          </li>
+          <li>
+            <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">RingBufferBase</xref>
+          </li>
+        </ul>
+      </section>
+    </body>
+    <topic id="Types.MyBuffer" outputclass="class" props="doxygen" specializations="@props/deliveryTarget">
+      <title>Class MyBuffer</title>
+      <titlealts>
+        <navtitle>MyBuffer</navtitle>
+        <searchtitle>MyBuffer</searchtitle>
+      </titlealts>
+      <body outputclass="cpp">
+        <p>
+          <b>Direct Base Classes:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#Types.RingBuffer_lt_%20int%20_gt_" scope="local" type="topic">Types::RingBuffer&lt; int &gt;</xref>
+          </li>
+        </ul>
+        <codeblock>public class
+          <b>MyBuffer</b>extends
+          <xref format="dita" href="#Types.RingBuffer_lt_%20int%20_gt_" scope="local" type="topic">Types::RingBuffer&lt; int &gt;</xref>
+        </codeblock>
+        <p></p>
+        <section outputclass="methods_summary">
+          <title>Method Summary</title>
+          <p></p>
+          <table outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Methods inherited from Class Types::
+                    <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">RingBuffer</xref>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#Types.RingBuffer/methods_get" scope="local" type="table">get</xref>
+                    </codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
+      </body>
+    </topic>
+    <topic id="Types.RingBuffer" outputclass="class" props="doxygen" specializations="@props/deliveryTarget">
+      <title>Class RingBuffer</title>
+      <titlealts>
+        <navtitle>RingBuffer</navtitle>
+        <searchtitle>RingBuffer</searchtitle>
+      </titlealts>
+      <body outputclass="cpp">
+        <p>
+          <b>Direct Base Classes:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#Types.RingBufferBase_lt_%20ElementType%20_gt_" scope="local" type="topic">Types::RingBufferBase&lt; ElementType &gt;</xref>
+          </li>
+        </ul>
+        <codeblock>public class
+          <b>RingBuffer</b>extends
+          <xref format="dita" href="#Types.RingBufferBase_lt_%20ElementType%20_gt_" scope="local" type="topic">Types::RingBufferBase&lt; ElementType &gt;</xref>
+        </codeblock>
+        <p></p>
+        <section outputclass="typedefs_summary">
+          <title>Types Summary</title>
+          <table outputclass="typedefs_summary">
+            <tgroup cols="2">
+              <colspec colname="col1" colnum="1" colwidth="25%"></colspec>
+              <colspec colname="col2" colnum="2" colwidth="75%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Name</entry>
+                  <entry align="left" colname="col2">Description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#Types.RingBuffer/typedefs_base" scope="local" type="table">base</xref>
+                    </codeph>
+                  </entry>
+                  <entry align="left" colname="col2"></entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
+        <section outputclass="contructors_summary">
+          <title>Constructor Summary</title>
+          <table outputclass="constructor_summary">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Constructor and Description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#Types.RingBuffer/constructors_RingBuffer" scope="local" type="table">RingBuffer</xref>(unsigned int numberOfElements)</codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
+        <section outputclass="methods_summary">
+          <title>Method Summary</title>
+          <table outputclass="method_summary">
+            <tgroup cols="2">
+              <colspec colname="col1" colnum="1" colwidth="25%"></colspec>
+              <colspec colname="col2" colnum="2" colwidth="75%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Modifier and Type</entry>
+                  <entry align="left" colname="col2">Method and Description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>ElementType</codeph>
+                  </entry>
+                  <entry align="left" colname="col2">
+                    <codeph>
+                      <xref format="dita" href="#Types.RingBuffer/methods_get" scope="local" type="table">get</xref>() override</codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+          <table outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Methods inherited from Class Types::
+                    <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">RingBufferBase</xref>
+                  </entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#Types.RingBufferBase/methods_get" scope="local" type="table">get</xref>
+                    </codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
+        <section id="Types::RingBuffer_typedefs" outputclass="typedefs">
+          <title>Types Detail</title>
+          <table id="typedefs_base" outputclass="typedef_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">base</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>using Types::RingBuffer&lt; ElementType &gt;::base =  RingBufferBase&lt;ElementType&gt;</codeph>
+                    <p></p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+        </section>
+        <section id="Types::RingBuffer_constructors" outputclass="constructors">
+          <title>Constructor Detail</title>
+          <table id="constructors_RingBuffer" outputclass="constructor_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">RingBuffer</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeblock>RingBuffer(unsigned int numberOfElements)</codeblock>
+                    <p></p>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>numberOfElements</codeph>
+                      </li>
+                    </ul>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+        </section>
+        <section id="Types::RingBuffer_methods" outputclass="methods">
+          <title>Method Detail</title>
+          <table id="methods_get" outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">get</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeblock>public ElementType get() override</codeblock>
+                    <p></p>
+                    <p>
+                      <b>Overrides:</b>
+                    </p>
+                    <p>
+                      <codeph>
+                        <xref format="dita" href="#Types.RingBufferBase/methods_get" scope="local" type="table">get</xref>
+                      </codeph>in class
+                      <codeph>
+                        <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">RingBufferBase</xref>
+                      </codeph>
+                    </p>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>
+                      <codeph>ElementType</codeph>
+                    </p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+        </section>
+      </body>
+    </topic>
+    <topic id="Types.RingBufferBase" outputclass="class" props="doxygen" specializations="@props/deliveryTarget">
+      <title>Class RingBufferBase</title>
+      <titlealts>
+        <navtitle>RingBufferBase</navtitle>
+        <searchtitle>RingBufferBase</searchtitle>
+      </titlealts>
+      <body outputclass="cpp">
+        <p>
+          <b>Direct Known Subclasses:</b>
+        </p>
+        <ul>
+          <li>
+            <xref format="dita" href="#Types.RingBuffer_lt_%20int%20_gt_" scope="local" type="topic">Types::RingBuffer&lt; int &gt;</xref>
+          </li>
+          <li>
+            <xref format="dita" href="#Types.RingBuffer_lt_%20ElementType%20_gt_" scope="local" type="topic">Types::RingBuffer&lt; ElementType &gt;</xref>
+          </li>
+        </ul>
+        <codeblock>public class
+          <b>RingBufferBase</b>
+        </codeblock>
+        <p></p>
+        <p>A customizable ring buffer</p>
+        <section outputclass="contructors_summary">
+          <title>Constructor Summary</title>
+          <table outputclass="constructor_summary">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Constructor and Description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#Types.RingBufferBase/constructors_RingBufferBase" scope="local" type="table">RingBufferBase</xref>(unsigned int numberOfElements)</codeph>
+                  </entry>
+                </row>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>
+                      <xref format="dita" href="#Types.RingBufferBase/constructors__dtor_RingBufferBase" scope="local" type="table">~RingBufferBase</xref>()</codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
+        <section outputclass="methods_summary">
+          <title>Method Summary</title>
+          <table outputclass="method_summary">
+            <tgroup cols="2">
+              <colspec colname="col1" colnum="1" colwidth="25%"></colspec>
+              <colspec colname="col2" colnum="2" colwidth="75%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">Modifier and Type</entry>
+                  <entry align="left" colname="col2">Method and Description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeph>ElementType</codeph>
+                  </entry>
+                  <entry align="left" colname="col2">
+                    <codeph>
+                      <xref format="dita" href="#Types.RingBufferBase/methods_get" scope="local" type="table">get</xref>()=0</codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
+        <section id="Types::RingBufferBase_constructors" outputclass="constructors">
+          <title>Constructor Detail</title>
+          <table id="constructors_RingBufferBase" outputclass="constructor_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">RingBufferBase</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeblock>RingBufferBase(unsigned int numberOfElements)</codeblock>
+                    <p></p>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>numberOfElements</codeph>
+                      </li>
+                    </ul>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+          <table id="constructors_~RingBufferBase" outputclass="constructor_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">~RingBufferBase</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeblock>~RingBufferBase()</codeblock>
+                    <p></p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+        </section>
+        <section id="Types::RingBufferBase_methods" outputclass="methods">
+          <title>Method Detail</title>
+          <table id="methods_get" outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="col1" colnum="1" colwidth="100%"></colspec>
+              <thead>
+                <row>
+                  <entry align="left" colname="col1">get</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry align="left" colname="col1">
+                    <codeblock>public ElementType get()=0</codeblock>
+                    <p></p>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>
+                      <codeph>ElementType</codeph>
+                    </p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p></p>
+        </section>
+      </body>
+    </topic>
+  </topic>
+</topic>
+
