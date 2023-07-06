@@ -22,6 +22,10 @@
       <xsl:attribute name="id">
         <xsl:value-of select="dita-ot:name-to-id(compoundname)"/>
       </xsl:attribute>
+      <xsl:attribute name="keys">
+        <xsl:value-of select="concat('doxygen-',dita-ot:name-to-id(compoundname))"/>
+      </xsl:attribute>
+      
       <xsl:attribute name="outputclass">
         <xsl:text>class</xsl:text>
       </xsl:attribute>
@@ -39,8 +43,8 @@
             <xsl:value-of select="dita-ot:prismjs(@language)"/>
         </xsl:attribute>
 
-        <xsl:if test="basecompoundref/@refid">
-          <xsl:if test="starts-with(basecompoundref/@refid, 'interface')">
+        <xsl:if test="basecompoundref[1]/@refid">
+          <xsl:if test="starts-with(basecompoundref[1]/@refid, 'interface')">
             <p class="- topic/p ">
               <b class="+ topic/ph hi-d/b ">
                 <xsl:text>All Implemented Interfaces:</xsl:text>
@@ -58,7 +62,7 @@
               </xsl:for-each>
             </ul>
           </xsl:if>
-          <xsl:if test="not(starts-with(basecompoundref/@refid, 'interface'))">
+          <xsl:if test="not(starts-with(basecompoundref[1]/@refid, 'interface'))">
             <p class="- topic/p ">
               <b class="+ topic/ph hi-d/b ">
                 <xsl:text>Direct Base Classes:</xsl:text>
@@ -133,7 +137,7 @@
         <xsl:call-template name="parse-brief-description"/>
         <xsl:call-template name="parse-detailed-description"/>
 
-        <xsl:if test="sectiondef/memberdef[@kind='typedef' and @prot='public']">
+        <xsl:if test="sectiondef/memberdef[(@kind='typedef' or @kind='enum') and @prot='public']">
           <!-- Class typedef Summary -->
           <section class="- topic/section " outputclass="typedefs_summary">
             <title class="- topic/title ">
@@ -166,14 +170,14 @@
              <xsl:text>Method Summary</xsl:text>
            </title>
           <xsl:if
-            test="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and not(type='') and @prot='public']"
+            test="sectiondef/memberdef[ (@kind='function' or @kind='slot') and not(type='') and @prot='public']"
           >
             <xsl:call-template name="add-method-summary"/>
           </xsl:if>
           <xsl:call-template name="add-inherited-method-summary"/>
         </section>
 
-         <xsl:if test="sectiondef/memberdef[@kind='typedef'and @prot='public']">
+         <xsl:if test="sectiondef/memberdef[(@kind='typedef' or @kind='enum') and @prot='public']">
           <!-- typedef Detail -->
           <section class="- topic/section " outputclass="typedefs">
             <xsl:attribute name="id">
@@ -183,7 +187,7 @@
               <xsl:text>Types Detail</xsl:text>
             </title>
             <xsl:apply-templates
-              select="sectiondef/memberdef[@kind='typedef' and @prot='public']"
+              select="sectiondef/memberdef[(@kind='typedef' or @kind='enum') and @prot='public']"
               mode="typedef"
             >
               <xsl:sort select="@id"/>
@@ -210,7 +214,7 @@
           </section>
         </xsl:if>
 
-        <xsl:if test="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and type='' and @prot='public']">
+        <xsl:if test="sectiondef/memberdef[ @kind='function' and type='' and @prot='public']">
           <!-- Constructor Detail -->
           <section class="- topic/section " outputclass="constructors">
             <xsl:attribute name="id">
@@ -229,7 +233,7 @@
         </xsl:if>
 
         <xsl:if
-          test="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and  not(type='') and @prot='public']"
+          test="sectiondef/memberdef[(@kind='function' or @kind='slot') and  not(type='') and @prot='public']"
         >
           <!-- Method Detail-->
           <section class="- topic/section " outputclass="methods">
@@ -240,7 +244,7 @@
               <xsl:text>Method Detail</xsl:text>
             </title>
             <xsl:apply-templates
-              select="sectiondef[contains(@kind,'-func')]/memberdef[@kind='function' and not(type='') and @prot='public']"
+              select="sectiondef/memberdef[ ( @kind='function' or @kind='slot') and not(type='') and @prot='public']"
               mode="method"
             >
               <xsl:sort select="name"/>
@@ -364,8 +368,9 @@
                 <codeph class="+ topic/ph pr-d/codeph ">
                   <xsl:attribute name="xtrc" select="concat('codeph:',generate-id(.),'3')"/>
                   <xsl:call-template name="add-modifiers"/>
-                  <xsl:call-template name="add-class-link">
-                    <xsl:with-param name="class" select="type"/>
+                  <xsl:call-template name="add-type-link">
+                    <xsl:with-param name="refid" select="type/ref/@refid"/>
+                    <xsl:with-param name="reftext" select="type"/>
                   </xsl:call-template>
                 </codeph>
               </entry>
@@ -411,8 +416,9 @@
         <xsl:if test="@final='true'">
           <xsl:text>final </xsl:text>
         </xsl:if>
-        <xsl:call-template name="add-class-link">
-          <xsl:with-param name="class" select="type"/>
+        <xsl:call-template name="add-type-link">
+          <xsl:with-param name="refid" select="type/ref/@refid"/>
+          <xsl:with-param name="reftext" select="type"/>
         </xsl:call-template>
         <xsl:value-of select="concat(' ',$field)"/>
       </codeph>
@@ -457,7 +463,7 @@
           </row>
         </thead>
         <tbody class="- topic/tbody ">
-          <xsl:for-each select="sectiondef/memberdef[@kind='typedef' and @prot='public']">
+          <xsl:for-each select="sectiondef/memberdef[(@kind='typedef' or @kind ='enum') and @prot='public']">
             <xsl:sort select="name"/>
             <xsl:variable name="field" select="name"/>
             <row class="- topic/row ">
