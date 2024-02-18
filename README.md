@@ -1,7 +1,7 @@
 # Doxygen Plugin for DITA-OT [<img src="https://jason-fox.github.io/fox.jason.passthrough.doxygen/doxygen.png" align="right" width="300">](http://doxygendita-ot.rtfd.io/)
 
 [![license](https://img.shields.io/github/license/jason-fox/fox.jason.passthrough.doxygen.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![DITA-OT 4.0](https://img.shields.io/badge/DITA--OT-4.0-green.svg)](http://www.dita-ot.org/4.0)
+[![DITA-OT 4.2](https://img.shields.io/badge/DITA--OT-4.2-green.svg)](http://www.dita-ot.org/4.2)
 [![CI](https://github.com/jason-fox/fox.jason.passthrough.doxygen/workflows/CI/badge.svg)](https://github.com/jason-fox/fox.jason.passthrough.doxygen/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.passthrough.doxygen/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.passthrough.doxygen?branch=master)
 
@@ -82,7 +82,7 @@ The DITA-OT doxygen plug-in is a file reader for the DITA Open Toolkit.
 -   Full installation instructions for downloading DITA-OT can be found
     [here](https://www.dita-ot.org/4.0/topics/installing-client.html).
 
-    1.  Download the `dita-ot-4.0.zip` package from the project website at
+    1.  Download the `dita-ot-4.2.zip` package from the project website at
         [dita-ot.org/download](https://www.dita-ot.org/download)
     2.  Extract the contents of the package to the directory where you want to install DITA-OT.
     3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable.
@@ -90,9 +90,9 @@ The DITA-OT doxygen plug-in is a file reader for the DITA Open Toolkit.
     This defines the necessary environment variable to run the `dita` command from the command line.
 
 ```console
-curl -LO https://github.com/dita-ot/dita-ot/releases/download/4.0/dita-ot-4.0.zip
-unzip -q dita-ot-4.0.zip
-rm dita-ot-4.0.zip
+curl -LO https://github.com/dita-ot/dita-ot/releases/download/4.2/dita-ot-4.2.zip
+unzip -q dita-ot-4.2.zip
+rm dita-ot-4.2.zip
 ```
 
 ### Installing the Plug-in
