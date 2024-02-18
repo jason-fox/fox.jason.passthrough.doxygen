@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
-<?path2rootmap-uri ./?>
-<topic id="sample" props="doxygen" specializations="@props/deliveryTarget">
+<topic id="sample" props="doxygen">
   <title>API Reference</title>
   <body>
     <section>
       <title>Namespaces</title>
       <ul>
         <li>
-          <xref format="dita" href="#Types" scope="local" type="topic">Types</xref>
+          <xref href="multibase.xml#Types" type="topic">Types</xref>
         </li>
       </ul>
     </section>
   </body>
   <related-links>
     <linkpool>
-      <link format="dita" href="topic.dita" role="parent" scope="local" type="topic">
+      <link href="topic.dita" role="parent" type="topic">
         <linktext>topic</linktext>
       </link>
     </linkpool>
   </related-links>
-  <topic id="Types" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
+  <topic id="Types" outputclass="package" props="doxygen">
     <title>Namespace Types</title>
     <titlealts>
       <navtitle>Types</navtitle>
@@ -31,15 +30,15 @@
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">RingBuffer</xref>
+            <xref href="multibase.xml#Types.RingBuffer" type="topic">RingBuffer</xref>
           </li>
           <li>
-            <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">RingBufferBase</xref>
+            <xref href="multibase.xml#Types.RingBufferBase" type="topic">RingBufferBase</xref>
           </li>
         </ul>
       </section>
     </body>
-    <topic id="Types.RingBuffer" outputclass="class" props="doxygen" specializations="@props/deliveryTarget">
+    <topic id="Types.RingBuffer" outputclass="class" props="doxygen">
       <title>Class RingBuffer</title>
       <titlealts>
         <navtitle>RingBuffer</navtitle>
@@ -51,16 +50,16 @@
         </p>
         <ul>
           <li>
-            <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">Types::RingBufferBase</xref>
+            <xref href="multibase.xml#Types.RingBufferBase" type="topic">Types::RingBufferBase</xref>
           </li>
           <li>
-            <xref format="dita" href="#QObject" scope="local" type="topic">QObject</xref>
+            <xref href="multibase.xml#QObject" type="topic">QObject</xref>
           </li>
         </ul>
         <codeblock>public class
           <b>RingBuffer</b>extends
-          <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">Types::RingBufferBase</xref>
-          <xref format="dita" href="#QObject" scope="local" type="topic">QObject</xref>
+          <xref href="multibase.xml#Types.RingBufferBase" type="topic">Types::RingBufferBase</xref>
+          <xref href="multibase.xml#QObject" type="topic">QObject</xref>
         </codeblock>
         <p></p>
         <section outputclass="contructors_summary">
@@ -77,7 +76,7 @@
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>
-                      <xref format="dita" href="#Types.RingBuffer/constructors_RingBuffer" scope="local" type="table">RingBuffer</xref>(unsigned int numberOfElements)</codeph>
+                      <xref href="multibase.xml#Types.RingBuffer/constructors_RingBuffer" type="table">RingBuffer</xref>(unsigned int numberOfElements)</codeph>
                   </entry>
                 </row>
               </tbody>
@@ -103,7 +102,7 @@
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
-                      <xref format="dita" href="#Types.RingBuffer/methods_get" scope="local" type="table">get</xref>() override</codeph>
+                      <xref href="multibase.xml#Types.RingBuffer/methods_get" type="table">get</xref>() override</codeph>
                   </entry>
                 </row>
               </tbody>
@@ -116,7 +115,7 @@
               <thead>
                 <row>
                   <entry align="left" colname="col1">Methods inherited from Class Types::
-                    <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">RingBufferBase</xref>
+                    <xref href="multibase.xml#Types.RingBufferBase" type="topic">RingBufferBase</xref>
                   </entry>
                 </row>
               </thead>
@@ -124,7 +123,7 @@
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>
-                      <xref format="dita" href="#Types.RingBufferBase/methods_get" scope="local" type="table">get</xref>
+                      <xref href="multibase.xml#Types.RingBufferBase/methods_get" type="table">get</xref>
                     </codeph>
                   </entry>
                 </row>
@@ -182,10 +181,10 @@
                     </p>
                     <p>
                       <codeph>
-                        <xref format="dita" href="#Types.RingBufferBase/methods_get" scope="local" type="table">get</xref>
+                        <xref href="multibase.xml#Types.RingBufferBase/methods_get" type="table">get</xref>
                       </codeph>in class
                       <codeph>
-                        <xref format="dita" href="#Types.RingBufferBase" scope="local" type="topic">RingBufferBase</xref>
+                        <xref href="multibase.xml#Types.RingBufferBase" type="topic">RingBufferBase</xref>
                       </codeph>
                     </p>
                     <p>
@@ -203,7 +202,7 @@
         </section>
       </body>
     </topic>
-    <topic id="Types.RingBufferBase" outputclass="class" props="doxygen" specializations="@props/deliveryTarget">
+    <topic id="Types.RingBufferBase" outputclass="class" props="doxygen">
       <title>Class RingBufferBase</title>
       <titlealts>
         <navtitle>RingBufferBase</navtitle>
@@ -215,7 +214,7 @@
         </p>
         <ul>
           <li>
-            <xref format="dita" href="#Types.RingBuffer" scope="local" type="topic">Types::RingBuffer</xref>
+            <xref href="multibase.xml#Types.RingBuffer" type="topic">Types::RingBuffer</xref>
           </li>
         </ul>
         <codeblock>public class
@@ -237,13 +236,13 @@
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>
-                      <xref format="dita" href="#Types.RingBufferBase/constructors_RingBufferBase" scope="local" type="table">RingBufferBase</xref>(unsigned int numberOfElements)</codeph>
+                      <xref href="multibase.xml#Types.RingBufferBase/constructors_RingBufferBase" type="table">RingBufferBase</xref>(unsigned int numberOfElements)</codeph>
                   </entry>
                 </row>
                 <row>
                   <entry align="left" colname="col1">
                     <codeph>
-                      <xref format="dita" href="#Types.RingBufferBase/constructors__dtor_RingBufferBase" scope="local" type="table">~RingBufferBase</xref>()</codeph>
+                      <xref href="multibase.xml#Types.RingBufferBase/constructors__dtor_RingBufferBase" type="table">~RingBufferBase</xref>()</codeph>
                   </entry>
                 </row>
               </tbody>
@@ -269,7 +268,7 @@
                   </entry>
                   <entry align="left" colname="col2">
                     <codeph>
-                      <xref format="dita" href="#Types.RingBufferBase/methods_get" scope="local" type="table">get</xref>()=0</codeph>
+                      <xref href="multibase.xml#Types.RingBufferBase/methods_get" type="table">get</xref>()=0</codeph>
                   </entry>
                 </row>
               </tbody>

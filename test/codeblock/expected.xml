@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
-<?path2rootmap-uri ./?>
-<topic id="sample" props="doxygen" specializations="@props/deliveryTarget">
+<topic id="sample" props="doxygen">
   <title>API Reference</title>
   <body>
     <section>
       <title>Namespaces</title>
       <ul>
         <li>
-          <xref format="dita" href="#IODriver" scope="local" type="topic">IODriver</xref>
+          <xref href="codeblock.xml#IODriver" type="topic">IODriver</xref>
         </li>
       </ul>
     </section>
   </body>
   <related-links>
     <linkpool>
-      <link format="dita" href="topic.dita" role="parent" scope="local" type="topic">
+      <link href="topic.dita" role="parent" type="topic">
         <linktext>topic</linktext>
       </link>
     </linkpool>
   </related-links>
-  <topic id="IODriver" outputclass="package" props="doxygen" specializations="@props/deliveryTarget">
+  <topic id="IODriver" outputclass="package" props="doxygen">
     <title>Namespace IODriver</title>
     <titlealts>
       <navtitle>IODriver</navtitle>
@@ -31,12 +30,12 @@
         <title>Class Summary</title>
         <ul>
           <li>
-            <xref format="dita" href="#IODriver.IOMessageLogging" scope="local" type="topic">IOMessageLogging</xref>
+            <xref href="codeblock.xml#IODriver.IOMessageLogging" type="topic">IOMessageLogging</xref>
           </li>
         </ul>
       </section>
     </body>
-    <topic id="IODriver.IOMessageLogging" outputclass="class" props="doxygen" specializations="@props/deliveryTarget">
+    <topic id="IODriver.IOMessageLogging" outputclass="class" props="doxygen">
       <title>Class IOMessageLogging</title>
       <titlealts>
         <navtitle>IOMessageLogging</navtitle>
@@ -45,7 +44,7 @@
       <body outputclass="cpp">
         <codeblock>public class
           <b>IOMessageLogging</b>extends
-          <xref format="dita" href="#QObject" scope="local" type="topic">QObject</xref>
+          <xref href="codeblock.xml#QObject" type="topic">QObject</xref>
         </codeblock>
         <p></p>
         <p>Class used to add a generic logging layer to all drivers and plugins Example:
